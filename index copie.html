@@ -86,15 +86,15 @@ em{font-style:italic;color:var(--gold);}
 }
 .nav-logo-box{
   display:flex;align-items:center;gap:11px;
-  background:transparent;
+  background:rgba(255,255,255,.94);border-radius:2px;
   padding:7px 16px 7px 12px;
   backdrop-filter:blur(8px);
 }
-#nav.scrolled .nav-logo-box{background:rgba(13,27,42,.6);}
+#nav.scrolled .nav-logo-box{background:rgba(255,255,255,.98);}
 .nav-logo{height:40px;width:auto;}
-.nav-brand{display:flex;flex-direction:column;line-height:1;border-left:1px solid rgba(255,255,255,.2);padding-left:11px;}
-.nb-a{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:#fff;letter-spacing:.06em;}
-.nb-b{font-size:7.5px;font-weight:700;color:var(--gold);letter-spacing:.3em;text-transform:uppercase;margin-top:2px;}
+.nav-brand{display:flex;flex-direction:column;line-height:1;border-left:1px solid rgba(13,27,42,.14);padding-left:11px;}
+.nb-a{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--navy);letter-spacing:.06em;}
+.nb-b{font-size:7.5px;font-weight:700;color:#6B4500;letter-spacing:.3em;text-transform:uppercase;margin-top:2px;}
 .nav-links{display:flex;align-items:center;gap:30px;}
 .nav-links a{font-size:12px;font-weight:400;color:rgba(255,255,255,.85);letter-spacing:.04em;transition:color .2s;}
 .nav-links a:hover{color:#fff;}
@@ -119,13 +119,13 @@ em{font-style:italic;color:var(--gold);}
 }
 .hero-img{
   position:absolute;inset:0;
-  background:url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1920&q=90') center 40%/cover no-repeat;
+  background:url('Images/Soleil.png') center 40%/cover no-repeat;
   will-change:transform;
 }
 @media(max-width:640px){.hero-img{background-position:center 60%;}}
 .hero-ov{
   position:absolute;inset:0;
-  background:linear-gradient(to right,rgba(13,27,42,.92) 0%,rgba(13,27,42,.55) 55%,rgba(13,27,42,.35) 100%);
+  background:linear-gradient(155deg,rgba(13,27,42,.88) 0%,rgba(13,27,42,.58) 48%,rgba(13,27,42,.82) 100%);
 }
 .hero-body{
   position:relative;z-index:2;text-align:center;
@@ -146,12 +146,10 @@ em{font-style:italic;color:var(--gold);}
 }
 .hero h1 em{color:var(--gold);font-style:italic;}
 .hero-tagline{
-  font-size:clamp(13px,1.4vw,17px);font-weight:400;
-  letter-spacing:.12em;text-transform:uppercase;
-  color:rgba(255,255,255,.85);margin-bottom:30px;
-  line-height:1.7;
+  font-size:clamp(11px,1.3vw,15px);font-weight:400;
+  letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(255,255,255,.65);margin-bottom:34px;
 }
-.hero-tagline strong{color:#fff;font-weight:600;font-size:1.1em;}
 .hero-sub{
   font-size:clamp(15px,1.6vw,18px);
   color:rgba(255,255,255,.75);
@@ -214,7 +212,7 @@ em{font-style:italic;color:var(--gold);}
 .dest-header{padding:80px 5% 52px;text-align:center;}
 @media(max-width:640px){.dest-header{padding:56px 5% 36px;}}
 .dest-header h2{color:#fff;font-size:clamp(38px,6vw,78px);}
-.dest-sub{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:14px;}
+.dest-sub{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:14px;}
 /* bande pays */
 .dest-strip{
   display:flex;flex-wrap:wrap;justify-content:center;gap:10px;
@@ -232,8 +230,8 @@ em{font-style:italic;color:var(--gold);}
 .dest-flag{font-size:22px;line-height:1;}
 .dest-tag-name{
   font-family:'Cormorant Garamond',serif;
-  font-size:22px;font-weight:400;
-  color:#fff;letter-spacing:.04em;
+  font-size:19px;font-weight:400;
+  color:rgba(255,255,255,.88);letter-spacing:.04em;
 }
 /* note bas */
 .dest-more{
@@ -663,89 +661,6 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.12);padding:
 
 
 
-
-/* hero slogan + airports */
-.hero-slogan{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,7.5vw,108px);font-weight:300;color:#fff;line-height:1.0;letter-spacing:-.01em;}
-.hero-slogan em{color:var(--gold);font-style:italic;font-weight:300;}
-.hero-airports{display:flex;align-items:center;justify-content:center;gap:8px;margin:22px 0 32px;flex-wrap:wrap;}
-.hap{font-size:11px;font-weight:700;letter-spacing:.22em;color:#fff;border:1px solid rgba(201,168,76,.5);padding:6px 14px;border-radius:2px;}
-.hap-dot{color:var(--gold);font-size:14px;}
-
-
-.about-link{color:var(--gold);font-weight:500;text-decoration:none;border-bottom:1px solid rgba(201,168,76,.3);padding-bottom:1px;}
-.about-link:hover{border-bottom-color:var(--gold);}
-
-/* ══ AÉROPORTS ══ */
-.airports{background:var(--navy);}
-.ap-sub{text-align:center;max-width:600px;margin:0 auto 48px;color:rgba(255,255,255,.55);font-size:14px;margin-top:12px;}
-.ap-grid{
-  display:grid;grid-template-columns:repeat(5,1fr);gap:2px;
-  max-width:var(--W);margin:0 auto;
-}
-@media(max-width:1000px){.ap-grid{grid-template-columns:repeat(5,1fr);}}
-@media(max-width:680px){.ap-grid{grid-template-columns:repeat(3,1fr);}}
-@media(max-width:480px){.ap-grid{grid-template-columns:repeat(2,1fr);}}
-.ap-card{
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(201,168,76,.15);
-  border-bottom:2px solid var(--gold);
-  padding:32px 16px;text-align:center;
-  transition:background .2s;
-}
-.ap-card:hover{background:rgba(255,255,255,.1);}
-.ap-code{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--gold);line-height:1;margin-bottom:8px;}
-.ap-name{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);}
-
-
-/* ══ TICKER ══ */
-.ticker{
-  background:var(--navy);
-  border-top:1px solid rgba(201,168,76,.2);
-  border-bottom:1px solid rgba(201,168,76,.2);
-  overflow:hidden;padding:14px 0;
-}
-.ticker-track{
-  display:flex;align-items:center;gap:24px;
-  white-space:nowrap;
-  animation:ticker 28s linear infinite;
-}
-.ticker-track span{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);}
-.ticker-track .tk-dot{color:rgba(201,168,76,.4);font-size:16px;}
-@keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-
-
-.pq-avec-intro{font-size:15px;color:var(--muted);text-align:center;max-width:700px;margin:0 auto 32px;font-style:italic;font-family:'Cormorant Garamond',serif;font-weight:300;line-height:1.7;}
-
-/* hero brand — top left */
-.hero-brand-block{
-  position:absolute;top:100px;left:5%;z-index:3;
-  display:flex;align-items:center;gap:18px;
-}
-.hero-logo-big{height:72px;width:auto;filter:drop-shadow(0 2px 12px rgba(0,0,0,.4));}
-.hero-brand-text{
-  display:flex;flex-direction:column;line-height:1;
-  border-left:2px solid var(--gold);
-  padding-left:16px;
-}
-.hbt-a{
-  font-family:'Cormorant Garamond',serif;
-  font-size:36px;font-weight:400;color:#fff;
-  letter-spacing:.08em;line-height:1;
-}
-.hbt-b{
-  font-size:10px;font-weight:700;color:var(--gold);
-  letter-spacing:.4em;text-transform:uppercase;margin-top:4px;
-}
-@media(max-width:860px){
-  .hero-brand-block{top:88px;left:4%;}
-  .hero-logo-big{height:52px;}
-  .hbt-a{font-size:26px;}
-}
-@media(max-width:480px){
-  .hbt-a{font-size:20px;}
-  .hero-logo-big{height:42px;}
-}
-
 </style>
 </head>
 <body>
@@ -775,32 +690,14 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.12);padding:
 <section class="hero">
   <div class="hero-img" id="hero-bg"></div>
   <div class="hero-ov"></div>
-  <!-- BRAND HERO — top left -->
-  <div class="hero-brand-block">
-    <img id="hero-logo-img" class="hero-logo-big" src="" alt="AUREVA Freight" aria-hidden="true">
-    <div class="hero-brand-text">
-      <span class="hbt-a">Aureva</span>
-      <span class="hbt-b">Freight</span>
-    </div>
-  </div>
   <div class="hero-body">
-    <h1 id="hero-h1" class="hero-slogan">Le dernier voyage,<br><em>avec dignité.</em></h1>
-    <p class="hero-tagline"><strong>Spécialiste du rapatriement aérien funéraire</strong><br>vers l'Afrique subsaharienne et le Maghreb</p>
-    <div class="hero-airports rev">
-      <span class="hap">BSL</span><span class="hap-dot">·</span>
-      <span class="hap">SXB</span><span class="hap-dot">·</span>
-      <span class="hap">CDG</span><span class="hap-dot">·</span>
-      <span class="hap">ORY</span><span class="hap-dot">·</span>
-      <span class="hap">LYS</span><span class="hap-dot">·</span>
-      <span class="hap">MRS</span><span class="hap-dot">·</span>
-      <span class="hap">ZRH</span><span class="hap-dot">·</span>
-      <span class="hap">NCE</span><span class="hap-dot">·</span>
-      <span class="hap">TLS</span><span class="hap-dot">·</span>
-      <span class="hap">BOD</span>
-    </div>
+    <div class="hero-eyebrow">Alsace · Grand Est · Multi-aéroports</div>
+    <h1 id="hero-h1">Transitaire aérien<br><em>funéraire</em></h1>
+    <p class="hero-tagline">Spécialisé Afrique &nbsp;·&nbsp; Partenaire des pompes funèbres</p>
+    <p class="hero-sub">Le dernier voyage, avec dignité.</p>
     <div class="hero-ctas">
       <a href="#contact" class="btn btn-gold">Nous écrire</a>
-      <a href="#pourquoi" class="btn btn-ghost">En savoir plus</a>
+      <a href="#services" class="btn btn-ghost">Nos services</a>
     </div>
   </div>
   <div class="scroll-hint">
@@ -814,37 +711,20 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.12);padding:
   <div class="about-grid">
     <div>
       <div class="kicker rev">Notre histoire</div>
-      <div class="about-body rev d1">
-        <p>AUREVA naît d'une conviction vécue de l'intérieur : chaque famille mérite que le dernier voyage de ses proches se fasse dans les meilleures conditions, dans le respect des rites.</p>
-        <p><a href="#pourquoi" class="about-link">En savoir plus →</a></p>
+      <blockquote class="about-quote rev d1">"Nous avons fondé AUREVA parce que notre communauté méritait mieux qu'un service généraliste."</blockquote>
+      <div class="about-body rev d2">
+        <p>AUREVA Freight est né d'un vide que nous avons nous-mêmes ressenti. Jeunes musulmans du Haut-Rhin, nous avons accompagné des familles endeuillées face à des rapatriements désorganisés — des interlocuteurs qui changent, des délais inexpliqués, des rites qui attendent.</p>
+        <p>Dans notre tradition, l'inhumation ne souffre aucun délai. Nous avons bâti AUREVA autour de cette réalité : une structure pensée pour l'urgence, basée à 10 min de Bâle-Mulhouse.</p>
+        <p>Nous prenons en charge l'intégralité : dossier administratif, acheminement, organisation du vol, suivi digital, remise à la famille au pays.</p>
+        <p>Notre engagement est simple : les pompes funèbres se concentrent sur l'accompagnement humain. Nous gérons tout le reste, sans que vous ayez à intervenir.</p>
+        <p>Chaque dossier est traité avec la même rigueur — comme si c'était le nôtre.</p>
+        <p><strong>AUREVA Freight</strong> — spécialiste du rapatriement funéraire vers l'Afrique. Nous assurons le premier vol disponible, depuis BSL, Strasbourg, Lyon ou tout aéroport adapté à l'urgence du dossier.</p>
       </div>
     </div>
-    <div class="about-visual rev-s">
+        <div class="about-visual rev-s">
       <div class="about-africa-img">
-        <img src="https://images.unsplash.com/photo-1584467735867-4297ae2ebcee?w=800&q=85" alt="Accompagnement familial" loading="lazy">
+        <img src="Images/Africa.png" alt="Notre terrain — l'Afrique" loading="lazy">
       </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- AÉROPORTS -->
-<section class="airports sec" id="services">
-  <div class="sec-inner">
-    <div class="kicker center rev">Multi-aéroports</div>
-    <h2 class="rev d1" style="text-align:center;color:var(--navy);">Nos aéroports<br><em>de départ</em></h2>
-    <p class="ap-sub rev d2">Nous recherchons systématiquement le premier vol disponible — sans délai, sans aéroport imposé.</p>
-    <div class="ap-grid rev d3">
-      <div class="ap-card"><div class="ap-code">BSL</div><div class="ap-name">Bâle-Mulhouse</div></div>
-      <div class="ap-card"><div class="ap-code">SXB</div><div class="ap-name">Strasbourg</div></div>
-      <div class="ap-card"><div class="ap-code">CDG</div><div class="ap-name">Paris Roissy</div></div>
-      <div class="ap-card"><div class="ap-code">ORY</div><div class="ap-name">Paris Orly</div></div>
-      <div class="ap-card"><div class="ap-code">LYS</div><div class="ap-name">Lyon</div></div>
-      <div class="ap-card"><div class="ap-code">MRS</div><div class="ap-name">Marseille</div></div>
-      <div class="ap-card"><div class="ap-code">NCE</div><div class="ap-name">Nice</div></div>
-      <div class="ap-card"><div class="ap-code">TLS</div><div class="ap-name">Toulouse</div></div>
-      <div class="ap-card"><div class="ap-code">BOD</div><div class="ap-name">Bordeaux</div></div>
-      <div class="ap-card"><div class="ap-code">ZRH</div><div class="ap-name">Zurich</div></div>
     </div>
   </div>
 </section>
@@ -853,7 +733,7 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.12);padding:
 <section class="destinations" id="destinations">
   <div class="dest-header">
     <div class="sec-inner">
-      <div class="kicker center rev light">Notre Afrique</div>
+      <div class="kicker center rev light">Notre terrain</div>
       <h2 class="rev d1">L'Afrique.<br><em>Toute l'Afrique.</em></h2>
       <p class="dest-sub rev d2">Spécialiste funéraire — déployé sur tout le continent.</p>
     </div>
@@ -871,25 +751,6 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.12);padding:
     <a href="#contact" class="btn btn-gold" style="font-size:10px;">Nous contacter</a>
   </div>
 </section>
-
-
-<!-- TICKER -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <span>7j/7</span><span class="tk-dot">·</span>
-    <span>Disponible pour toute l'Afrique subsaharienne et le Maghreb</span><span class="tk-dot">·</span>
-    <span>Réponse sous 24h</span><span class="tk-dot">·</span>
-    <span>Rites islamiques respectés</span><span class="tk-dot">·</span>
-    <span>Tracking en temps réel</span><span class="tk-dot">·</span>
-    <span>Premier vol disponible</span><span class="tk-dot">·</span>
-    <span>7j/7</span><span class="tk-dot">·</span>
-    <span>Disponible pour toute l'Afrique subsaharienne et le Maghreb</span><span class="tk-dot">·</span>
-    <span>Réponse sous 24h</span><span class="tk-dot">·</span>
-    <span>Rites islamiques respectés</span><span class="tk-dot">·</span>
-    <span>Tracking en temps réel</span><span class="tk-dot">·</span>
-    <span>Premier vol disponible</span><span class="tk-dot">·</span>
-  </div>
-</div>
 
 <!-- STATS -->
 <div class="stats">
@@ -934,14 +795,14 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.12);padding:
 
       <div class="pq rev d1">
         <div class="pq-n">02</div>
-        <div class="pq-h">Premier vol disponible</div>
-        <p class="pq-p">Nous recherchons le premier départ disponible : BSL · CDG · LYS · MRS · SXB · ZRH — aucune heure perdue.</p>
+        <div class="pq-h">Premier vol — tout aeroport</div>
+        <p class="pq-p">BSL, Strasbourg, Lyon ou ailleurs. Bases a 10 min de Bale-Mulhouse, mobiles partout. On cherche le premier depart, pas le plus facile.</p>
       </div>
 
       <div class="pq rev d2">
         <div class="pq-n">03</div>
-        <div class="pq-h">Zéro charge pour vous</div>
-        <p class="pq-p">Sécurisation du cercueil, odorologie et inspection X-ray pris en charge. Vous accompagnez la famille. Nous gérons le reste.</p>
+        <div class="pq-h">Zero charge pour vous</div>
+        <p class="pq-p">Dossier HUM, prefecture, consulat, coordination compagnie, suivi, remise. Vous accompagnez la famille. Nous gerons le reste.</p>
       </div>
 
       <div class="pq rev d3 pq-has-iata">
@@ -957,7 +818,6 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.12);padding:
 
     </div>
 
-    <p class="pq-avec-intro rev">Spécialiste transitaire HUM — nous gérons l'intégralité du dossier en priorité, de la prise en charge jusqu'à la remise à la famille à destination.</p>
     <div class="pq-vs rev">
       <div class="pvs-col pvs-bad">
         <div class="pvs-h">Sans AUREVA</div>
@@ -968,7 +828,7 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.12);padding:
       </div>
       <div class="pvs-sep"><div class="pvs-vs">VS</div></div>
       <div class="pvs-col pvs-good">
-        <div class="pvs-h">Avec AUREVA — Transitaire HUM</div>
+        <div class="pvs-h">Avec AUREVA</div>
         <div class="pvs-item">Un seul referent</div>
         <div class="pvs-item">Tout gere en urgence</div>
         <div class="pvs-item">Rites islamiques maitrise</div>
@@ -998,7 +858,7 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.12);padding:
       <div class="chrono-num">01</div>
       <span class="chrono-tag">Prise en charge</span>
       <h3 class="chrono-h">Vous nous<br><em>appelez.</em></h3>
-      <p class="chrono-p">Un appel suffit. Nous recueillons les informations du défunt et la destination. Disponibles 7j/7, sans délai.</p>
+      <p class="chrono-p">Un appel, un message. Nous recueillons les informations du défunt et la destination. La mort n'attend pas le lundi.</p>
     </div>
   </div>
 
@@ -1010,9 +870,9 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.12);padding:
     </div>
     <div class="chrono-text rev">
       <div class="chrono-num">02</div>
-      <span class="chrono-tag">Premier vol</span>
-      <h3 class="chrono-h">Le premier<br><em>vol disponible.</em></h3>
-      <p class="chrono-p">Nous cherchons le premier départ sur l'aéroport le plus proche. Aucune heure perdue.</p>
+      <span class="chrono-tag">Dossier & logistique</span>
+      <h3 class="chrono-h">Nous prenons<br><em>tout en charge.</em></h3>
+      <p class="chrono-p">Dossier HUM, laissez-passer, préfecture, consulat. Les délais islamiques sont notre priorité absolue.</p>
     </div>
   </div>
 
@@ -1024,9 +884,9 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.12);padding:
     </div>
     <div class="chrono-text rev">
       <div class="chrono-num">03</div>
-      <span class="chrono-tag">Prise en charge complète</span>
-      <h3 class="chrono-h">Nous prenons<br><em>tout en charge.</em></h3>
-      <p class="chrono-p">Rédaction AWB · Processus de sécurisation · Mise en relation PAF · Réservation compagnie aérienne.</p>
+      <span class="chrono-tag">Organisation du vol</span>
+      <h3 class="chrono-h">Le premier vol<br><em>disponible.</em></h3>
+      <p class="chrono-p">Nous cherchons le premier départ — BSL, Strasbourg, Lyon ou ailleurs. Aucune heure perdue.</p>
     </div>
   </div>
 
@@ -1040,18 +900,18 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.12);padding:
       <div class="chrono-num">04</div>
       <span class="chrono-tag">Suivi en vol</span>
       <h3 class="chrono-h">Vous êtes informé.<br><em>La famille aussi.</em></h3>
-      <p class="chrono-p">Tracking en temps réel. Chaque étape confirmée. Vous êtes informé. La famille aussi. Aucune zone d'ombre.</p>
+      <p class="chrono-p">Chaque étape confirmée. Vous êtes informé. La famille aussi. Aucune zone d'ombre.</p>
     </div>
   </div>
 
   <!-- Étape 5 — Africa plein écran -->
   <div class="chrono-final">
-    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=1200&q=85" alt="L'arrivée en famille" loading="lazy">
+    <img src="Images/Plume.png" alt="Arrivée en Afrique" loading="lazy">
     <div class="chrono-final-ov"></div>
     <div class="chrono-final-body rev">
       <span class="chrono-final-num">Étape 05</span>
       <h3 class="chrono-final-h">L'arrivée.<br><em>La famille.</em></h3>
-      <p class="chrono-final-sub">Prise en charge par la douane locale et remise au pompe funèbre partenaire à destination.</p>
+      <p class="chrono-final-sub">Sénégal · Mali · Guinée · Maroc · Algérie · Tunisie · Et toute l'Afrique</p>
     </div>
   </div>
 
@@ -1171,13 +1031,6 @@ document.addEventListener('click', e => {
     links.classList.remove('open');
   }
 });
-
-// Clone logo nav → hero brand
-(function(){
-  var navLogo = document.querySelector('#nav .nav-logo');
-  var heroLogo = document.getElementById('hero-logo-img');
-  if(navLogo && heroLogo) heroLogo.src = navLogo.src;
-})();
 </script>
 <style>@keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}</style>
 </body>
