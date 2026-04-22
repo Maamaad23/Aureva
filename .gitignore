@@ -1,0 +1,10 @@
+.DS_Store
+**/.DS_Store
+.claude/
+*.pdf
+*.pptx
+*.ppt
+*.docx
+IMG_*.JPG
+IMG_*.jpg
+Thumbs.db
