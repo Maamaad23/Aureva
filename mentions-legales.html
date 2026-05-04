@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mentions légales — AUREVA Freight</title>
+<meta name="robots" content="noindex,follow">
+<meta property="og:title" content="Mentions légales — AUREVA Freight">
+<meta property="og:url" content="https://aurevafreight.com/mentions-legales.html">
+<link rel="icon" type="image/png" href="Images/LogoAureva_transparent.png">
+<link rel="apple-touch-icon" href="Images/LogoAureva_transparent.png">
+<link rel="canonical" href="https://aurevafreight.com/mentions-legales.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Outfit',sans-serif;font-weight:300;
+  font-size:15px;line-height:1.75;
+  background:#F7F4EE;color:#1a1a18;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+
+:root{
+  --navy:#0D1B2A;
+  --gold:#C9A84C;
+  --cream:#F7F4EE;
+  --muted:#5a5850;
+  --radius:2px;
+}
+
+/* ═══ NAV ═══ */
+#nav{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 5%;height:68px;
+  background:rgba(247,244,238,.95);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(13,27,42,.07);
+}
+.nav-brand{display:flex;align-items:center;gap:10px;}
+.nav-logo{
+  height:28px;width:auto;
+  background:var(--navy);border-radius:2px;
+  padding:3px 7px;
+  filter:brightness(0) invert(1);opacity:.9;
+}
+.nav-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;font-weight:400;color:var(--navy);
+  letter-spacing:.07em;
+}
+.nav-back{
+  display:flex;align-items:center;gap:6px;
+  font-size:11px;font-weight:500;letter-spacing:.08em;
+  color:var(--navy);opacity:.5;
+  transition:opacity .2s;
+}
+.nav-back:hover{opacity:1;}
+.nav-back svg{flex-shrink:0;}
+
+/* ═══ HERO BAND ═══ */
+.hero-band{
+  background:var(--navy);
+  padding:72px 5% 64px;
+  position:relative;overflow:hidden;
+}
+.hero-band::after{
+  content:'';
+  position:absolute;bottom:0;left:5%;right:5%;
+  height:1px;background:rgba(201,168,76,.18);
+}
+.hero-eyebrow{
+  font-size:8.5px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px;
+  display:flex;align-items:center;gap:10px;
+}
+.hero-eyebrow::before{content:'';width:20px;height:1px;background:var(--gold);}
+.hero-band h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(40px,6vw,80px);
+  font-weight:300;color:#fff;
+  letter-spacing:-.02em;line-height:1;
+  font-optical-sizing:auto;
+}
+.hero-band h1 em{font-style:italic;color:var(--gold);}
+.hero-date{
+  margin-top:18px;
+  font-size:11px;font-weight:400;letter-spacing:.1em;
+  color:rgba(255,255,255,.28);
+}
+/* watermark */
+.hero-band::before{
+  content:'LEX';
+  position:absolute;right:4%;bottom:-0.1em;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(100px,16vw,220px);font-weight:300;
+  color:rgba(255,255,255,.025);letter-spacing:.1em;
+  pointer-events:none;user-select:none;
+}
+@media(max-width:560px){.hero-band{padding:52px 5% 48px;}}
+
+/* ═══ LAYOUT ═══ */
+.doc{
+  max-width:700px;
+  margin:0 auto;
+  padding:80px 5% 100px;
+}
+@media(max-width:560px){.doc{padding:56px 5% 72px;}}
+
+/* ═══ SECTION ═══ */
+.section{
+  position:relative;
+  margin-bottom:72px;
+  padding-left:28px;
+  border-left:1px solid rgba(201,168,76,.25);
+  opacity:0;transform:translateY(16px);
+  transition:opacity .7s ease,transform .7s ease;
+}
+.section.on{opacity:1;transform:translateY(0);}
+.section.d1{transition-delay:.1s;}
+.section.d2{transition-delay:.2s;}
+.section:last-child{margin-bottom:0;}
+
+.section-num{
+  position:absolute;left:-28px;top:-12px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(80px,10vw,120px);font-weight:300;
+  color:rgba(13,27,42,.055);
+  line-height:1;pointer-events:none;user-select:none;
+  letter-spacing:-.02em;
+}
+.section-eyebrow{
+  font-size:8px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:10px;display:block;
+}
+.section h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(26px,3.5vw,38px);
+  font-weight:300;color:var(--navy);
+  letter-spacing:-.01em;line-height:1.1;
+  margin-bottom:28px;
+  font-optical-sizing:auto;
+}
+
+/* ═══ ROWS ═══ */
+.rows{display:flex;flex-direction:column;gap:0;}
+.row{
+  display:grid;grid-template-columns:160px 1fr;
+  gap:0;
+  padding:13px 0;
+  border-bottom:1px solid rgba(13,27,42,.06);
+}
+.row:first-child{border-top:1px solid rgba(13,27,42,.06);}
+@media(max-width:500px){.row{grid-template-columns:1fr;gap:3px;}}
+.row-label{
+  font-size:8.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);padding-top:1px;
+  flex-shrink:0;
+}
+.row-val{
+  font-size:14.5px;color:#1a1a18;line-height:1.65;
+}
+.row-val a{
+  color:var(--navy);
+  border-bottom:1px solid rgba(201,168,76,.35);
+  transition:border-color .2s;
+}
+.row-val a:hover{border-color:var(--gold);}
+
+/* ═══ PROSE ═══ */
+.prose{
+  font-size:14.5px;color:var(--muted);
+  line-height:1.9;margin-bottom:12px;
+  max-width:56ch;
+}
+.prose:last-child{margin-bottom:0;}
+.prose strong{color:#1a1a18;font-weight:500;}
+.prose a{
+  color:var(--navy);
+  border-bottom:1px solid rgba(201,168,76,.35);
+  transition:border-color .2s;
+}
+.prose a:hover{border-color:var(--gold);}
+
+/* ═══ RIGHTS STRIP ═══ */
+.rights{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;background:rgba(13,27,42,.08);
+  margin-top:20px;
+}
+@media(max-width:560px){.rights{grid-template-columns:repeat(2,1fr);}}
+.right-item{
+  background:var(--cream);
+  padding:16px 14px;
+}
+.right-label{
+  font-size:7.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);display:block;margin-bottom:5px;
+}
+.right-text{font-size:12.5px;color:var(--muted);line-height:1.6;}
+
+/* ═══ COOKIE BOX ═══ */
+.cookie-box{
+  display:flex;align-items:flex-start;gap:16px;
+  background:rgba(13,27,42,.04);
+  border:1px solid rgba(13,27,42,.08);
+  border-left:2px solid var(--gold);
+  padding:18px 20px;border-radius:var(--radius);
+  margin-top:4px;
+}
+.cookie-icon{
+  flex-shrink:0;width:32px;height:32px;
+  border-radius:50%;background:rgba(201,168,76,.1);
+  border:1px solid rgba(201,168,76,.3);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gold);
+}
+.cookie-icon svg{width:15px;height:15px;}
+.cookie-text{font-size:14px;color:var(--muted);line-height:1.75;}
+.cookie-text strong{color:#1a1a18;font-weight:500;}
+
+/* ═══ DIVIDER ═══ */
+.doc-divider{
+  height:1px;
+  background:linear-gradient(to right,rgba(201,168,76,.3),transparent);
+  margin:72px 0;
+}
+
+/* ═══ FOOTER ═══ */
+.site-footer{
+  background:var(--navy);
+  padding:22px 5%;
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:9px;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(255,255,255,.18);
+  border-top:1px solid rgba(201,168,76,.1);
+}
+.site-footer a{
+  color:rgba(255,255,255,.28);
+  transition:color .2s;
+}
+.site-footer a:hover{color:var(--gold);}
+@media(max-width:560px){.site-footer{flex-direction:column;gap:8px;text-align:center;}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-brand">
+    <img src="Images/LogoAureva_transparent.png" alt="AUREVA" class="nav-logo" decoding="async">
+    <span class="nav-name">AUREVA Freight</span>
+  </div>
+  <a href="index.html" class="nav-back">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    Retour
+  </a>
+</nav>
+
+<!-- HERO -->
+<div class="hero-band">
+  <div class="hero-eyebrow">Document légal</div>
+  <h1>Mentions<br><em>légales</em></h1>
+  <p class="hero-date">Mise à jour — mai 2026</p>
+</div>
+
+<!-- DOCUMENT -->
+<div class="doc">
+
+  <!-- 01 — LCEN -->
+  <div class="section">
+    <span class="section-num">01</span>
+    <span class="section-eyebrow">LCEN — Loi pour la confiance dans l'économie numérique</span>
+    <h2>Éditeur &amp; hébergeur</h2>
+
+    <div class="rows">
+      <div class="row">
+        <span class="row-label">Éditeur</span>
+        <span class="row-val">AUREVA SAS</span>
+      </div>
+      <div class="row">
+        <span class="row-label">Siège social</span>
+        <span class="row-val">20 rue du Jura, 68390 Sausheim, France</span>
+      </div>
+      <div class="row">
+        <span class="row-label">SIREN</span>
+        <span class="row-val">102 873 577</span>
+      </div>
+      <div class="row">
+        <span class="row-label">TVA</span>
+        <span class="row-val">FR14102873577</span>
+      </div>
+      <div class="row">
+        <span class="row-label">Dir. publication</span>
+        <span class="row-val">Hamza Agouddim</span>
+      </div>
+      <div class="row">
+        <span class="row-label">Contact</span>
+        <span class="row-val"><a href="mailto:support@aurevafreight.com">support@aurevafreight.com</a></span>
+      </div>
+      <div class="row">
+        <span class="row-label">Hébergeur</span>
+        <span class="row-val">GitHub, Inc. — 88 Colin P. Kelly Jr. Street, San Francisco CA 94107, États-Unis</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="doc-divider"></div>
+
+  <!-- 02 — RGPD -->
+  <div class="section d1">
+    <span class="section-num">02</span>
+    <span class="section-eyebrow">RGPD — Règlement général sur la protection des données</span>
+    <h2>Données personnelles</h2>
+
+    <div class="rows">
+      <div class="row">
+        <span class="row-label">Responsable</span>
+        <span class="row-val">AUREVA SAS — <a href="mailto:support@aurevafreight.com">support@aurevafreight.com</a></span>
+      </div>
+      <div class="row">
+        <span class="row-label">Données collectées</span>
+        <span class="row-val">Nom de l'agence, prénom, email, message — formulaire de contact uniquement</span>
+      </div>
+      <div class="row">
+        <span class="row-label">Finalité</span>
+        <span class="row-val">Traitement des demandes de partenariat B2B</span>
+      </div>
+      <div class="row">
+        <span class="row-label">Conservation</span>
+        <span class="row-val">3 ans à compter du dernier contact</span>
+      </div>
+      <div class="row">
+        <span class="row-label">Sous-traitant</span>
+        <span class="row-val">Formspree Inc. (États-Unis) — encadré par clauses contractuelles types conformes au RGPD</span>
+      </div>
+    </div>
+
+    <div class="rights" style="margin-top:24px;">
+      <div class="right-item">
+        <span class="right-label">Accès</span>
+        <p class="right-text">Copie de vos données</p>
+      </div>
+      <div class="right-item">
+        <span class="right-label">Rectification</span>
+        <p class="right-text">Corriger vos données</p>
+      </div>
+      <div class="right-item">
+        <span class="right-label">Suppression</span>
+        <p class="right-text">Effacement sur demande</p>
+      </div>
+      <div class="right-item">
+        <span class="right-label">Opposition</span>
+        <p class="right-text">Refus de traitement</p>
+      </div>
+    </div>
+
+    <p class="prose" style="margin-top:20px;">
+      Pour exercer vos droits : <a href="mailto:support@aurevafreight.com">support@aurevafreight.com</a><br>
+      Réclamation non résolue : <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL — cnil.fr</a>
+    </p>
+  </div>
+
+  <div class="doc-divider"></div>
+
+  <!-- 03 — COOKIES -->
+  <div class="section d2">
+    <span class="section-num">03</span>
+    <span class="section-eyebrow">Traceurs &amp; cookies</span>
+    <h2>Politique cookies</h2>
+
+    <div class="cookie-box">
+      <div class="cookie-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <p class="cookie-text">
+        <strong>Ce site n'utilise aucun cookie de suivi, de publicité ou d'analyse.</strong><br>
+        Le formulaire de contact transmet vos données à Formspree à titre ponctuel uniquement. Aucune donnée n'est conservée dans votre navigateur.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <span>© 2026 AUREVA Freight</span>
+  <a href="index.html">aurevafreight.com</a>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}
+  });
+},{threshold:.08});
+document.querySelectorAll('.section').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
