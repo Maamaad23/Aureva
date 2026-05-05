@@ -16,6 +16,7 @@
 <link rel="icon" type="image/png" href="Images/LogoAureva_transparent.png">
 <link rel="apple-touch-icon" href="Images/LogoAureva_transparent.png">
 <link rel="canonical" href="https://aurevafreight.com/">
+<script defer data-domain="aurevafreight.com" src="https://plausible.io/js/script.js"></script>
 <link rel="preload" as="image" href="Images/Embarquement.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +45,7 @@ button{font-family:inherit;cursor:pointer;}
   --gold2:#A8892A;
   --gold-hi:#E2C06E;
   --cream:#F5F1E8;
-  --mist:rgba(245,241,232,.5);
+  --mist:rgba(245,241,232,.72);
   --ghost:rgba(245,241,232,.12);
   --W:1160px;
   --mono:'JetBrains Mono',monospace;
@@ -115,51 +116,22 @@ em{font-style:italic;color:var(--gold);}
   transform: scale(1.04);
 }
 .nav-sep{width:1px;height:22px;background:var(--ghost);}
-.nav-iata-badge{height:22px;width:auto;opacity:.65;filter:brightness(0) invert(1) sepia(1) saturate(1.5) hue-rotate(-10deg);transition:opacity .2s;}
-#nav:hover .nav-iata-badge{opacity:.85;}
+.nav-iata-badge{height:30px;width:auto;opacity:.9;transition:opacity .2s;}
+#nav:hover .nav-iata-badge{opacity:1;}
 .nav-brand-info{display:flex;flex-direction:column;justify-content:center;}
 .nav-brand-sub{font-family:var(--mono);font-size:7px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--mist);}
-.nav-links{display:flex;align-items:center;gap:32px;}
-.nav-links a{font-family:var(--mono);font-size:9.5px;font-weight:400;letter-spacing:.1em;color:var(--mist);transition:color .2s;text-transform:uppercase;}
-.nav-links a:hover{color:var(--cream);}
-.nav-links a.nav-cta{color:var(--gold);border:1px solid rgba(201,168,76,.3);padding:9px 22px;transition:background .2s,color .2s,border-color .2s;}
-.nav-links a.nav-cta:hover{background:var(--gold);color:var(--void);border-color:var(--gold);}
-.nav-phone{
-  display:flex;align-items:center;gap:8px;
-  font-family:var(--mono);font-size:9.5px;font-weight:500;
-  color:var(--cream);letter-spacing:.04em;
-  border:1px solid var(--ghost);padding:8px 16px;
-  transition:background .2s,color .2s,border-color .2s;
+.nav-linkedin{
+  display:flex;align-items:center;
+  opacity:.88;
+  transition:opacity .2s,transform .2s;
+  flex-shrink:0;
 }
-.nav-phone:hover{background:var(--gold);color:var(--void);border-color:var(--gold);}
-.nav-phone svg{flex-shrink:0;}
-.nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px;}
-.nav-burger span{display:block;width:22px;height:1px;background:var(--cream);border-radius:1px;transition:all .3s;}
-
+.nav-linkedin:hover{opacity:1;transform:scale(1.06);}
 @media(max-width:900px){
   #nav{height:60px;padding:0 4%;}
   .nav-sep{display:none;}
   .nav-brand-sub{display:none;}
   .nav-iata-badge{display:none;}
-  .nav-links{
-    display:none;flex-direction:column;gap:0;
-    position:fixed;inset:0;top:60px;
-    background:var(--void);padding:24px 5% 40px;
-    z-index:99;overflow-y:auto;
-    border-top:1px solid rgba(201,168,76,.1);
-  }
-  .nav-links.open{display:flex;}
-  .nav-links li{border-bottom:1px solid rgba(255,255,255,.06);}
-  .nav-links a{display:block;padding:18px 0;font-size:13px;text-transform:none;letter-spacing:.02em;}
-  .nav-links a.nav-cta{display:inline-block;margin-top:14px;}
-  .nav-links .nav-phone-mobile{
-    display:flex;align-items:center;gap:10px;
-    padding:18px 0;font-size:14px;color:var(--cream);
-    border-bottom:1px solid rgba(255,255,255,.06);
-  }
-  .nav-links .nav-phone-mobile svg{color:var(--gold);}
-  .nav-phone{display:none;}
-  .nav-burger{display:flex;}
 }
 
 
@@ -248,7 +220,7 @@ em{font-style:italic;color:var(--gold);}
 }
 .hero-kicker::before{content:'';width:22px;height:1px;background:var(--gold);}
 .hero-kicker-imgs{display:flex;align-items:center;gap:10px;margin-left:2px;}
-.hero-kicker-imgs img{height:20px;width:auto;filter:brightness(0) invert(1);opacity:.55;}
+.hero-kicker-imgs img{height:28px;width:auto;opacity:.9;}
 .hero-kicker-imgs .kv{width:1px;height:14px;background:var(--ghost);}
 .hero h1{
   font-family:'Fraunces',serif;
@@ -383,7 +355,7 @@ em{font-style:italic;color:var(--gold);}
 }
 @media(max-width:768px){.iata-featured{flex-direction:column;gap:24px;padding:36px 28px;}}
 @media(max-width:480px){.iata-featured{padding:28px 20px;}}
-.iata-feat-logo{flex-shrink:0;height:56px;width:auto;opacity:.9;}
+.iata-feat-logo{flex-shrink:0;height:72px;width:auto;opacity:.95;}
 .iata-feat-sep{width:1px;height:50px;background:rgba(201,168,76,.15);flex-shrink:0;}
 @media(max-width:768px){.iata-feat-sep{display:none;}}
 .iata-feat-tag{font-family:var(--mono);font-size:8px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:10px;}
@@ -613,6 +585,39 @@ em{font-style:italic;color:var(--gold);}
 .faq-a-inner a:hover{opacity:.75;}
 
 
+/* ══ ONBOARDING PARTENAIRE ══ */
+.onboard{background:var(--void);border-top:1px solid rgba(201,168,76,.07);}
+.onboard-header{text-align:center;max-width:560px;margin:0 auto 60px;}
+.onboard-header h2{color:var(--cream);font-size:clamp(38px,5vw,72px);margin-bottom:12px;letter-spacing:-.025em;}
+.onboard-header p{font-size:14px;color:var(--mist);line-height:1.75;}
+.onboard-steps{
+  display:flex;align-items:flex-start;
+  max-width:var(--W);margin:0 auto;
+}
+.onboard-step{flex:1;padding:0 36px 0 0;}
+.onboard-step-n{
+  font-family:'Fraunces',serif;font-size:52px;font-weight:200;font-style:italic;
+  color:var(--gold);line-height:1;margin-bottom:18px;opacity:.7;
+}
+.onboard-step-h{
+  font-family:'Fraunces',serif;font-size:clamp(18px,1.8vw,23px);font-weight:200;font-style:italic;
+  color:var(--cream);margin-bottom:10px;line-height:1.2;
+}
+.onboard-step-p{font-size:13.5px;color:var(--mist);line-height:1.9;}
+.onboard-sep{
+  flex-shrink:0;padding:14px 8px 0;
+  color:rgba(201,168,76,.2);
+  font-family:var(--mono);font-size:18px;letter-spacing:0;
+}
+.onboard-cta{text-align:center;margin-top:56px;padding-top:44px;border-top:1px solid rgba(201,168,76,.07);}
+.onboard-cta p{font-size:13.5px;color:var(--mist);margin-bottom:22px;}
+@media(max-width:860px){
+  .onboard-steps{flex-direction:column;gap:0;}
+  .onboard-step{padding:28px 0;border-bottom:1px solid rgba(201,168,76,.06);}
+  .onboard-step:last-child{border-bottom:none;}
+  .onboard-sep{display:none;}
+}
+
 /* ══ TARMAC QUOTE ══ */
 .tarmac-sec{
   position:relative;min-height:580px;overflow:hidden;
@@ -670,10 +675,10 @@ em{font-style:italic;color:var(--gold);}
 @media(max-width:480px){.contact-info{padding:52px 5%;}}
 .contact-logo{height:26px;width:auto;filter:drop-shadow(0 2px 8px rgba(201,168,76,0.25));opacity:.72;display:block;}
 .ci-iata-row{display:flex;align-items:center;gap:12px;margin-bottom:28px;}
-.ci-iata-logo{height:32px;width:auto;filter:brightness(0) invert(1) sepia(1) saturate(1.5) hue-rotate(-10deg);opacity:.8;}
+.ci-iata-logo{height:48px;width:auto;opacity:.95;}
 .ci-iata-label{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);}
 .aero-p2-iata{display:flex;align-items:center;gap:16px;margin-top:28px;padding:16px 20px;border:1px solid rgba(201,168,76,.15);border-left:2px solid rgba(201,168,76,.45);}
-.aero-p2-iata img{height:28px;width:auto;filter:brightness(0) invert(1) sepia(1) saturate(1.5) hue-rotate(-10deg);opacity:.75;flex-shrink:0;}
+.aero-p2-iata img{height:40px;width:auto;opacity:.95;flex-shrink:0;}
 .aero-p2-iata span{font-family:var(--mono);font-size:10px;font-weight:400;letter-spacing:.06em;color:var(--mist);line-height:1.6;}
 .ci-quote{font-family:'Fraunces',serif;font-size:clamp(24px,3vw,40px);font-weight:200;font-style:italic;color:var(--cream);line-height:1.25;border-left:2px solid var(--gold);padding-left:24px;}
 .ci-sub{font-size:14px;color:var(--mist);line-height:1.8;max-width:380px;}
@@ -693,7 +698,7 @@ em{font-style:italic;color:var(--gold);}
   background:var(--void);
   display:flex;flex-direction:column;justify-content:center;
   padding:80px 60px;
-  border-top:2px solid rgba(201,168,76,.22);
+  border-top:2px solid var(--gold);
 }
 @media(max-width:1100px){.contact-form{padding:72px 44px;}}
 @media(max-width:860px){.contact-form{padding:60px 5%;}}
@@ -772,14 +777,22 @@ textarea.f-in{height:110px;resize:vertical;}
 .sticky-btn:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(201,168,76,.5);background:var(--gold-hi);}
 .sticky-btn:active{transform:scale(.97);}
 @media(max-width:560px){.sticky-cta{bottom:18px;right:18px;}.sticky-btn{padding:11px 18px;font-size:8.5px;}}
-/* Active nav link */
-.nav-links a.nav-active{color:var(--cream);}
 /* Label centered variant */
 .label.center{justify-content:center;}
 .label.center::after{content:'';width:20px;height:1px;background:var(--gold);}
 /* Hover-gold links */
 .ci-row a{color:var(--mist);transition:color .2s;}
 .ci-row a:hover{color:var(--gold);}
+.ci-plaquette{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:8.5px;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(201,168,76,.45);
+  border:1px solid rgba(201,168,76,.14);
+  padding:9px 16px;margin-top:8px;
+  transition:color .2s,border-color .2s;
+}
+.ci-plaquette:hover{color:var(--gold);border-color:rgba(201,168,76,.4);}
 .site-copyright a{color:rgba(201,168,76,.28);transition:color .2s;}
 .site-copyright a:hover{color:var(--gold);}
 /* Sticky CTA hidden state */
@@ -789,15 +802,195 @@ textarea.f-in{height:110px;resize:vertical;}
   .rev,.rev-l,.rev-r,.board-reveal{opacity:1!important;transform:none!important;}
   .hero-logo-img,.hero h1,.hero-sub,.hero-cta-wrap{opacity:1!important;animation:none!important;}
 }
+
+/* ══════════════════════════════════════════════════════
+   PREMIUM ANIMATIONS — ÉDITORIAL
+══════════════════════════════════════════════════════ */
+
+/* Page enter */
+body{opacity:0;transition:opacity .65s cubic-bezier(.16,1,.3,1);}
+body.ready{opacity:1;}
+
+/* Grain texture overlay */
+body::before{
+  content:'';position:fixed;inset:0;
+  z-index:9998;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  opacity:.030;
+  mix-blend-mode:screen;
+  background-size:180px 180px;
+}
+
+/* Gold shimmer on key headings */
+h1 em,h2 em,.iata-feat-h em{
+  background:linear-gradient(110deg,#8a6820 0%,#C9A84C 22%,#E8CF70 42%,#FBF0A0 52%,#E8CF70 62%,#C9A84C 78%,#8a6820 100%);
+  background-size:250% 100%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation:gold-flow 4.5s ease-in-out infinite;
+}
+@keyframes gold-flow{
+  0%,100%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+}
+
+/* IATA card shine beam */
+.iata-featured{isolation:isolate;}
+.iata-beam{
+  position:absolute;inset:0;
+  pointer-events:none;z-index:0;
+  overflow:hidden;border-radius:inherit;
+}
+.iata-beam::after{
+  content:'';
+  position:absolute;
+  width:72px;height:120%;top:-10%;
+  background:linear-gradient(to right,transparent,rgba(201,168,76,.28),rgba(248,238,150,.5),rgba(201,168,76,.28),transparent);
+  transform:skewX(-12deg);
+  animation:iata-shine 4s cubic-bezier(.4,0,.6,1) 1.4s infinite;
+}
+@keyframes iata-shine{
+  0%{left:-80px;opacity:0;}
+  8%{opacity:1;}
+  88%{opacity:.85;}
+  100%{left:calc(100% + 80px);opacity:0;}
+}
+
+/* Tarmac letter reveal */
+.tarmac-char{
+  display:inline-block;
+  opacity:0;
+  transform:translateY(6px);
+  transition:opacity .45s ease,transform .45s cubic-bezier(.16,1,.3,1);
+}
+.tarmac-char.on{opacity:1;transform:translateY(0);}
+
+/* Tarmac badges row */
+.tarmac-badges{
+  display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;
+  margin-top:8px;
+}
+.tarmac-badge-pill{
+  font-family:var(--mono);font-size:8px;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);
+  border:1px solid rgba(201,168,76,.3);
+  padding:5px 14px;
+  background:rgba(201,168,76,.05);
+}
+
+/* Hero ambient spotlight */
+.hero-spotlight{
+  position:absolute;inset:0;
+  pointer-events:none;z-index:1;
+  background:radial-gradient(circle 600px at var(--mx,50%) var(--my,60%),rgba(201,168,76,.055),transparent 60%);
+}
+
+
+/* dCard face-glow */
+.dcard{--cx:50%;--cy:50%;}
+.dcard::after{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle 160px at var(--cx) var(--cy),rgba(201,168,76,.09),transparent 70%);
+  opacity:0;transition:opacity .3s;z-index:0;
+}
+.dcard:hover::after{opacity:1;}
+
+/* Ticker dot pulse */
+.tk-dot{animation:dot-glow 2.2s ease-in-out infinite;}
+@keyframes dot-glow{
+  0%,100%{color:rgba(201,168,76,.28);}
+  50%{color:rgba(201,168,76,.9);text-shadow:0 0 10px rgba(201,168,76,.5);}
+}
+
+/* Reduced motion overrides */
+@media(prefers-reduced-motion:reduce){
+  body{opacity:1!important;transition:none!important;}
+  body::before{display:none;}
+  .iata-beam::after,.tk-dot{animation:none!important;}
+  .tarmac-char{opacity:1!important;transform:none!important;transition:none!important;}
+  h1 em,h2 em,.iata-feat-h em{
+    animation:none!important;background:none!important;
+    -webkit-text-fill-color:var(--gold)!important;
+    color:var(--gold)!important;
+  }
+}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "AUREVA Freight",
+  "description": "Spécialiste du transit aérien funéraire international — partenaire B2B exclusif des pompes funèbres vers l'Afrique subsaharienne et le Maghreb. Agréé IATA, opérateur HUM certifié.",
+  "url": "https://aurevafreight.com",
+  "logo": "https://aurevafreight.com/Images/LogoAureva_transparent.png",
+  "image": "https://aurevafreight.com/Images/og-image.jpg",
+  "email": "support@aurevafreight.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "20 rue du Jura",
+    "addressLocality": "Sausheim",
+    "postalCode": "68390",
+    "addressCountry": "FR"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "sameAs": ["https://www.linkedin.com/company/aurevafreight/"],
+  "vatID": "FR14102873577",
+  "taxID": "102873577",
+  "areaServed": [
+    {"@type":"Country","name":"Algérie"},
+    {"@type":"Country","name":"Maroc"},
+    {"@type":"Country","name":"Tunisie"},
+    {"@type":"Country","name":"Sénégal"},
+    {"@type":"Country","name":"Mali"},
+    {"@type":"Country","name":"Côte d'Ivoire"},
+    {"@type":"Country","name":"Cameroun"},
+    {"@type":"Country","name":"Guinée"},
+    {"@type":"Country","name":"Congo"},
+    {"@type":"Country","name":"Burkina Faso"},
+    {"@type":"Country","name":"France"}
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services de transit aérien funéraire",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Booking vol HUM",
+          "description": "Recherche et réservation du premier vol HUM disponible sur tous les aéroports de la région"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Handling & documentation fret funéraire",
+          "description": "AWB, odorologie, X-ray, PAF, coordination handling agent"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Suivi cargo jusqu'au consignee",
+          "description": "Tracking en temps réel, coordination douane destination, notification pompe funèbre partenaire"
+        }
+      }
+    ]
+  }
+}
+</script>
 </head>
 <body>
 
-<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
-  <symbol id="ico-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.72A2 2 0 012 .99h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-  </symbol>
-</svg>
 
 <!-- ══ NAVIGATION ══ -->
 <nav id="nav">
@@ -808,24 +1001,12 @@ textarea.f-in{height:110px;resize:vertical;}
       <img src="Images/IATA-ANUBIS.webp" alt="IATA" class="nav-iata-badge" decoding="async">
     </div>
   </div>
-  <a href="tel:+33XXXXXXXXX" class="nav-phone">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#ico-phone"/></svg>
-    Urgence 7j/7
+  <a href="https://www.linkedin.com/company/aurevafreight/" target="_blank" rel="noopener" class="nav-linkedin" aria-label="AUREVA Freight sur LinkedIn">
+    <svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+      <rect width="28" height="28" rx="5" fill="#0A66C2"/>
+      <path d="M9 11.5H6.5V21H9V11.5ZM7.75 10.25C8.58 10.25 9.25 9.58 9.25 8.75C9.25 7.92 8.58 7.25 7.75 7.25C6.92 7.25 6.25 7.92 6.25 8.75C6.25 9.58 6.92 10.25 7.75 10.25ZM21.5 21H19V16.25C19 15.15 18.98 13.75 17.48 13.75C15.96 13.75 15.72 14.94 15.72 16.17V21H13.22V11.5H15.63V12.76H15.66C16 12.11 16.84 11.42 18.09 11.42C20.63 11.42 21.49 13.07 21.49 15.24L21.5 21Z" fill="white"/>
+    </svg>
   </a>
-  <ul class="nav-links" id="nav-menu">
-    <li><a href="#hero">Accueil</a></li>
-    <li><a href="#histoire">Notre histoire</a></li>
-    <li><a href="#aeroports">Nos aéroports</a></li>
-    <li><a href="#distingue">Nos avantages</a></li>
-    <li class="nav-phone-mobile">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#ico-phone"/></svg>
-      <a href="tel:+33XXXXXXXXX" style="color:var(--cream);">Urgence 7j/7</a>
-    </li>
-    <li><a href="#contact" class="nav-cta">Nous écrire</a></li>
-  </ul>
-  <button class="nav-burger" id="nav-burger" aria-label="Menu" aria-expanded="false" onclick="const m=document.getElementById('nav-menu');m.classList.toggle('open');this.setAttribute('aria-expanded',m.classList.contains('open'));">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
 
 
@@ -891,12 +1072,11 @@ textarea.f-in{height:110px;resize:vertical;}
     </div>
     <h1>
       Le dernier<br>voyage,
-      <em>avec<br>dignité.</em>
+      <em>avec<br>dignité</em>
     </h1>
-    <p class="hero-sub">Spécialiste du transit aérien funéraire international — partenaire B2B exclusif des pompes funèbres vers l'Afrique et le Maghreb.</p>
+    <p class="hero-sub">Spécialiste du transit aérien funéraire international — partenaire exclusif des pompes funèbres.</p>
     <div class="hero-cta-wrap">
-      <a href="#contact" class="btn btn-gold">Nous écrire →</a>
-      <a href="#distingue" class="btn btn-outline">Nos avantages</a>
+      <a href="#contact" class="btn btn-gold">Soumettre un dossier →</a>
     </div>
   </div>
 
@@ -908,12 +1088,18 @@ textarea.f-in{height:110px;resize:vertical;}
   <div class="ticker-track" id="ticker1">
     <div class="tk-item">AUREVA Freight<span class="tk-dot">◆</span></div>
     <div class="tk-item">Agréé IATA — Opérateur HUM certifié<span class="tk-dot">◆</span></div>
+    <div class="tk-item">24 à 48h — délai islamique · premier vol, pas le suivant<span class="tk-dot">◆</span></div>
     <div class="tk-item">Fondateurs musulmans — Rites islamiques vécus<span class="tk-dot">◆</span></div>
     <div class="tk-item">Accès direct aux compagnies aériennes<span class="tk-dot">◆</span></div>
     <div class="tk-item">Premier vol HUM — zéro délai ajouté<span class="tk-dot">◆</span></div>
     <div class="tk-item">Suivi complet jusqu'au consignee<span class="tk-dot">◆</span></div>
     <div class="tk-item">AUREVA Freight<span class="tk-dot">◆</span></div>
     <div class="tk-item">Agréé IATA — Opérateur HUM certifié<span class="tk-dot">◆</span></div>
+    <div class="tk-item">24 à 48h — délai islamique · premier vol, pas le suivant<span class="tk-dot">◆</span></div>
+    <div class="tk-item">Fondateurs musulmans — Rites islamiques vécus<span class="tk-dot">◆</span></div>
+    <div class="tk-item">Accès direct aux compagnies aériennes<span class="tk-dot">◆</span></div>
+    <div class="tk-item">Premier vol HUM — zéro délai ajouté<span class="tk-dot">◆</span></div>
+    <div class="tk-item">Suivi complet jusqu'au consignee<span class="tk-dot">◆</span></div>
     <div class="tk-item">Fondateurs musulmans — Rites islamiques vécus<span class="tk-dot">◆</span></div>
     <div class="tk-item">Accès direct aux compagnies aériennes<span class="tk-dot">◆</span></div>
     <div class="tk-item">Premier vol HUM — zéro délai ajouté<span class="tk-dot">◆</span></div>
@@ -927,16 +1113,34 @@ textarea.f-in{height:110px;resize:vertical;}
   <div class="histoire-inner">
     <div class="histoire-text rev-l">
       <div class="label">Notre histoire</div>
-      <h2>Fondés par<br><em>des musulmans.</em></h2>
-      <p class="histoire-body">AUREVA est né d'un constat concret — les délais de rapatriement pour les familles musulmanes en Europe étaient trop longs. Chaque heure perdue est une violation du rite islamique.</p>
-      <p class="histoire-body">Fondateurs pratiquants, nous avons construit une structure entièrement dédiée à la partie aérienne du rapatriement — pour que les pompes funèbres se concentrent sur les familles, sans gérer la logistique cargo.</p>
-      <blockquote class="histoire-blockquote">On gère le côté aérien.<br>Vous restez aux côtés des familles.</blockquote>
+      <h2>Fondés par<br><em>des musulmans</em></h2>
+      <p class="histoire-body">Le rite islamique impose l'inhumation sous 24 à 48h. Pas une recommandation — une obligation religieuse. Chaque intermédiaire dans la chaîne du cargo aérien, c'est des heures perdues pour une famille qui n'a pas le droit d'attendre.</p>
+      <p class="histoire-body">Fondateurs pratiquants, nous avons construit une structure entièrement dédiée à la partie aérienne du rapatriement. Agréés IATA, on accède directement aux compagnies — zéro intermédiaire, zéro délai ajouté. C'est notre seul métier.</p>
+      <blockquote class="histoire-blockquote">On ne gère pas des marchandises.<br>On gère le dernier respect.</blockquote>
+      <div class="hist-creds">
+        <div class="hist-cred">
+          <span class="hist-cred-n">24h</span>
+          <span class="hist-cred-l">Délai islamique</span>
+        </div>
+        <div class="hist-cred">
+          <span class="hist-cred-n">7j/7</span>
+          <span class="hist-cred-l">Disponibilité urgence</span>
+        </div>
+        <div class="hist-cred">
+          <span class="hist-cred-n">10+</span>
+          <span class="hist-cred-l">Destinations</span>
+        </div>
+      </div>
     </div>
     <div class="histoire-visuals rev-r">
       <div class="histoire-img-main">
         <img src="Images/volafrique.png" alt="Afrique AUREVA" loading="lazy" decoding="async">
       </div>
       <div class="histoire-img-overlay"></div>
+      <div class="histoire-badge">
+        <span class="histoire-badge-title">Délai islamique maximal</span>
+        <span class="histoire-badge-text">24 — 48h</span>
+      </div>
       <img src="Images/Coran.png" alt="Valeurs islamiques" class="histoire-img-coran" loading="lazy" decoding="async">
     </div>
   </div>
@@ -979,7 +1183,7 @@ textarea.f-in{height:110px;resize:vertical;}
         <span class="dcard-num">03</span>
         <div class="dcard-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
         <div class="dcard-h">Premier vol — sans attendre</div>
-        <p class="dcard-p">On scrute tous les départs disponibles sur la région simultanément.<br>Priorité absolue aux délais islamiques — chaque heure compte.</p>
+        <p class="dcard-p">Le rite donne <strong>24 à 48h</strong> — pas une de plus.<br>On scrute tous les départs simultanément pour le premier vol HUM disponible. Pas le suivant.</p>
       </div>
       <div class="dcard rev d3">
         <span class="dcard-num">04</span>
@@ -1012,7 +1216,7 @@ textarea.f-in{height:110px;resize:vertical;}
     </div>
     <div class="aero-split-body rev">
       <div class="label">Nos aéroports de départ</div>
-      <h2>Basés à BSL —<br><em>on active tout.</em></h2>
+      <h2>Basés à BSL —<br><em>on active tout</em></h2>
       <p class="aero-split-lead">Notre base est Bâle-Mulhouse — mais aucun vol n'est imposé. Dès qu'un dossier arrive, on scrute tous les départs de la région simultanément pour le premier vol HUM disponible.</p>
 
       <div class="departure-board rev d1">
@@ -1088,7 +1292,7 @@ textarea.f-in{height:110px;resize:vertical;}
   </div>
   <div class="afrique-content rev">
     <div class="label center" style="margin-bottom:24px;">Destinations</div>
-    <h2>L'Afrique —<br><em>toute l'Afrique.</em></h2>
+    <h2>L'Afrique —<br><em>toute l'Afrique</em></h2>
     <p class="afrique-body-sub">Afrique subsaharienne · Maghreb · et au-delà</p>
     <div class="afrique-labels">
       <div class="afrique-label"><span class="afrique-label-flag" aria-hidden="true">🇩🇿</span><span class="afrique-label-name">Algérie</span></div>
@@ -1207,31 +1411,82 @@ textarea.f-in{height:110px;resize:vertical;}
     <div class="faq-list">
       <div class="faq-item rev">
         <button class="faq-q" aria-expanded="false" onclick="const fi=this.closest('.faq-item');fi.classList.toggle('open');this.setAttribute('aria-expanded',fi.classList.contains('open'));">
+          L'agrément IATA — concrètement, ça change quoi pour votre dossier ?
+          <span class="faq-q-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">L'agrément IATA n'est pas un label marketing. C'est une accréditation exigeante — audits, garanties financières, formation — que peu d'opérateurs funéraires obtiennent. Ce que ça change pour vous : on réserve directement auprès des compagnies aériennes, sans passer par un tiers. Résultat : numéro de vol confirmé dès la réservation, dossier HUM traité en priorité, zéro délai ajouté par un intermédiaire. Chaque heure compte dans ce métier.</div></div>
+      </div>
+      <div class="faq-item rev d1">
+        <button class="faq-q" aria-expanded="false" onclick="const fi=this.closest('.faq-item');fi.classList.toggle('open');this.setAttribute('aria-expanded',fi.classList.contains('open'));">
           Quelle différence entre AUREVA et un transitaire classique ?
           <span class="faq-q-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">Un transitaire classique traite des marchandises. AUREVA est entièrement dédié au fret funéraire HUM — fondateurs pratiquants, nous maîtrisons les contraintes islamiques, les délais religieux et la documentation spécifique. Agréés IATA, on accède directement aux compagnies : aucun intermédiaire, aucun délai ajouté sur votre dossier.</div></div>
       </div>
-      <div class="faq-item rev d1">
+      <div class="faq-item rev d2">
         <button class="faq-q" aria-expanded="false" onclick="const fi=this.closest('.faq-item');fi.classList.toggle('open');this.setAttribute('aria-expanded',fi.classList.contains('open'));">
           Comment démarrer un dossier HUM avec AUREVA ?
           <span class="faq-q-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">Un email à <a href="mailto:support@aurevafreight.com">support@aurevafreight.com</a> suffit. Précisez : nom du défunt, destination souhaitée, pompe funèbre partenaire à destination si connue. On revient vers vous sous 24h avec le vol disponible et les documents à préparer — on gère tout le reste.</div></div>
       </div>
-      <div class="faq-item rev d2">
+      <div class="faq-item rev d3">
+        <button class="faq-q" aria-expanded="false" onclick="const fi=this.closest('.faq-item');fi.classList.toggle('open');this.setAttribute('aria-expanded',fi.classList.contains('open'));">
+          Quel délai entre la prise en charge et le départ en soute ?
+          <span class="faq-q-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">On ne promet pas un délai fixe — parce que ça dépend de la destination, des vols disponibles et des documents fournis. Ce qu'on promet : le <strong>premier vol HUM compatible</strong>, sur tous les aéroports de la région, sans délai ajouté par un intermédiaire. Notre accès direct aux compagnies via l'IATA, c'est exactement ce qui fait la différence quand chaque heure compte.</div></div>
+      </div>
+      <div class="faq-item rev d4">
         <button class="faq-q" aria-expanded="false" onclick="const fi=this.closest('.faq-item');fi.classList.toggle('open');this.setAttribute('aria-expanded',fi.classList.contains('open'));">
           AUREVA coordonne-t-il à la destination ?
           <span class="faq-q-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">Oui — notre rôle ne s'arrête pas à l'embarquement. On coordonne avec la douane à destination et la pompe funèbre partenaire locale. Vous êtes notifiés jusqu'à la remise au consignee. Zéro zone d'ombre sur l'ensemble du transit.</div></div>
       </div>
-      <div class="faq-item rev d3">
+      <div class="faq-item rev d5">
         <button class="faq-q" aria-expanded="false" onclick="const fi=this.closest('.faq-item');fi.classList.toggle('open');this.setAttribute('aria-expanded',fi.classList.contains('open'));">
           Travaillez-vous uniquement vers l'Afrique ?
           <span class="faq-q-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">Notre cœur de métier est l'Afrique subsaharienne et le Maghreb — les destinations les plus demandées par les familles musulmanes en Europe. Mais chaque dossier est étudié : contactez-nous pour toute destination, on évalue avec vous les options disponibles.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ ONBOARDING PARTENAIRE ══ -->
+<section class="onboard sec" id="demarrer">
+  <div class="sec-inner">
+    <div class="onboard-header rev">
+      <div class="label center">Travailler avec nous</div>
+      <h2>Simple à démarrer —<br><em>solide sur la durée</em></h2>
+      <p>Pas de contrat cadre pour commencer. Votre premier dossier suffit à établir la relation.</p>
+    </div>
+    <div class="onboard-steps">
+      <div class="onboard-step rev">
+        <div class="onboard-step-n">01</div>
+        <div class="onboard-step-h">Un premier contact</div>
+        <p class="onboard-step-p">Email ou formulaire ci-dessous. On vous répond sous 24h — destination, disponibilités, ce qu'il faut préparer.</p>
+      </div>
+      <div class="onboard-sep" aria-hidden="true">→</div>
+      <div class="onboard-step rev d1">
+        <div class="onboard-step-n">02</div>
+        <div class="onboard-step-h">Un échange direct</div>
+        <p class="onboard-step-p">On identifie votre zone géographique et vos destinations habituelles. Un appel de dix minutes — pas de réunion inutile.</p>
+      </div>
+      <div class="onboard-sep" aria-hidden="true">→</div>
+      <div class="onboard-step rev d2">
+        <div class="onboard-step-n">03</div>
+        <div class="onboard-step-h">Premier transit ensemble</div>
+        <p class="onboard-step-p">On gère le dossier, on vous tient informé à chaque étape. Vous évaluez. Pas de surprise sur la procédure, pas de surprise sur la facture.</p>
+      </div>
+      <div class="onboard-sep" aria-hidden="true">→</div>
+      <div class="onboard-step rev d3">
+        <div class="onboard-step-n">✓</div>
+        <div class="onboard-step-h">Partenaire établi</div>
+        <p class="onboard-step-p">Un interlocuteur direct à chaque dossier suivant. Vous gérez les familles — on gère le cargo aérien. Pas de prestataire ponctuel : un partenaire.</p>
       </div>
     </div>
   </div>
@@ -1246,9 +1501,13 @@ textarea.f-in{height:110px;resize:vertical;}
   <div class="tarmac-ov"></div>
   <div class="tarmac-body rev">
     <div class="tarmac-rule-top"></div>
-    <blockquote>Le dernier voyage<br>mérite <em>le meilleur soin.</em></blockquote>
+    <blockquote>Le dernier voyage<br><span style="white-space:nowrap">mérite <em>le&nbsp;meilleur&nbsp;soin</em></span></blockquote>
     <div class="tarmac-rule-bot"></div>
-    <span class="tarmac-sub">AUREVA Freight — Agréé IATA — Opérateur HUM</span>
+    <div class="tarmac-badges">
+      <span class="tarmac-badge-pill">Agréé IATA</span>
+      <span class="tarmac-sub">AUREVA Freight</span>
+      <span class="tarmac-badge-pill">Opérateur HUM</span>
+    </div>
   </div>
 </section>
 
@@ -1261,8 +1520,8 @@ textarea.f-in{height:110px;resize:vertical;}
       <img src="Images/IATA-ANUBIS.webp" alt="IATA Agréé" class="ci-iata-logo" decoding="async">
       <span class="ci-iata-label">Agréé IATA · Opérateur HUM</span>
     </div>
-    <blockquote class="ci-quote">"Travaillons ensemble pour chaque dossier."</blockquote>
-    <p class="ci-sub">Vous êtes une pompe funèbre — contactez-nous pour tout dossier HUM vers l'Afrique ou le Maghreb.</p>
+    <blockquote class="ci-quote">Vous avez un dossier.<br>On a le vol.</blockquote>
+    <p class="ci-sub">Un email suffit. On revient sous 24h avec le premier vol disponible et les documents à préparer.</p>
     <div class="ci-detail">
       <div class="ci-row">
         <span class="ci-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
@@ -1276,15 +1535,23 @@ textarea.f-in{height:110px;resize:vertical;}
         <span class="ci-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span>
         <span>BSL · SXB · CDG · LYS · GVA · ZRH et toute la région</span>
       </div>
+      <div class="ci-row">
+        <span class="ci-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+        <a href="https://www.linkedin.com/company/aurevafreight/" target="_blank" rel="noopener">Suivre AUREVA sur LinkedIn</a>
+      </div>
     </div>
     <div class="ci-avail">
       <div class="ci-dot"></div>
       <span>Disponible 7j/7 — Réponse sous 24h</span>
     </div>
+    <a href="plaquette-aureva.html" target="_blank" class="ci-plaquette">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Télécharger notre présentation
+    </a>
   </div>
   <div class="contact-form">
     <div class="label">Travailler ensemble</div>
-    <h2>Nous <em>écrire.</em></h2>
+    <h2>Nous <em>écrire</em></h2>
     <p class="contact-form-sub">Contact direct : <a href="mailto:support@aurevafreight.com">support@aurevafreight.com</a></p>
     <div class="f-form-wrap" id="f-form-wrap">
       <form id="contact-form" action="https://formspree.io/f/mvzlovrr" method="POST">
@@ -1324,8 +1591,11 @@ textarea.f-in{height:110px;resize:vertical;}
 </section>
 
 <div class="site-copyright">
-  <span>© 2026 AUREVA Freight — Tous droits réservés</span>
-  <a href="mentions-legales.html">Mentions légales</a>
+  <span>© 2026 AUREVA Freight SAS — SIREN 102 873 577 — Tous droits réservés</span>
+  <div style="display:flex;align-items:center;gap:24px;">
+    <a href="https://www.linkedin.com/company/aurevafreight/" target="_blank" rel="noopener" aria-label="LinkedIn AUREVA Freight" style="display:flex;align-items:center;gap:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+    <a href="mentions-legales.html">Mentions légales</a>
+  </div>
 </div>
 
 <div class="sticky-cta">
@@ -1356,30 +1626,6 @@ window.addEventListener('scroll',()=>{
   }
 },{passive:true});
 
-// Close mobile nav on outside click
-document.addEventListener('click', e => {
-  const menu = document.getElementById('nav-menu');
-  if(menu.classList.contains('open') && !nav.contains(e.target))
-    menu.classList.remove('open');
-});
-
-// Close mobile nav on link click
-document.querySelectorAll('#nav-menu a').forEach(a => {
-  a.addEventListener('click', () => document.getElementById('nav-menu').classList.remove('open'));
-});
-
-// Active nav section
-const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-const secObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if(e.isIntersecting)
-      navLinks.forEach(a => a.classList.toggle('nav-active', a.getAttribute('href') === '#'+e.target.id));
-  });
-},{threshold:.25,rootMargin:'-10% 0px -60% 0px'});
-['hero','histoire','aeroports','distingue','faq','contact'].forEach(id => {
-  const el = document.getElementById(id);
-  if(el) secObs.observe(el);
-});
 
 // Hide sticky CTA when contact visible
 const stickyCta = document.querySelector('.sticky-cta');
@@ -1388,6 +1634,97 @@ const ctaObs = new IntersectionObserver(([e]) => {
 },{threshold:.1});
 const cSection = document.getElementById('contact');
 if(cSection) ctaObs.observe(cSection);
+
+// ── PREMIUM ANIMATIONS ──────────────────────────────────────────
+
+// Page enter
+document.body.classList.add('ready');
+
+
+// IATA card shine beam
+(function(){
+  const card = document.querySelector('.iata-featured');
+  if(!card) return;
+  const beam = document.createElement('span');
+  beam.className = 'iata-beam';
+  card.insertBefore(beam, card.firstChild);
+})();
+
+// Hero ambient spotlight — lazy follows cursor
+(function(){
+  const hero = document.getElementById('hero');
+  if(!hero) return;
+  const spot = document.createElement('div');
+  spot.className = 'hero-spotlight';
+  hero.insertBefore(spot, hero.firstChild);
+  let tx=50,ty=60,mx=50,my=60,raf=null;
+  hero.addEventListener('mousemove',e=>{
+    const r=hero.getBoundingClientRect();
+    tx=(e.clientX-r.left)/r.width*100;
+    ty=(e.clientY-r.top)/r.height*100;
+    if(!raf) raf=requestAnimationFrame(function tick(){
+      mx+=(tx-mx)*.08; my+=(ty-my)*.08;
+      spot.style.setProperty('--mx',mx.toFixed(2)+'%');
+      spot.style.setProperty('--my',my.toFixed(2)+'%');
+      raf=(Math.abs(tx-mx)>.05||Math.abs(ty-my)>.05)?requestAnimationFrame(tick):null;
+    });
+  },{passive:true});
+})();
+
+// dCard face-glow mouse tracking
+document.querySelectorAll('.dcard').forEach(c=>{
+  c.addEventListener('mousemove',e=>{
+    const r=c.getBoundingClientRect();
+    c.style.setProperty('--cx',((e.clientX-r.left)/r.width*100)+'%');
+    c.style.setProperty('--cy',((e.clientY-r.top)/r.height*100)+'%');
+  },{passive:true});
+});
+
+// Tarmac blockquote — letter-by-letter reveal
+(function(){
+  const q=document.querySelector('.tarmac-body blockquote');
+  if(!q) return;
+  let ci=0;
+  function wrap(node){
+    if(node.nodeType===3){
+      const frag=document.createDocumentFragment();
+      for(const ch of node.textContent){
+        if(ch===' '||ch==='\n'){frag.appendChild(document.createTextNode(ch));}
+        else{
+          const s=document.createElement('span');
+          s.className='tarmac-char';
+          s.style.transitionDelay=(ci*28)+'ms';
+          s.textContent=ch;
+          frag.appendChild(s);ci++;
+        }
+      }
+      node.parentNode.replaceChild(frag,node);
+    }else if(node.nodeType===1&&node.tagName!=='BR'){
+      [...node.childNodes].forEach(wrap);
+    }
+  }
+  [...q.childNodes].forEach(wrap);
+  const tObs=new IntersectionObserver(([e])=>{
+    if(e.isIntersecting){
+      q.querySelectorAll('.tarmac-char').forEach(c=>c.classList.add('on'));
+      tObs.disconnect();
+    }
+  },{threshold:.25});
+  tObs.observe(q);
+})();
+
+// Magnetic hover on gold CTAs
+document.querySelectorAll('.btn-gold,.sticky-btn').forEach(btn=>{
+  btn.addEventListener('mousemove',e=>{
+    const r=btn.getBoundingClientRect();
+    const x=((e.clientX-r.left)/r.width-.5)*10;
+    const y=((e.clientY-r.top)/r.height-.5)*6;
+    btn.style.transform=`translate(${x}px,${y}px) translateY(-2px)`;
+  },{passive:true});
+  btn.addEventListener('mouseleave',()=>{btn.style.transform='';});
+});
+
+// ── END PREMIUM ANIMATIONS ───────────────────────────────────────
 
 // Contact form — Formspree AJAX
 const contactForm = document.getElementById('contact-form');
