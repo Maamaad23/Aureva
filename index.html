@@ -910,6 +910,57 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
   50%{color:rgba(201,168,76,.9);text-shadow:0 0 10px rgba(201,168,76,.5);}
 }
 
+/* ══ HERO WORD STAGGER ══ */
+.hero-w{
+  opacity:0;transform:translateY(16px);display:inline-block;
+  transition:opacity .72s cubic-bezier(.16,1,.3,1),transform .72s cubic-bezier(.16,1,.3,1);
+  transition-delay:var(--d,0s);
+}
+.hero-w.on{opacity:1;transform:translateY(0);}
+
+/* ══ ORNEMENT ISLAMIQUE ══ */
+.islamic-sep{
+  display:flex;align-items:center;justify-content:center;gap:18px;
+  margin:28px 0 24px;
+  opacity:0;transition:opacity 1.4s ease;
+}
+.islamic-sep.on{opacity:1;}
+.islamic-sep-line{flex:1;height:1px;background:linear-gradient(to right,transparent,rgba(201,168,76,.22),transparent);}
+.islamic-star-svg{flex-shrink:0;animation:star-turn 50s linear infinite;}
+@keyframes star-turn{to{transform:rotate(360deg);}}
+
+/* ══ BOARD ROWS STAGGER ══ */
+.board-reveal{opacity:0;transform:translateX(-6px);transition:opacity .38s cubic-bezier(.16,1,.3,1),transform .38s cubic-bezier(.16,1,.3,1);}
+.board-reveal.on{opacity:1;transform:translateX(0);}
+.board-rows .board-reveal:nth-child(1).on{transition-delay:.00s;}
+.board-rows .board-reveal:nth-child(2).on{transition-delay:.07s;}
+.board-rows .board-reveal:nth-child(3).on{transition-delay:.14s;}
+.board-rows .board-reveal:nth-child(4).on{transition-delay:.21s;}
+.board-rows .board-reveal:nth-child(5).on{transition-delay:.28s;}
+.board-rows .board-reveal:nth-child(6).on{transition-delay:.35s;}
+.board-rows .board-reveal:nth-child(7).on{transition-delay:.42s;}
+.board-rows .board-reveal:nth-child(8).on{transition-delay:.49s;}
+
+/* ══ URGENCY — 24 à 48h ══ */
+.urgency-txt{position:relative;display:inline;}
+.urgency-txt::after{
+  content:'';
+  position:absolute;bottom:-2px;left:0;
+  width:0;height:1px;
+  background:var(--gold);
+  transition:width 1.5s cubic-bezier(.16,1,.3,1) .3s;
+}
+.dcard.on .urgency-txt::after{width:100%;}
+
+/* ══ HIST-CRED FLASH ══ */
+.hist-cred-n{display:block;}
+@keyframes cred-flash{
+  0%{color:var(--cream);opacity:.4;}
+  60%{color:var(--gold);opacity:1;text-shadow:0 0 18px rgba(201,168,76,.4);}
+  100%{color:var(--cream);opacity:1;text-shadow:none;}
+}
+.hist-cred-n.flashed{animation:cred-flash .9s cubic-bezier(.16,1,.3,1) forwards;}
+
 /* Reduced motion overrides */
 @media(prefers-reduced-motion:reduce){
   body{opacity:1!important;transition:none!important;}
@@ -917,6 +968,11 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
   .tk-dot{animation:none!important;}
   .tarmac-char{opacity:1!important;transform:none!important;transition:none!important;}
   h1 em,h2 em,.iata-feat-h em{color:var(--gold)!important;}
+  .hero-w{opacity:1!important;transform:none!important;transition:none!important;}
+  .islamic-star-svg{animation:none!important;}
+  .board-reveal{opacity:1!important;transform:none!important;transition:none!important;}
+  .urgency-txt::after{width:100%!important;transition:none!important;}
+  .islamic-sep{opacity:1!important;transition:none!important;}
 }
 </style>
 <script type="application/ld+json">
@@ -1073,8 +1129,7 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
       </div>
     </div>
     <h1>
-      Le dernier<br>voyage,
-      <em>avec<br>dignité</em>
+      <span class="hero-w" style="--d:.08s">Le</span> <span class="hero-w" style="--d:.20s">dernier</span><br><span class="hero-w" style="--d:.34s">voyage,</span><em><br><span class="hero-w" style="--d:.50s">avec</span><br><span class="hero-w" style="--d:.67s">dignité</span></em>
     </h1>
     <p class="hero-sub">Spécialiste du transit aérien funéraire international — partenaire exclusif des pompes funèbres</p>
     <div class="hero-cta-wrap">
@@ -1115,6 +1170,14 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
       <p class="histoire-body">Le rite islamique impose l'inhumation sous 24 à 48h. Pas une recommandation — une obligation religieuse. Chaque intermédiaire dans la chaîne du cargo aérien, c'est des heures perdues pour une famille qui n'a pas le droit d'attendre.</p>
       <p class="histoire-body">Fondateurs pratiquants, nous avons construit une structure entièrement dédiée à la partie aérienne du rapatriement. Agréés IATA, on accède directement aux compagnies — sans couche supplémentaire, sans délai ajouté. C'est notre seul métier.</p>
       <blockquote class="histoire-blockquote">On ne gère pas des marchandises.<br>On gère le dernier respect.</blockquote>
+      <div class="islamic-sep rev" aria-hidden="true">
+        <div class="islamic-sep-line"></div>
+        <svg class="islamic-star-svg" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="6" width="14" height="14" stroke="rgba(201,168,76,0.5)" stroke-width="0.7"/>
+          <rect x="6" y="6" width="14" height="14" stroke="rgba(201,168,76,0.5)" stroke-width="0.7" transform="rotate(45 13 13)"/>
+        </svg>
+        <div class="islamic-sep-line"></div>
+      </div>
       <div class="hist-creds">
         <div class="hist-cred">
           <span class="hist-cred-n">IATA</span>
@@ -1177,7 +1240,7 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
         <span class="dcard-num">03</span>
         <div class="dcard-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
         <div class="dcard-h">Premier vol — sans attendre</div>
-        <p class="dcard-p">Le rite donne <strong>24 à 48h</strong> — pas une de plus.<br>On mobilise chaque compagnie, chaque aéroport disponible. Le premier vol. Pas le suivant.</p>
+        <p class="dcard-p">Le rite donne <strong><span class="urgency-txt">24 à 48h</span></strong> — pas une de plus.<br>On mobilise chaque compagnie, chaque aéroport disponible. Le premier vol. Pas le suivant.</p>
       </div>
       <div class="dcard rev d3">
         <span class="dcard-num">04</span>
@@ -1501,6 +1564,16 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
 
 
 <!-- ══ CONTACT ══ -->
+<div class="sec" style="padding-top:0;padding-bottom:0;display:flex;align-items:center;justify-content:center;background:var(--navy);" aria-hidden="true">
+  <div class="islamic-sep rev" style="max-width:480px;width:100%;margin:36px 0;">
+    <div class="islamic-sep-line"></div>
+    <svg class="islamic-star-svg" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="6" y="6" width="14" height="14" stroke="rgba(201,168,76,0.5)" stroke-width="0.7"/>
+      <rect x="6" y="6" width="14" height="14" stroke="rgba(201,168,76,0.5)" stroke-width="0.7" transform="rotate(45 13 13)"/>
+    </svg>
+    <div class="islamic-sep-line"></div>
+  </div>
+</div>
 <section class="contact" id="contact">
   <div class="contact-info">
     <div class="ci-brand-row">
@@ -1508,7 +1581,7 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
       <div class="ci-logo-sep"></div>
       <img src="Images/IATA-ANUBIS.webp" alt="IATA Agréé" class="ci-iata-logo" decoding="async">
     </div>
-    <span class="ci-iata-label">Agréé IATA · Opérateur HUM</span>
+    <p class="ci-iata-label">Agréé IATA · Opérateur HUM</p>
     <blockquote class="ci-quote">Vous avez un dossier.<br>On a le vol.</blockquote>
     <p class="ci-sub">Un email suffit. On revient vers vous avec le premier vol disponible et les documents à préparer.</p>
     <div class="ci-detail">
@@ -1659,8 +1732,43 @@ if(cSection) ctaObs.observe(cSection);
 
 // ── PREMIUM ANIMATIONS ──────────────────────────────────────────
 
-// Page enter
+// Page enter + hero word stagger
 document.body.classList.add('ready');
+document.querySelectorAll('.hero-w').forEach(w => w.classList.add('on'));
+
+// Islamic sep observer
+document.querySelectorAll('.islamic-sep').forEach(el => obs.observe(el));
+
+// Hist-creds: counter on "10+" + gold flash on all numbers
+(function(){
+  const creds = document.querySelector('.hist-creds');
+  if(!creds) return;
+  let fired = false;
+  const credObs = new IntersectionObserver(([e]) => {
+    if(!e.isIntersecting || fired) return;
+    fired = true;
+    credObs.disconnect();
+    // Flash all labels
+    creds.querySelectorAll('.hist-cred-n').forEach((el, i) => {
+      setTimeout(() => {
+        if(el.textContent.trim() === '10+'){
+          // Count up animation
+          let n = 0;
+          const tick = () => {
+            n++;
+            el.textContent = n < 10 ? n + '' : '10+';
+            if(n < 10) setTimeout(tick, 100);
+            else el.classList.add('flashed');
+          };
+          setTimeout(tick, 80);
+        } else {
+          el.classList.add('flashed');
+        }
+      }, i * 180);
+    });
+  }, {threshold:.5});
+  credObs.observe(creds);
+})();
 
 
 
