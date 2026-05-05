@@ -105,6 +105,15 @@ em{font-style:italic;color:var(--gold);}
 }
 #nav.scrolled{border-color:rgba(201,168,76,.14);}
 .nav-brand{display:flex;align-items:center;gap:14px;}
+.nav-links{display:flex;align-items:center;gap:32px;}
+.nav-link{
+  font-family:var(--mono);font-size:9px;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(245,241,232,.55);
+  transition:color .2s;
+}
+.nav-link:hover{color:var(--gold);}
+@media(max-width:900px){.nav-links{display:none;}}
 .nav-logo{
   height:52px;
   width:auto;
@@ -934,6 +943,12 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
       <img src="Images/IATA-ANUBIS.webp" alt="IATA" class="nav-iata-badge" decoding="async">
     </div>
   </div>
+  <nav class="nav-links" aria-label="Navigation principale">
+    <a href="#histoire" class="nav-link">Notre histoire</a>
+    <a href="#aeroports" class="nav-link">Aéroports</a>
+    <a href="#faq" class="nav-link">FAQ</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
   <a href="https://www.linkedin.com/company/aurevafreight/" target="_blank" rel="noopener" class="nav-linkedin" aria-label="AUREVA Freight sur LinkedIn">
     <svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
       <rect width="28" height="28" rx="5" fill="#0A66C2"/>
@@ -1012,22 +1027,18 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
   <div class="ticker-track" id="ticker1">
     <div class="tk-item">AUREVA Freight<span class="tk-dot">◆</span></div>
     <div class="tk-item">Agréé IATA — Opérateur HUM certifié<span class="tk-dot">◆</span></div>
-    <div class="tk-item">24 à 48h — délai islamique · premier vol, pas le suivant<span class="tk-dot">◆</span></div>
     <div class="tk-item">Fondateurs musulmans — Rites islamiques vécus<span class="tk-dot">◆</span></div>
     <div class="tk-item">Accès direct aux compagnies aériennes<span class="tk-dot">◆</span></div>
-    <div class="tk-item">Premier vol HUM — zéro délai ajouté<span class="tk-dot">◆</span></div>
+    <div class="tk-item">Premier vol — zéro délai ajouté<span class="tk-dot">◆</span></div>
     <div class="tk-item">Suivi complet jusqu'au consignee<span class="tk-dot">◆</span></div>
+    <div class="tk-item">BSL · CDG · LYS · MRS · GVA · ZRH<span class="tk-dot">◆</span></div>
     <div class="tk-item">AUREVA Freight<span class="tk-dot">◆</span></div>
     <div class="tk-item">Agréé IATA — Opérateur HUM certifié<span class="tk-dot">◆</span></div>
-    <div class="tk-item">24 à 48h — délai islamique · premier vol, pas le suivant<span class="tk-dot">◆</span></div>
     <div class="tk-item">Fondateurs musulmans — Rites islamiques vécus<span class="tk-dot">◆</span></div>
     <div class="tk-item">Accès direct aux compagnies aériennes<span class="tk-dot">◆</span></div>
-    <div class="tk-item">Premier vol HUM — zéro délai ajouté<span class="tk-dot">◆</span></div>
+    <div class="tk-item">Premier vol — zéro délai ajouté<span class="tk-dot">◆</span></div>
     <div class="tk-item">Suivi complet jusqu'au consignee<span class="tk-dot">◆</span></div>
-    <div class="tk-item">Fondateurs musulmans — Rites islamiques vécus<span class="tk-dot">◆</span></div>
-    <div class="tk-item">Accès direct aux compagnies aériennes<span class="tk-dot">◆</span></div>
-    <div class="tk-item">Premier vol HUM — zéro délai ajouté<span class="tk-dot">◆</span></div>
-    <div class="tk-item">Suivi complet jusqu'au consignee<span class="tk-dot">◆</span></div>
+    <div class="tk-item">BSL · CDG · LYS · MRS · GVA · ZRH<span class="tk-dot">◆</span></div>
   </div>
 </div>
 
@@ -1039,7 +1050,7 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
       <div class="label">Notre histoire</div>
       <h2>Fondés par<br><em>des musulmans</em></h2>
       <p class="histoire-body">Le rite islamique impose l'inhumation sous 24 à 48h. Pas une recommandation — une obligation religieuse. Chaque intermédiaire dans la chaîne du cargo aérien, c'est des heures perdues pour une famille qui n'a pas le droit d'attendre.</p>
-      <p class="histoire-body">Fondateurs pratiquants, nous avons construit une structure entièrement dédiée à la partie aérienne du rapatriement. Agréés IATA, on accède directement aux compagnies — zéro intermédiaire, zéro délai ajouté. C'est notre seul métier.</p>
+      <p class="histoire-body">Fondateurs pratiquants, nous avons construit une structure entièrement dédiée à la partie aérienne du rapatriement. Agréés IATA, on accède directement aux compagnies — sans couche supplémentaire, sans délai ajouté. C'est notre seul métier.</p>
       <blockquote class="histoire-blockquote">On ne gère pas des marchandises.<br>On gère le dernier respect.</blockquote>
       <div class="hist-creds">
         <div class="hist-cred">
@@ -1061,10 +1072,6 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
         <img src="Images/volafrique.png" alt="Afrique AUREVA" loading="lazy" decoding="async">
       </div>
       <div class="histoire-img-overlay"></div>
-      <div class="histoire-badge">
-        <span class="histoire-badge-title">Opérateur HUM certifié</span>
-        <span class="histoire-badge-text">Agréé IATA</span>
-      </div>
       <img src="Images/Coran.png" alt="Valeurs islamiques" class="histoire-img-coran" loading="lazy" decoding="async">
     </div>
   </div>
@@ -1107,7 +1114,7 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
         <span class="dcard-num">03</span>
         <div class="dcard-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
         <div class="dcard-h">Premier vol — sans attendre</div>
-        <p class="dcard-p">Le rite donne <strong>24 à 48h</strong> — pas une de plus.<br>On scrute tous les départs simultanément pour le premier vol HUM disponible. Pas le suivant.</p>
+        <p class="dcard-p">Le rite donne <strong>24 à 48h</strong> — pas une de plus.<br>On mobilise chaque compagnie, chaque aéroport disponible. Le premier vol. Pas le suivant.</p>
       </div>
       <div class="dcard rev d3">
         <span class="dcard-num">04</span>
@@ -1141,7 +1148,7 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
     <div class="aero-split-body rev">
       <div class="label">Nos aéroports de départ</div>
       <h2>Basés à BSL —<br><em>on active tout</em></h2>
-      <p class="aero-split-lead">Notre base est Bâle-Mulhouse — mais aucun vol n'est imposé. Dès qu'un dossier arrive, on scrute tous les départs de la région simultanément pour le premier vol HUM disponible.</p>
+      <p class="aero-split-lead">Notre base est Bâle-Mulhouse — mais aucun vol n'est imposé. Dès qu'un dossier arrive, on active tous les aéroports de la région pour le premier départ compatible.</p>
 
       <div class="departure-board rev d1">
         <div class="board-header">
@@ -1241,10 +1248,6 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
     <div class="label center">Déroulement côté cargo</div>
     <h2>De la documentation<br><em>au départ en soute</em></h2>
     <p>Ce que nous faisons concrètement sur le terrain</p>
-    <div class="aero-p2-iata rev">
-      <img src="Images/IATA-ANUBIS.webp" alt="IATA HUM" decoding="async">
-      <span>Dossiers HUM traités en priorité — numéro de vol confirmé dès la réservation</span>
-    </div>
   </div>
   <div class="aero-p2-cols">
     <div class="aero-col rev">
@@ -1428,9 +1431,7 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
     <blockquote>Le dernier voyage<br><span style="white-space:nowrap">mérite <em>le&nbsp;meilleur&nbsp;soin</em></span></blockquote>
     <div class="tarmac-rule-bot"></div>
     <div class="tarmac-badges">
-      <span class="tarmac-badge-pill">Agréé IATA</span>
       <span class="tarmac-sub">AUREVA Freight</span>
-      <span class="tarmac-badge-pill">Opérateur HUM</span>
     </div>
   </div>
 </section>
