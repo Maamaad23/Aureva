@@ -27,7 +27,7 @@ html{scroll-behavior:smooth;}
 body{
   font-family:'Karla',sans-serif;font-weight:300;
   font-size:16px;line-height:1.75;
-  background:#050D16;color:#F5F1E8;
+  background:#0D1B2A;color:#F5F1E8;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
   overflow-x:hidden;
@@ -56,8 +56,8 @@ p{line-height:1.85;font-weight:300;}
 em{font-style:italic;color:var(--gold);}
 
 .label{
-  font-family:var(--mono);font-size:8.5px;font-weight:500;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--gold);
+  font-family:var(--mono);font-size:10px;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--gold);
   display:inline-flex;align-items:center;gap:10px;margin-bottom:20px;
 }
 .label::before{content:'';width:20px;height:1px;background:var(--gold);}
@@ -80,14 +80,14 @@ em{font-style:italic;color:var(--gold);}
 /* BUTTONS */
 .btn{
   display:inline-flex;align-items:center;gap:10px;
-  font-family:var(--mono);font-size:9px;font-weight:500;
-  letter-spacing:.2em;text-transform:uppercase;
+  font-family:var(--mono);font-size:10px;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;
   padding:15px 36px;
   transition:transform 160ms ease-out,box-shadow 200ms ease-out,background 200ms ease,color 200ms ease;
 }
 .btn:active{transform:scale(.97) !important;}
 .btn-gold{background:var(--gold);color:var(--void);}
-.btn-gold:hover{background:var(--gold-hi);box-shadow:0 8px 32px rgba(201,168,76,.3);transform:translateY(-2px);}
+.btn-gold:hover{background:var(--gold-hi);transform:translateY(-2px);}
 .btn-outline{background:transparent;color:var(--cream);border:1px solid var(--ghost);}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
 :focus-visible{outline:1px solid var(--gold);outline-offset:4px;}
@@ -108,18 +108,17 @@ em{font-style:italic;color:var(--gold);}
 .nav-logo{
   height:52px;
   width:auto;
-  filter: drop-shadow(0 2px 8px rgba(201,168,76,0.25));
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 .nav-logo:hover{
-  filter: drop-shadow(0 4px 16px rgba(201,168,76,0.45));
+  filter: drop-shadow(0 3px 12px rgba(201,168,76,0.35));
   transform: scale(1.04);
 }
 .nav-sep{width:1px;height:22px;background:var(--ghost);}
 .nav-iata-badge{height:30px;width:auto;opacity:.9;transition:opacity .2s;}
 #nav:hover .nav-iata-badge{opacity:1;}
 .nav-brand-info{display:flex;flex-direction:column;justify-content:center;}
-.nav-brand-sub{font-family:var(--mono);font-size:7px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--mist);}
+.nav-brand-sub{font-family:var(--mono);font-size:9px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--mist);}
 .nav-linkedin{
   display:flex;align-items:center;
   opacity:.88;
@@ -182,27 +181,6 @@ em{font-style:italic;color:var(--gold);}
 }
 .fp-tick{stroke:rgba(201,168,76,.3);stroke-width:1;}
 
-/* ── HERO LOGO ── */
-.hero-logo-wrap{
-  display:flex;
-  justify-content:flex-start;
-  margin-bottom:28px;
-}
-.hero-logo-img{
-  width:clamp(120px,14vw,196px);
-  height:auto;
-  opacity:0;
-  filter:
-    drop-shadow(0 0 40px rgba(201,168,76,0.35))
-    drop-shadow(0 8px 32px rgba(13,27,42,0.6))
-    brightness(1.15);
-  animation:logoReveal 1.4s cubic-bezier(0.16,1,0.3,1) 0.2s forwards;
-}
-@keyframes logoReveal{
-  0%  {opacity:0;transform:scale(0.88) translateY(12px);}
-  60% {opacity:1;transform:scale(1.02) translateY(-2px);}
-  100%{opacity:1;transform:scale(1)    translateY(0);}
-}
 
 /* Hero body */
 .hero-body{
@@ -212,8 +190,8 @@ em{font-style:italic;color:var(--gold);}
 }
 @keyframes hIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
 .hero-kicker{
-  font-family:var(--mono);font-size:8.5px;font-weight:500;
-  letter-spacing:.22em;text-transform:uppercase;color:var(--gold);
+  font-family:var(--mono);font-size:10px;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--gold);
   display:flex;align-items:center;gap:12px;
   margin-bottom:24px;
   animation:hIn .7s cubic-bezier(.23,1,.32,1) .1s both;
@@ -305,7 +283,7 @@ em{font-style:italic;color:var(--gold);}
 }
 .hist-cred:last-child{border-right:none;margin-right:0;}
 .hist-cred-n{font-family:'Fraunces',serif;font-size:34px;font-weight:200;font-style:italic;color:var(--gold);line-height:1;}
-.hist-cred-l{font-family:var(--mono);font-size:7.5px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--mist);}
+.hist-cred-l{font-family:var(--mono);font-size:9px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--mist);}
 .histoire-visuals{position:relative;background:var(--void);overflow:hidden;min-height:520px;}
 .histoire-img-main{position:absolute;inset:0;}
 .histoire-img-main img{width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.62;transition:transform 8s ease;}
@@ -329,7 +307,7 @@ em{font-style:italic;color:var(--gold);}
   border:1px solid rgba(201,168,76,.22);
   backdrop-filter:blur(12px);padding:16px 22px;
 }
-.histoire-badge-title{font-family:var(--mono);font-size:7.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:8px;}
+.histoire-badge-title{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:8px;}
 .histoire-badge-text{font-family:'Fraunces',serif;font-size:18px;font-weight:200;font-style:italic;color:var(--cream);line-height:1.3;}
 @media(max-width:900px){.histoire-visuals{min-height:380px;}}
 
@@ -337,7 +315,7 @@ em{font-style:italic;color:var(--gold);}
 /* ══ CE QUI NOUS DISTINGUE ══ */
 .distingue{
   position:relative;overflow:hidden;
-  background:var(--void);
+  background:var(--navy);
 }
 .distingue-header{text-align:center;max-width:600px;margin:0 auto 60px;position:relative;z-index:1;}
 .distingue-header h2{color:var(--cream);font-size:clamp(44px,6vw,86px);margin-bottom:14px;letter-spacing:-.025em;}
@@ -358,7 +336,7 @@ em{font-style:italic;color:var(--gold);}
 .iata-feat-logo{flex-shrink:0;height:72px;width:auto;opacity:.95;}
 .iata-feat-sep{width:1px;height:50px;background:rgba(201,168,76,.15);flex-shrink:0;}
 @media(max-width:768px){.iata-feat-sep{display:none;}}
-.iata-feat-tag{font-family:var(--mono);font-size:8px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:10px;}
+.iata-feat-tag{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:10px;}
 .iata-feat-h{font-family:'Fraunces',serif;font-size:clamp(22px,2.5vw,34px);font-weight:200;font-style:italic;color:var(--cream);line-height:1.15;margin-bottom:12px;}
 .iata-feat-h em{color:var(--gold);}
 .iata-feat-p{font-size:14px;color:var(--mist);line-height:1.85;max-width:540px;}
@@ -429,7 +407,7 @@ em{font-style:italic;color:var(--gold);}
   background:rgba(201,168,76,.07);
   border-bottom:1px solid rgba(201,168,76,.1);
 }
-.board-th{font-family:var(--mono);font-size:7px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,168,76,.45);}
+.board-th{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.45);}
 .board-row{
   display:grid;grid-template-columns:72px 1fr 84px;
   padding:10px 18px;
@@ -444,7 +422,7 @@ em{font-style:italic;color:var(--gold);}
 .board-row.home .board-code{font-weight:400;}
 .board-name{font-family:'Karla',sans-serif;font-size:13px;font-weight:300;color:var(--mist);padding-left:14px;}
 .board-row.home .board-name{color:var(--cream);}
-.board-status{font-family:var(--mono);font-size:7.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-align:right;}
+.board-status{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-align:right;}
 .board-status.active{color:rgba(100,210,140,.8);}
 .board-status.ready{color:rgba(201,168,76,.65);}
 .board-reveal{opacity:0;transform:translateY(-6px);transition:opacity .35s ease-out,transform .35s ease-out;}
@@ -524,7 +502,7 @@ em{font-style:italic;color:var(--gold);}
   font-family:'Fraunces',serif;font-size:100px;font-weight:200;font-style:italic;
   color:rgba(201,168,76,.04);line-height:1;user-select:none;pointer-events:none;
 }
-.aero-col-step{font-family:var(--mono);font-size:7.5px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block;}
+.aero-col-step{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block;}
 .aero-col-h{font-family:'Fraunces',serif;font-size:clamp(20px,2vw,26px);font-weight:200;font-style:italic;color:var(--cream);line-height:1.1;margin-bottom:12px;}
 .aero-col-h em{color:var(--gold);}
 .aero-col-p{font-size:13.5px;color:var(--mist);line-height:1.9;}
@@ -578,15 +556,16 @@ em{font-style:italic;color:var(--gold);}
 .faq-item.open .faq-q-icon{background:var(--gold);border-color:var(--gold);transform:rotate(45deg);}
 .faq-q-icon svg{width:11px;height:11px;stroke:var(--cream);fill:none;stroke-width:2;stroke-linecap:round;}
 .faq-item.open .faq-q-icon svg{stroke:var(--void);}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.23,1,.32,1);}
-.faq-item.open .faq-a{max-height:400px;}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.23,1,.32,1);}
+.faq-item.open .faq-a{grid-template-rows:1fr;}
+.faq-a-inner{min-height:0;overflow:hidden;}
 .faq-a-inner{padding-bottom:28px;font-size:14.5px;color:var(--mist);line-height:1.9;max-width:680px;}
 .faq-a-inner a{color:var(--gold);transition:opacity .2s;}
 .faq-a-inner a:hover{opacity:.75;}
 
 
 /* ══ ONBOARDING PARTENAIRE ══ */
-.onboard{background:var(--void);border-top:1px solid rgba(201,168,76,.07);}
+.onboard{background:var(--navy);border-top:1px solid rgba(201,168,76,.07);}
 .onboard-header{text-align:center;max-width:560px;margin:0 auto 60px;}
 .onboard-header h2{color:var(--cream);font-size:clamp(38px,5vw,72px);margin-bottom:12px;letter-spacing:-.025em;}
 .onboard-header p{font-size:14px;color:var(--mist);line-height:1.75;}
@@ -673,13 +652,13 @@ em{font-style:italic;color:var(--gold);}
 @media(max-width:1100px){.contact-info{padding:72px 44px;}}
 @media(max-width:860px){.contact-info{padding:60px 5%;border-right:none;border-bottom:1px solid rgba(201,168,76,.07);gap:28px;}}
 @media(max-width:480px){.contact-info{padding:52px 5%;}}
-.contact-logo{height:26px;width:auto;filter:drop-shadow(0 2px 8px rgba(201,168,76,0.25));opacity:.72;display:block;}
+.contact-logo{height:26px;width:auto;opacity:.72;display:block;}
 .ci-iata-row{display:flex;align-items:center;gap:12px;margin-bottom:28px;}
 .ci-iata-logo{height:48px;width:auto;opacity:.95;}
 .ci-iata-label{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);}
 .aero-p2-iata{display:flex;align-items:center;gap:16px;margin-top:28px;padding:16px 20px;border:1px solid rgba(201,168,76,.15);border-left:2px solid rgba(201,168,76,.45);}
 .aero-p2-iata img{height:40px;width:auto;opacity:.95;flex-shrink:0;}
-.aero-p2-iata span{font-family:var(--mono);font-size:10px;font-weight:400;letter-spacing:.06em;color:var(--mist);line-height:1.6;}
+.aero-p2-iata span{font-family:var(--mono);font-size:10px;font-weight:400;letter-spacing:.04em;color:var(--mist);line-height:1.6;}
 .ci-quote{font-family:'Fraunces',serif;font-size:clamp(24px,3vw,40px);font-weight:200;font-style:italic;color:var(--cream);line-height:1.25;border-left:2px solid var(--gold);padding-left:24px;}
 .ci-sub{font-size:14px;color:var(--mist);line-height:1.8;max-width:380px;}
 .ci-detail{display:flex;flex-direction:column;gap:14px;}
@@ -695,7 +674,7 @@ em{font-style:italic;color:var(--gold);}
 @keyframes dotpulse{0%,100%{opacity:.4;transform:scale(.8);}50%{opacity:1;transform:scale(1.2);}}
 
 .contact-form{
-  background:var(--void);
+  background:var(--navy);
   display:flex;flex-direction:column;justify-content:center;
   padding:80px 60px;
   border-top:2px solid var(--gold);
@@ -708,7 +687,7 @@ em{font-style:italic;color:var(--gold);}
 .contact-form-sub a{color:var(--gold);transition:opacity .2s;}
 .contact-form-sub a:hover{opacity:.75;}
 .f-row{margin-bottom:14px;}
-.f-lbl{display:block;font-family:var(--mono);font-size:7.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.f-lbl{display:block;font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
 .f-in{
   width:100%;background:rgba(201,168,76,.03);
   border:1px solid rgba(201,168,76,.14);
@@ -725,15 +704,14 @@ textarea.f-in{height:110px;resize:vertical;}
   margin-top:22px;width:100%;
   background:var(--gold);color:var(--void);
   padding:16px;border:none;
-  font-family:var(--mono);font-size:9px;font-weight:600;
-  letter-spacing:.2em;text-transform:uppercase;
+  font-family:var(--mono);font-size:10px;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;
   transition:background .2s,transform .16s ease-out,box-shadow .2s;
   cursor:pointer;
 }
-.f-btn:hover{background:var(--gold-hi);box-shadow:0 6px 24px rgba(201,168,76,.3);transform:translateY(-1px);}
+.f-btn:hover{background:var(--gold-hi);transform:translateY(-1px);}
 .f-btn:active{transform:scale(.98);box-shadow:none;}
-.f-btn:active{transform:scale(.98);}
-.f-note{font-family:var(--mono);font-size:8.5px;color:rgba(201,168,76,.32);margin-top:12px;text-align:center;letter-spacing:.06em;}
+.f-note{font-family:var(--mono);font-size:9px;color:rgba(201,168,76,.32);margin-top:12px;text-align:center;letter-spacing:.04em;}
 .f-success{
   display:none;flex-direction:column;align-items:center;justify-content:center;
   text-align:center;padding:48px 24px;gap:18px;min-height:320px;
@@ -769,12 +747,11 @@ textarea.f-in{height:110px;resize:vertical;}
   display:inline-flex;align-items:center;gap:8px;
   background:var(--gold);color:var(--void);
   padding:13px 22px;
-  font-family:var(--mono);font-weight:600;font-size:9px;
-  letter-spacing:.16em;text-transform:uppercase;
-  box-shadow:0 8px 28px rgba(201,168,76,.38);
+  font-family:var(--mono);font-weight:600;font-size:10px;
+  letter-spacing:.14em;text-transform:uppercase;
   transition:transform .16s ease-out,box-shadow .16s ease-out,background .2s;
 }
-.sticky-btn:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(201,168,76,.5);background:var(--gold-hi);}
+.sticky-btn:hover{transform:translateY(-3px);background:var(--gold-hi);}
 .sticky-btn:active{transform:scale(.97);}
 @media(max-width:560px){.sticky-cta{bottom:18px;right:18px;}.sticky-btn{padding:11px 18px;font-size:8.5px;}}
 /* Label centered variant */
@@ -821,41 +798,9 @@ body::before{
   background-size:180px 180px;
 }
 
-/* Gold shimmer on key headings */
-h1 em,h2 em,.iata-feat-h em{
-  background:linear-gradient(110deg,#8a6820 0%,#C9A84C 22%,#E8CF70 42%,#FBF0A0 52%,#E8CF70 62%,#C9A84C 78%,#8a6820 100%);
-  background-size:250% 100%;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-  animation:gold-flow 4.5s ease-in-out infinite;
-}
-@keyframes gold-flow{
-  0%,100%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-}
+/* Static gold on key headings — no animation */
+h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
 
-/* IATA card shine beam */
-.iata-featured{isolation:isolate;}
-.iata-beam{
-  position:absolute;inset:0;
-  pointer-events:none;z-index:0;
-  overflow:hidden;border-radius:inherit;
-}
-.iata-beam::after{
-  content:'';
-  position:absolute;
-  width:72px;height:120%;top:-10%;
-  background:linear-gradient(to right,transparent,rgba(201,168,76,.28),rgba(248,238,150,.5),rgba(201,168,76,.28),transparent);
-  transform:skewX(-12deg);
-  animation:iata-shine 4s cubic-bezier(.4,0,.6,1) 1.4s infinite;
-}
-@keyframes iata-shine{
-  0%{left:-80px;opacity:0;}
-  8%{opacity:1;}
-  88%{opacity:.85;}
-  100%{left:calc(100% + 80px);opacity:0;}
-}
 
 /* Tarmac letter reveal */
 .tarmac-char{
@@ -888,14 +833,6 @@ h1 em,h2 em,.iata-feat-h em{
 }
 
 
-/* dCard face-glow */
-.dcard{--cx:50%;--cy:50%;}
-.dcard::after{
-  content:'';position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(circle 160px at var(--cx) var(--cy),rgba(201,168,76,.09),transparent 70%);
-  opacity:0;transition:opacity .3s;z-index:0;
-}
-.dcard:hover::after{opacity:1;}
 
 /* Ticker dot pulse */
 .tk-dot{animation:dot-glow 2.2s ease-in-out infinite;}
@@ -908,13 +845,9 @@ h1 em,h2 em,.iata-feat-h em{
 @media(prefers-reduced-motion:reduce){
   body{opacity:1!important;transition:none!important;}
   body::before{display:none;}
-  .iata-beam::after,.tk-dot{animation:none!important;}
+  .tk-dot{animation:none!important;}
   .tarmac-char{opacity:1!important;transform:none!important;transition:none!important;}
-  h1 em,h2 em,.iata-feat-h em{
-    animation:none!important;background:none!important;
-    -webkit-text-fill-color:var(--gold)!important;
-    color:var(--gold)!important;
-  }
+  h1 em,h2 em,.iata-feat-h em{color:var(--gold)!important;}
 }
 </style>
 <script type="application/ld+json">
@@ -1054,15 +987,6 @@ h1 em,h2 em,.iata-feat-h em{
   </div>
 
   <div class="hero-body">
-    <div class="hero-logo-wrap">
-      <img
-        src="Images/LogoAureva_transparent.png"
-        alt="AUREVA Freight"
-        class="hero-logo-img"
-        fetchpriority="high"
-        decoding="async"
-      >
-    </div>
     <div class="hero-kicker">
       <span>Agréé IATA · Opérateur HUM</span>
       <div class="hero-kicker-imgs">
@@ -1119,8 +1043,8 @@ h1 em,h2 em,.iata-feat-h em{
       <blockquote class="histoire-blockquote">On ne gère pas des marchandises.<br>On gère le dernier respect.</blockquote>
       <div class="hist-creds">
         <div class="hist-cred">
-          <span class="hist-cred-n">24h</span>
-          <span class="hist-cred-l">Délai islamique</span>
+          <span class="hist-cred-n">IATA</span>
+          <span class="hist-cred-l">Accès direct compagnies</span>
         </div>
         <div class="hist-cred">
           <span class="hist-cred-n">7j/7</span>
@@ -1138,8 +1062,8 @@ h1 em,h2 em,.iata-feat-h em{
       </div>
       <div class="histoire-img-overlay"></div>
       <div class="histoire-badge">
-        <span class="histoire-badge-title">Délai islamique maximal</span>
-        <span class="histoire-badge-text">24 — 48h</span>
+        <span class="histoire-badge-title">Opérateur HUM certifié</span>
+        <span class="histoire-badge-text">Agréé IATA</span>
       </div>
       <img src="Images/Coran.png" alt="Valeurs islamiques" class="histoire-img-coran" loading="lazy" decoding="async">
     </div>
@@ -1195,7 +1119,7 @@ h1 em,h2 em,.iata-feat-h em{
         <span class="dcard-num">05</span>
         <div class="dcard-icon"><svg viewBox="0 0 24 24"><path d="M1 6l10.5 6L22 6"/><path d="M1 6v12a1 1 0 001 1h20a1 1 0 001-1V6a1 1 0 00-1-1H2a1 1 0 00-1 1z"/></svg></div>
         <div class="dcard-h">Disponible quand vous en avez besoin</div>
-        <p class="dcard-p">La mort n'attend pas.<br>On est là 7j/7 — week-ends et jours fériés compris. Réponse sous 24h, toujours.</p>
+        <p class="dcard-p">La mort n'attend pas.<br>On est là 7j/7 — week-ends et jours fériés compris. Chaque dossier traité en priorité.</p>
       </div>
       <div class="dcard rev d5">
         <span class="dcard-num">06</span>
@@ -1468,7 +1392,7 @@ h1 em,h2 em,.iata-feat-h em{
       <div class="onboard-step rev">
         <div class="onboard-step-n">01</div>
         <div class="onboard-step-h">Un premier contact</div>
-        <p class="onboard-step-p">Email ou formulaire ci-dessous. On vous répond sous 24h — destination, disponibilités, ce qu'il faut préparer.</p>
+        <p class="onboard-step-p">Email ou formulaire ci-dessous. On revient vers vous rapidement — destination, disponibilités, ce qu'il faut préparer.</p>
       </div>
       <div class="onboard-sep" aria-hidden="true">→</div>
       <div class="onboard-step rev d1">
@@ -1484,7 +1408,7 @@ h1 em,h2 em,.iata-feat-h em{
       </div>
       <div class="onboard-sep" aria-hidden="true">→</div>
       <div class="onboard-step rev d3">
-        <div class="onboard-step-n">✓</div>
+        <div class="onboard-step-n">04</div>
         <div class="onboard-step-h">Partenaire établi</div>
         <p class="onboard-step-p">Un interlocuteur direct à chaque dossier suivant. Vous gérez les familles — on gère le cargo aérien. Pas de prestataire ponctuel : un partenaire.</p>
       </div>
@@ -1521,7 +1445,7 @@ h1 em,h2 em,.iata-feat-h em{
       <span class="ci-iata-label">Agréé IATA · Opérateur HUM</span>
     </div>
     <blockquote class="ci-quote">Vous avez un dossier.<br>On a le vol.</blockquote>
-    <p class="ci-sub">Un email suffit. On revient sous 24h avec le premier vol disponible et les documents à préparer.</p>
+    <p class="ci-sub">Un email suffit. On revient vers vous avec le premier vol disponible et les documents à préparer.</p>
     <div class="ci-detail">
       <div class="ci-row">
         <span class="ci-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
@@ -1542,7 +1466,7 @@ h1 em,h2 em,.iata-feat-h em{
     </div>
     <div class="ci-avail">
       <div class="ci-dot"></div>
-      <span>Disponible 7j/7 — Réponse sous 24h</span>
+      <span>Disponible 7j/7 — Priorité urgence islamique</span>
     </div>
     <a href="plaquette-aureva.html" target="_blank" class="ci-plaquette">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -1585,7 +1509,7 @@ h1 em,h2 em,.iata-feat-h em{
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
       </div>
       <h3>Message envoyé.</h3>
-      <p>Nous revenons vers vous sous 24h. Merci de votre confiance.</p>
+      <p>Message reçu. Nous revenons vers vous au plus vite. Merci de votre confiance.</p>
     </div>
   </div>
 </section>
@@ -1641,14 +1565,6 @@ if(cSection) ctaObs.observe(cSection);
 document.body.classList.add('ready');
 
 
-// IATA card shine beam
-(function(){
-  const card = document.querySelector('.iata-featured');
-  if(!card) return;
-  const beam = document.createElement('span');
-  beam.className = 'iata-beam';
-  card.insertBefore(beam, card.firstChild);
-})();
 
 // Hero ambient spotlight — lazy follows cursor
 (function(){
@@ -1671,14 +1587,6 @@ document.body.classList.add('ready');
   },{passive:true});
 })();
 
-// dCard face-glow mouse tracking
-document.querySelectorAll('.dcard').forEach(c=>{
-  c.addEventListener('mousemove',e=>{
-    const r=c.getBoundingClientRect();
-    c.style.setProperty('--cx',((e.clientX-r.left)/r.width*100)+'%');
-    c.style.setProperty('--cy',((e.clientY-r.top)/r.height*100)+'%');
-  },{passive:true});
-});
 
 // Tarmac blockquote — letter-by-letter reveal
 (function(){
