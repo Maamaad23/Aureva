@@ -719,10 +719,11 @@ em{font-style:italic;color:var(--gold);}
 @media(max-width:1100px){.contact-info{padding:72px 44px;}}
 @media(max-width:860px){.contact-info{padding:60px 5%;border-right:none;border-bottom:1px solid rgba(201,168,76,.07);gap:28px;}}
 @media(max-width:480px){.contact-info{padding:52px 5%;}}
-.contact-logo{height:38px;width:auto;opacity:.88;display:block;}
-.ci-iata-row{display:flex;align-items:center;gap:12px;margin-bottom:28px;}
-.ci-iata-logo{height:48px;width:auto;opacity:.95;}
-.ci-iata-label{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);}
+.ci-brand-row{display:flex;align-items:center;gap:18px;margin-bottom:10px;}
+.contact-logo{height:38px;width:auto;opacity:.88;}
+.ci-logo-sep{width:1px;height:30px;background:rgba(201,168,76,.2);}
+.ci-iata-logo{height:38px;width:auto;opacity:.95;}
+.ci-iata-label{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:block;}
 .aero-p2-iata{display:flex;align-items:center;gap:16px;margin-top:28px;padding:16px 20px;border:1px solid rgba(201,168,76,.15);border-left:2px solid rgba(201,168,76,.45);}
 .aero-p2-iata img{height:40px;width:auto;opacity:.95;flex-shrink:0;}
 .aero-p2-iata span{font-family:var(--mono);font-size:10px;font-weight:400;letter-spacing:.04em;color:var(--mist);line-height:1.6;}
@@ -1502,11 +1503,12 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
 <!-- ══ CONTACT ══ -->
 <section class="contact" id="contact">
   <div class="contact-info">
-    <img src="Images/LogoAureva_transparent.png" alt="AUREVA Freight" class="contact-logo" decoding="async">
-    <div class="ci-iata-row">
+    <div class="ci-brand-row">
+      <img src="Images/LogoAureva_transparent.png" alt="AUREVA Freight" class="contact-logo" decoding="async">
+      <div class="ci-logo-sep"></div>
       <img src="Images/IATA-ANUBIS.webp" alt="IATA Agréé" class="ci-iata-logo" decoding="async">
-      <span class="ci-iata-label">Agréé IATA · Opérateur HUM</span>
     </div>
+    <span class="ci-iata-label">Agréé IATA · Opérateur HUM</span>
     <blockquote class="ci-quote">Vous avez un dossier.<br>On a le vol.</blockquote>
     <p class="ci-sub">Un email suffit. On revient vers vous avec le premier vol disponible et les documents à préparer.</p>
     <div class="ci-detail">
