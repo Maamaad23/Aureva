@@ -752,6 +752,8 @@ em{font-style:italic;color:var(--gold);}
 }
 .ci-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;animation:dotpulse 2s ease-in-out infinite;}
 @keyframes dotpulse{0%,100%{opacity:.4;transform:scale(.8);}50%{opacity:1;transform:scale(1.2);}}
+.ci-avail--pending{background:rgba(201,168,76,.04);border-color:rgba(201,168,76,.1);}
+.ci-dot--pending{background:rgba(201,168,76,.45);animation:dotpulse 3.5s ease-in-out infinite;}
 
 .contact-form{
   background:var(--navy);
@@ -1300,6 +1302,14 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
         "@type": "Answer",
         "text": "Devis clair sur chaque dossier, avant tout engagement. Aucun frais caché — vous savez exactement ce que vous payez avant qu'on commence. La tarification dépend de la destination, de la compagnie et du volume : on vous envoie un chiffre précis dès la demande."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles sont les accréditations d'AUREVA Freight ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AUREVA est agréé IATA (accès direct aux compagnies aériennes, sans intermédiaire) et certifié opérateur HUM. La licence de commissionnaire de transport (DREAL) est en cours d'obtention. Chaque dossier est traité en conformité totale avec la réglementation en vigueur."
+      }
     }
   ]
 }
@@ -1393,7 +1403,7 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
       <span class="hero-w" style="--d:.08s">Le</span> <span class="hero-w" style="--d:.20s">dernier</span><br><span class="hero-w" style="--d:.34s">voyage,</span><em><br><span class="hero-w" style="--d:.50s">avec</span><br><span class="hero-w" style="--d:.67s">dignité</span></em>
     </h1>
     <p class="sr-only">AUREVA Freight — transitaire funéraire aérien agréé IATA, spécialisé dans le rapatriement de corps vers l'Afrique subsaharienne et le Maghreb.</p>
-    <p class="hero-sub">Spécialiste du transit aérien funéraire international — partenaire exclusif des pompes funèbres</p>
+    <p class="hero-sub">Rapatriement aérien de corps vers toute l'Afrique — booking, handling, suivi jusqu'au consignee. Partenaire B2B des pompes funèbres françaises.</p>
     <div class="hero-cta-wrap">
       <a href="#contact" class="btn btn-gold">Soumettre un dossier →</a>
       <a href="plaquette-aureva.pdf" target="_blank" rel="noopener" class="btn btn-outline">Notre présentation ↗</a>
@@ -1481,7 +1491,7 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
       <div class="iata-feat-body">
         <span class="iata-feat-tag">Notre force principale</span>
         <div class="iata-feat-h">Agréé IATA — <em>Opérateur HUM certifié</em></div>
-        <p class="iata-feat-p">L'agrément IATA donne accès direct aux compagnies aériennes — <strong>pas d'intermédiaire, pas de délai ajouté.</strong> Dossiers HUM traités en priorité — numéro de vol confirmé dès la réservation.</p>
+        <p class="iata-feat-p">L'agrément IATA donne accès direct aux compagnies aériennes — <strong>pas d'intermédiaire, pas de délai ajouté.</strong> Dossiers HUM traités en priorité. Numéro de vol confirmé le jour même. Vous ne passez plus par un tiers qui passe par un autre tiers.</p>
       </div>
     </div>
 
@@ -1795,6 +1805,15 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
         Pas de surprise sur la facture.</p>
       </div>
 
+      <div class="faq-card rev d3">
+        <div class="faq-card-q">Quelles sont vos accréditations ?</div>
+        <p class="faq-card-a">Agréés IATA — accès direct aux compagnies aériennes, sans intermédiaire.<br>
+        Opérateur HUM certifié — traitement prioritaire des dossiers funéraires.<br><br>
+        La licence de commissionnaire de transport (DREAL) est en cours d'obtention.<br>
+        Nous opérons dans le cadre légal en vigueur pendant cette phase de lancement.<br>
+        Chaque dossier est traité en conformité totale avec la réglementation.</p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1899,7 +1918,11 @@ h1 em,h2 em,.iata-feat-h em{color:var(--gold);}
     </div>
     <div class="ci-avail">
       <div class="ci-dot"></div>
-      <span>Disponible 7j/7 — Priorité urgence islamique</span>
+      <span>Disponible 7j/7 — Disponible pour toute urgence</span>
+    </div>
+    <div class="ci-avail ci-avail--pending">
+      <div class="ci-dot ci-dot--pending"></div>
+      <span>Licence commissionnaire de transport DREAL — en cours d'obtention</span>
     </div>
     <a href="plaquette-aureva.pdf" target="_blank" rel="noopener" class="ci-plaquette">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
