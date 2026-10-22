@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://aurevafreight.com/</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aurevafreight.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurevafreight.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aurevafreight.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurevafreight.com/"/>
+    <image:image><image:loc>https://aurevafreight.com/Images/photo-piste.webp</image:loc></image:image>
+    <image:image><image:loc>https://aurevafreight.com/Images/photo-tarmac-soir-900.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://aurevafreight.com/mentions-legales.html</loc>
-    <lastmod>2026-05-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://aurevafreight.com/en/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aurevafreight.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurevafreight.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aurevafreight.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurevafreight.com/"/>
+  </url>
+  <url>
+    <loc>https://aurevafreight.com/de/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aurevafreight.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurevafreight.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aurevafreight.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurevafreight.com/"/>
   </url>
 </urlset>

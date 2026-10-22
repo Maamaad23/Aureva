@@ -8,3 +8,10 @@
 IMG_*.JPG
 IMG_*.jpg
 Thumbs.db
+
+# Vidéos : plus aucune sur le site depuis le 2026-10-22 (film dans ../videos)
+Videos/
+*.mp4
+
+# Notes privées, sauvegardes et anciens aperçus : jamais dans le dépôt
+_atelier/prive/

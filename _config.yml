@@ -1,0 +1,6 @@
+# GitHub Pages : le site est publié tel quel (aucune page n'a d'en-tête Jekyll, rien n'est transformé).
+# Les dossiers qui commencent par _ (dont _atelier, outils internes) ne sont jamais publiés.
+exclude:
+  - CLAUDE.md
+  - AGENTS.md
+  - _config.yml
