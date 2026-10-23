@@ -867,7 +867,7 @@ html.lenis,html.lenis body{height:auto}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important}
 }
 /* ══ Carte des destinations (SVG inline, sans librairie) ══ */
 .dest-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-6);align-items:start;margin-bottom:var(--s-6)}
@@ -1102,6 +1102,18 @@ html.lenis,html.lenis body{height:auto}
   .contact-call dl{grid-template-columns:1fr 1fr;gap:var(--s-4) var(--s-5);padding-top:var(--s-6)}
   .contact-call dl > div:first-child{grid-column:1 / -1}
 }
+
+/* Mouvement réduit : fondus seulement, aucun déplacement, zoom ni masque */
+.calm .rv,.calm .hero .fade,.calm .chrono li.rv,.calm .chrono li.rv .card,.calm .chrono li .num,.calm .hero-title .l>span,.calm .step.rv .step-fig img{transform:none!important}
+.calm h2.rv{clip-path:none;opacity:0;transition:opacity .9s var(--ease-out)}
+.calm h2.rv.in{opacity:1}
+.calm .hero-title .l>span{opacity:0;transition:opacity 1.1s var(--ease-out)}
+.calm .loaded .hero-title .l>span{opacity:1}
+.calm .step.rv .step-fig{clip-path:none}
+.calm .lb{display:none}
+.calm .hero-media,.calm .hero-media img{transform:none!important;scale:none;animation:none!important}
+.calm .hero-media img{transition:filter 1.6s var(--ease-out)}
+.calm .hero-media::after{animation:none}
 </style>
 </head>
 <body>
@@ -1605,7 +1617,9 @@ html.lenis,html.lenis body{height:auto}
 (() => {
   const root = document.documentElement;
   const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!calm) root.classList.add('js');
+  // Mouvement réduit : rien ne se déplace ni ne zoome, mais les fondus, les tuiles et le tableau restent
+  root.classList.add('js');
+  if (calm) root.classList.add('calm');
 
   const reveal = () => document.body.classList.add('loaded');
   requestAnimationFrame(() => requestAnimationFrame(reveal));
@@ -1790,8 +1804,8 @@ html.lenis,html.lenis body{height:auto}
     const flap = (code, still) => {
       const f = document.createElement('span');
       f.className = 'flap';
-      f.innerHTML = [...code].map(c => `<i>${still || calm || c === ' ' ? c : ALPHA[(ALPHA.indexOf(c) + 9) % 26]}</i>`).join('');
-      if (!still && !calm && code.trim()) [...f.children].forEach((tile, k) => {
+      f.innerHTML = [...code].map(c => `<i>${still || c === ' ' ? c : ALPHA[(ALPHA.indexOf(c) + 9) % 26]}</i>`).join('');
+      if (!still && code.trim()) [...f.children].forEach((tile, k) => {
         let n = 0;
         const max = 6 + k * 3;
         setTimeout(function tick() {
@@ -1894,7 +1908,7 @@ html.lenis,html.lenis body{height:auto}
         };
         requestAnimationFrame(step);
       }, delay);
-      if (!calm && 'IntersectionObserver' in window) {
+      if ('IntersectionObserver' in window) {
         let timer = 0, done = false;
         new IntersectionObserver(([e]) => {
           clearInterval(timer);
@@ -2012,7 +2026,7 @@ html.lenis,html.lenis body{height:auto}
   })();
 
   // Apparitions au défilement
-  if (!calm && 'IntersectionObserver' in window) {
+  if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (!e.isIntersecting) return;
