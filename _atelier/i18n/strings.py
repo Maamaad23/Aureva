@@ -615,3 +615,24 @@ _PF = {
 }
 T.update(_PF)
 LD.update(_PF)
+
+# Départs réels et compagnies (2026-10-23)
+T.update({
+ "Aéroport de départ": ("Departure airport", "Abflughafen"),
+ "Paris": ("Paris", "Paris"),
+ "Compagnie": ("Airline", "Fluggesellschaft"),
+ "Choisissez une destination": ("Choose a destination", "Wählen Sie ein Ziel"),
+ "Vols directs relevés en octobre 2026 sur les programmes des aéroports, uniquement avec des compagnies qui transportent les défunts. Nous confirmons la compagnie à chaque dossier.": ("Direct flights taken from airport schedules in October 2026, only with airlines that carry the deceased. We confirm the airline for every case.", "Direktflüge laut Flugplänen der Flughäfen im Oktober 2026, nur mit Fluggesellschaften, die Verstorbene befördern. Wir bestätigen die Fluggesellschaft bei jedem Fall."),
+})
+JS.update({
+ "direct: 'Vol direct'": ("direct: 'Direct flight'", "direct: 'Direktflug'"),
+ "with: 'avec'": ("with: 'with'", "with: 'mit'"),
+ "season: 'en saison'": ("season: 'seasonal'", "season: 'saisonal'"),
+ "noDirect: 'Pas de vol direct depuis'": ("noDirect: 'No direct flight from'", "noDirect: 'Kein Direktflug ab'"),
+ "conn: 'avec une correspondance\\u00a0: nous réservons le premier vol disponible.'": ("conn: 'with a connection: we book the first available flight.'", "conn: 'mit Umstieg: Wir buchen den ersten verfügbaren Flug.'"),
+ "orDirect: 'Vol direct possible depuis\\u00a0:'": ("orDirect: 'Direct flight available from:'", "orDirect: 'Direktflug möglich ab:'"),
+ "alsoDirect: 'Aussi en direct depuis\\u00a0:'": ("alsoDirect: 'Also direct from:'", "alsoDirect: 'Auch direkt ab:'"),
+ "connTag: 'Correspondance'": ("connTag: 'Connection'", "connTag: 'Umstieg'"),
+ "airAny: 'Selon le premier vol disponible'": ("airAny: 'Depending on the first available flight'", "airAny: 'Je nach erstem verfügbarem Flug'"),
+ "airPick: 'Choisissez l’aéroport d’arrivée'": ("airPick: 'Choose the arrival airport'", "airPick: 'Wählen Sie den Zielflughafen'"),
+})
