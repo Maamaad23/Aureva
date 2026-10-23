@@ -593,3 +593,11 @@ T.update({
 T.update({"contact@pompes-funebres.fr": ("contact@funeral-home.com", "kontakt@bestattungen.de")})
 
 LD.update({"Transitaire funéraire aérien, agent cargo IATA et commissionnaire de transport, basé à Sausheim près de l'EuroAirport Bâle-Mulhouse. Rapatriement de corps par avion depuis toute la France vers toute l'Afrique et le reste du monde, avec les pompes funèbres, 7 jours sur 7.": ('Funeral air forwarder, IATA cargo agent and freight forwarder, based in Sausheim near EuroAirport Basel-Mulhouse. Air repatriation of the deceased from anywhere in France to all of Africa and the rest of the world, with funeral homes, 7 days a week.', 'Luftfrachtspediteur für Überführungen, IATA-Frachtagent und Spediteur mit Sitz in Sausheim beim EuroAirport Basel-Mulhouse. Überführung Verstorbener per Flugzeug von ganz Frankreich nach ganz Afrika und in den Rest der Welt, mit Bestattungsunternehmen, 7 Tage die Woche.')})
+
+T.update({
+ 'Confiance': ('Trust', 'Vertrauen'),
+ "De toute la France, depuis l'aéroport qui offre le premier vol. L'Afrique en priorité, le reste du monde aussi.": ('From anywhere in France, from whichever airport offers the first flight. Africa first, the rest of the world too.', 'Von überall in Frankreich, ab dem Flughafen mit dem ersten Flug. Afrika zuerst, der Rest der Welt ebenso.'),
+ 'Nos accréditations, et nos réponses aux questions que les pompes funèbres nous posent en premier.': ('Our accreditations, and our answers to the questions funeral homes ask us first.', 'Unsere Zulassungen und unsere Antworten auf die Fragen, die Bestattungsunternehmen uns zuerst stellen.'),
+ 'Tapez une ville ou un pays': ('Type a city or a country', 'Stadt oder Land eingeben'),
+ 'Voir tous les pays': ('See all countries', 'Alle Länder anzeigen'),
+})
