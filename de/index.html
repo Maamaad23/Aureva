@@ -1163,6 +1163,23 @@ html.lenis,html.lenis body{height:auto}
   .dep button{flex:none;min-height:2.75rem}
   .pass-an{font-size:var(--t-base)}
 }
+
+/* ══ Tableau interactif 2026-10-23 : une compagnie touchée montre ses vols directs ══ */
+.board-rows li{padding:0}
+.board-rows li button{display:flex;align-items:center;gap:inherit;width:100%;padding:.6rem 0;font:inherit;color:inherit;text-align:left;background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background-color .25s ease}
+.board-rows li button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (hover:hover){.board-rows li button:hover .b-name{color:var(--gold-hi)}}
+.board-rows li button[aria-pressed="true"] .b-name{color:var(--gold-hi)}
+.board-rows li button[aria-pressed="true"]{box-shadow:inset 3px 0 0 var(--gold);padding-left:var(--s-3)}
+.board-info{margin-top:var(--s-5);font-size:var(--t-sm);line-height:1.7;color:var(--paper-2);min-height:3.4em}
+.board-info b{display:block;color:var(--paper);font-weight:600;margin-bottom:var(--s-2)}
+.board-info ul{display:grid;gap:var(--s-2)}
+.board-info li{display:grid;grid-template-columns:9rem minmax(0,1fr);gap:var(--s-3)}
+.bi-dep{color:var(--paper-3);font-size:var(--t-xs);font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding-top:.2rem}
+@media (max-width:40rem){.board-info li{grid-template-columns:1fr;gap:0}}
+.board-info button{font:inherit;color:var(--gold-hi);background:none;border:0;border-bottom:1px solid oklch(74% .115 85 / .4);padding:0;cursor:pointer}
+.board-info button:hover{border-color:var(--gold)}
+@media (max-width:40rem){.board-rows li button{padding:.5rem 0}.board-rows li button[aria-pressed="true"]{padding-left:var(--s-2)}}
 </style>
 </head>
 <body>
@@ -1314,22 +1331,23 @@ html.lenis,html.lenis body{height:auto}
       </div>
     </div>
     <div class="board rv" data-d="2">
-      <div class="board-head"><h3>Die häufigsten Fluggesellschaften</h3><p>Wir buchen die, die zuerst fliegt.</p></div>
+      <div class="board-head"><h3>Unsere Fluggesellschaften im Direktflug</h3><p>Wir buchen die, die zuerst fliegt.</p></div>
       <ul class="board-rows">
       <li><span class="b-code">AH</span><span class="b-name">Air Algérie</span></li>
       <li><span class="b-code">AF</span><span class="b-name">Air France</span></li>
+      <li><span class="b-code">HF</span><span class="b-name">Air Côte d’Ivoire</span></li>
       <li><span class="b-code">HC</span><span class="b-name">Air Sénégal</span></li>
       <li><span class="b-code">SS</span><span class="b-name">Corsair</span></li>
       <li><span class="b-code">MS</span><span class="b-name">Egyptair</span></li>
-      <li><span class="b-code">EK</span><span class="b-name">Emirates</span></li>
       <li><span class="b-code">ET</span><span class="b-name">Ethiopian Airlines</span></li>
+      <li><span class="b-code">KQ</span><span class="b-name">Kenya Airways</span></li>
       <li><span class="b-code">BJ</span><span class="b-name">Nouvelair</span></li>
-      <li><span class="b-code">QR</span><span class="b-name">Qatar Airways</span></li>
       <li><span class="b-code">AT</span><span class="b-name">Royal Air Maroc</span></li>
       <li><span class="b-code">WB</span><span class="b-name">RwandAir</span></li>
+      <li><span class="b-code">LX</span><span class="b-name">Swiss</span></li>
       <li><span class="b-code">TU</span><span class="b-name">Tunisair</span></li>
-      <li><span class="b-code">TK</span><span class="b-name">Turkish Airlines</span></li>
       </ul>
+      <p class="board-info" id="board-info" aria-live="polite">Tippen Sie auf eine Fluggesellschaft, um ihre Direktflüge zu sehen.</p>
     </div>
   </div>
 </section>
@@ -1793,28 +1811,32 @@ html.lenis,html.lenis body{height:auto}
     // La question remplit une carte d'embarquement : départ Bâle-Mulhouse, arrivée choisie, phrase de réponse.
     const L = {
       yes: 'Ja.',
-      to: 'Wir überführen nach',
-      toLow: 'wir überführen nach',
       and: ' und ',
       sep: ': ',
       go: 'Einen Fall für dieses Land eröffnen',
       also: 'Siehe auch:',
-      world: 'wir organisieren den Flug zum nächstgelegenen Flughafen.',
       dest: 'Zielort',
       pick: 'Ankunftsflughafen wählen:',
       direct: 'Direktflug',
       with: 'mit',
       season: 'saisonal',
       noDirect: 'Kein Direktflug ab',
-      conn: 'mit Umstieg: Wir buchen den ersten verfügbaren Flug.',
+      none: 'Kein bekannter Direktflug ab unseren Abflughäfen. Schreiben Sie uns: Wir prüfen es mit den Fluggesellschaften.',
+      toward: 'nach',
+      check: 'Wir prüfen die Direktflüge mit Ihnen, schreiben Sie uns.',
+      checkAir: 'Mit uns zu prüfen',
+      noneAir: 'Kein bekannter Direktflug',
+      ask: 'Schreiben Sie uns zu diesem Ziel',
+      depart: 'Abflug',
+      directToLow: 'Direktflüge nach',
+      directLow: 'Direktflug',
+      airTo: 'im Direktflug',
       orDirect: 'Direktflug möglich ab:',
       alsoDirect: 'Auch direkt ab:',
-      connTag: 'Umstieg',
-      airAny: 'Je nach erstem verfügbarem Flug',
       airPick: 'Wählen Sie den Zielflughafen',
     };
     // Vols directs relevés en octobre 2026 (programmes des aéroports), seulement les compagnies qui transportent les défunts.
-    // Arrivée : départ et compagnies ; * = en saison. Pas de ligne = correspondance depuis tous les départs.
+    // Arrivée : départ et compagnies ; * = en saison. Pas de ligne = aucun vol direct connu : nous ne promettons rien (pas d'escale).
     const AIR = { AF: 'Air France', AH: 'Air Algérie', AT: 'Royal Air Maroc', TU: 'Tunisair', BJ: 'Nouvelair', HC: 'Air Sénégal', HF: 'Air Côte d’Ivoire', SS: 'Corsair', MS: 'Egyptair', ET: 'Ethiopian Airlines', KQ: 'Kenya Airways', WB: 'RwandAir', LX: 'Swiss', UU: 'Air Austral', TK: 'Turkish Airlines', EK: 'Emirates', QR: 'Qatar Airways' };
     const ROUTES = {
       ALG: 'BSL:AH SXB:AH LYS:AH PAR:AH,AF', AAE: 'LYS:AH PAR:AH', BJA: 'LYS:AH PAR:AH', CZL: 'LYS:AH PAR:AH', ORN: 'LYS:AH PAR:AH,AF', TLM: 'LYS:AH PAR:AH',
@@ -1931,11 +1953,14 @@ html.lenis,html.lenis body{height:auto}
       const r = one ? routes(c.code[one]) : {};
       const direct = ORDER.filter(a => r[a]);
       setFrom(dep || direct[0] || 'BSL');
-      if (!one) { msg.append(yes, c.cities.length ? `${c.name}${L.sep}${L.toLow} ${list(c.cities)}.` : `${c.name}${L.sep}${L.world}`); setAir(c.cities.length > 1 ? L.airPick : L.airAny); }
-      else if (c.world && !direct.length) { msg.append(yes, `${L.to} ${where}.`); setAir(L.airAny); }
+      // Seulement des vols directs : sans vol direct connu, on le dit et on invite à écrire
+      const served = c.cities.filter(x => ORDER.some(a => routes(c.code[x])[a]));
+      const ok = one ? direct.length > 0 : served.length > 0;
+      if (!one && ok) { msg.append(yes, `${c.name}${L.sep}${L.directToLow} ${list(served)}.`); setAir(L.airPick); }
+      else if (!ok && c.world) { msg.append(`${where || c.name}${L.sep}${L.check}`); setAir(L.checkAir); }
+      else if (!ok) { msg.append(`${where || c.name}${L.sep}${L.none}`); setAir(L.noneAir); }
       else if (r[from]) { msg.append(yes, `${L.direct} ${apName[from]} → ${where} ${L.with} ${airNames(r[from])}.`); setAir(airNames(r[from]), L.direct); }
-      else if (direct.length) { msg.append(yes, `${L.to} ${where}. ${L.noDirect} ${apName[from]}.`); setAir(L.airAny, L.connTag); }
-      else { msg.append(yes, `${L.to} ${where}, ${L.conn}`); setAir(L.airAny, L.connTag); }
+      else { msg.append(`${L.noDirect} ${apName[from]} ${L.toward} ${where}.`); setAir(`${L.noDirect} ${apName[from]}`); }
       const alt = direct.filter(a => a !== from);
       if (one && alt.length) {
         const pick = document.createElement('span');
@@ -1952,13 +1977,14 @@ html.lenis,html.lenis body{height:auto}
         msg.append(pick);
       }
       const go = document.createElement('a');
-      go.href = '#contact'; go.className = 'dask-go'; go.textContent = L.go;
+      go.href = '#contact'; go.className = 'dask-go'; go.textContent = ok ? L.go : L.ask;
       go.addEventListener('click', () => {
         const sel = document.getElementById('f-dest'), text = document.getElementById('f-msg');
         if (!sel) return;
         const known = [...sel.options].some(o => o.value === c.name);
         sel.value = known ? c.name : sel.options[sel.options.length - 1].value;
-        if (!known && text && !text.value) text.value = `${L.dest}${L.sep}${one && one !== c.name ? `${one} (${c.name})` : c.name}\n`;
+        // Message prérempli : destination, et départ en vol direct s'il est connu
+        if (text && !text.value) text.value = `${L.dest}${L.sep}${one && one !== c.name ? `${one} (${c.name})` : c.name}\n` + (one && r[from] ? `${L.depart}${L.sep}${apName[from]}, ${L.directLow} ${airNames(r[from])}\n` : '');
       });
       msg.append(go);
       if (rest.length) {
@@ -1970,7 +1996,7 @@ html.lenis,html.lenis body{height:auto}
       }
       asked = c.world ? [] : one ? [one] : c.cities;
       focus(asked);
-      if (one && !c.world) fly(one);
+      if (one && !c.world && ok) fly(one);
     };
     const ask = () => {
       const q = norm(input.value);
@@ -1987,6 +2013,9 @@ html.lenis,html.lenis body{height:auto}
         msg.innerHTML = 'Kein Ziel unter diesem Namen gefunden. <a href="#contact">Schreiben Sie uns</a>: Wir fliegen in jedes angeflogene Land.';
         asked = []; focus(asked); return;
       }
+      // Le nom qui commence par la recherche passe devant celui qui la contient (russie avant biélorussie)
+      const starts = (x) => (x.c.ns || [x.c.n]).some(n => n.startsWith(q)) || !!(x.city && norm(x.city).startsWith(q));
+      hits.sort((a, b) => starts(b) - starts(a));
       const [h, ...rest] = hits;
       show(h.c, h.city, rest);
     };
@@ -1994,12 +2023,50 @@ html.lenis,html.lenis body{height:auto}
     // Tableau des compagnies : codes en tuiles, noms qui se posent lettre à lettre, puis une ligne se remet à jour de temps en temps
     const board = document.querySelector('.board');
     if (board) {
+      // Chaque compagnie se touche : ses arrivées en vol direct et ses aéroports de départ, tirés de ROUTES
+      const info = document.getElementById('board-info');
+      const cityOf = {};
+      [...countries, ...world].forEach(c => c.cities.forEach(x => { cityOf[c.code[x]] = x; }));
+      // Vols directs d'une compagnie, rangés par aéroport de départ
+      const flights = (a) => ORDER.map(d => ({ d, to: Object.keys(ROUTES).map(k => {
+        const hit = (routes(k)[d] || []).find(x => x.replace('*', '') === a);
+        return hit && cityOf[k] ? { k, season: hit.endsWith('*') } : null;
+      }).filter(Boolean) })).filter(x => x.to.length);
       const rows = [...board.querySelectorAll('li')].map(li => {
         const code = li.querySelector('.b-code'), name = li.querySelector('.b-name');
         const r = { code, name, c: code.textContent, n: name.textContent };
-        li.setAttribute('aria-label', r.n);
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', r.n);
+        b.setAttribute('aria-controls', 'board-info');
+        b.setAttribute('aria-pressed', 'false');
         code.setAttribute('aria-hidden', 'true'); name.setAttribute('aria-hidden', 'true');
         code.replaceChildren(flap(r.c, true));
+        b.append(code, name);
+        li.append(b);
+        b.addEventListener('click', () => {
+          rows.forEach(o => o.b.setAttribute('aria-pressed', String(o === r)));
+          const head = document.createElement('b');
+          head.textContent = `${r.n} ${L.airTo}`;
+          const ul = document.createElement('ul');
+          flights(r.c).forEach(f => {
+            const li = document.createElement('li');
+            const dt = document.createElement('span');
+            dt.className = 'bi-dep';
+            dt.textContent = apName[f.d];
+            const cs = document.createElement('span');
+            li.append(dt, cs);
+            f.to.forEach((t, k) => cs.append(k ? ', ' : '', button(cityOf[t.k] + (t.season ? ` (${L.season})` : ''), () => {
+              dep = f.d;
+              input.value = cityOf[t.k];
+              ask();
+              input.closest('.dask').scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'start' });
+            })));
+            ul.append(li);
+          });
+          info.replaceChildren(head, ul);
+        });
+        r.b = b;
         return r;
       });
       const roll = (r, delay) => setTimeout(() => {

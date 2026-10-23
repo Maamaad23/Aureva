@@ -636,3 +636,24 @@ JS.update({
  "airAny: 'Selon le premier vol disponible'": ("airAny: 'Depending on the first available flight'", "airAny: 'Je nach erstem verfügbarem Flug'"),
  "airPick: 'Choisissez l’aéroport d’arrivée'": ("airPick: 'Choose the arrival airport'", "airPick: 'Wählen Sie den Zielflughafen'"),
 })
+
+# Vols directs seulement, tableau interactif (2026-10-23)
+KEEP |= {"Air Côte d'Ivoire", "Kenya Airways", "Swiss"}
+T.update({
+ "Nos compagnies en vol direct": ("Our direct-flight airlines", "Unsere Fluggesellschaften im Direktflug"),
+ "Touchez une compagnie pour voir ses vols directs.": ("Tap an airline to see its direct flights.", "Tippen Sie auf eine Fluggesellschaft, um ihre Direktflüge zu sehen."),
+})
+JS.update({
+ "toward: 'vers'": ("toward: 'to'", "toward: 'nach'"),
+ "none: 'pas de vol direct connu depuis nos aéroports de départ. Écrivez-nous\\u00a0: nous vérifions avec les compagnies.'": ("none: 'no known direct flight from our departure airports. Write to us: we check with the airlines.'", "none: 'Kein bekannter Direktflug ab unseren Abflughäfen. Schreiben Sie uns: Wir prüfen es mit den Fluggesellschaften.'"),
+ "noneAir: 'Pas de vol direct connu'": ("noneAir: 'No known direct flight'", "noneAir: 'Kein bekannter Direktflug'"),
+ "ask: 'Nous écrire pour cette destination'": ("ask: 'Write to us about this destination'", "ask: 'Schreiben Sie uns zu diesem Ziel'"),
+ "depart: 'Départ'": ("depart: 'Departure'", "depart: 'Abflug'"),
+ "directToLow: 'vols directs vers'": ("directToLow: 'direct flights to'", "directToLow: 'Direktflüge nach'"),
+ "directLow: 'vol direct'": ("directLow: 'direct flight'", "directLow: 'Direktflug'"),
+ "airTo: 'en vol direct'": ("airTo: 'direct flights'", "airTo: 'im Direktflug'"),
+})
+JS.update({
+ "check: 'nous vérifions les vols directs avec vous, écrivez-nous.'": ("check: 'we check the direct flights with you, write to us.'", "check: 'Wir prüfen die Direktflüge mit Ihnen, schreiben Sie uns.'"),
+ "checkAir: 'À vérifier avec nous'": ("checkAir: 'To check with us'", "checkAir: 'Mit uns zu prüfen'"),
+})
