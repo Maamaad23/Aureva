@@ -657,3 +657,7 @@ JS.update({
  "check: 'nous vérifions les vols directs avec vous, écrivez-nous.'": ("check: 'we check the direct flights with you, write to us.'", "check: 'Wir prüfen die Direktflüge mit Ihnen, schreiben Sie uns.'"),
  "checkAir: 'À vérifier avec nous'": ("checkAir: 'To check with us'", "checkAir: 'Mit uns zu prüfen'"),
 })
+
+# Départs dans toute la France (2026-10-24)
+KEEP |= {"Lille", "Marseille", "Nice", "Montpellier", "Toulouse", "Bordeaux", "Nantes"}
+T.update({"Départ en vol direct": ("Direct departure", "Direktabflug")})

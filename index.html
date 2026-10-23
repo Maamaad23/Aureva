@@ -1145,6 +1145,7 @@ html.lenis,html.lenis body{height:auto}
 .calm .qa-js > div::before,.calm .qa-pm::after,.calm .qa-js dd{transition:none}
 
 /* ══ Départs réels 2026-10-23 : choix de l'aéroport, compagnie en vol direct ══ */
+.dep[hidden],.dep button[hidden]{display:none}
 .dep{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-2);margin-top:var(--s-4)}
 .dep-k{font-size:var(--t-xs);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--paper-3);margin-right:var(--s-1)}
 .dep button{display:inline-flex;align-items:baseline;gap:.4rem;min-height:2.5rem;padding:.4rem .8rem;font:inherit;font-size:var(--t-sm);color:var(--paper-2);background:none;border:1px solid var(--line-strong);cursor:pointer;transition:border-color .2s ease,color .2s ease,background-color .2s ease;-webkit-tap-highlight-color:transparent}
@@ -1302,13 +1303,20 @@ html.lenis,html.lenis body{height:auto}
         <div class="dask rv">
           <label class="dask-q" for="dsearch">Où doit reposer le défunt ?</label>
           <input id="dsearch" type="search" placeholder="Tapez une ville ou un pays" autocomplete="off" spellcheck="false" aria-describedby="dsearch-msg">
-          <div class="dep" role="group" aria-label="Aéroport de départ">
-            <span class="dep-k">Départ</span>
+          <div class="dep" role="group" aria-label="Aéroport de départ" hidden>
+            <span class="dep-k">Départ en vol direct</span>
             <button type="button" data-ap="BSL" aria-pressed="false"><b>BSL</b><span>Bâle‑Mulhouse</span></button>
             <button type="button" data-ap="SXB" aria-pressed="false"><b>SXB</b><span>Strasbourg</span></button>
             <button type="button" data-ap="LYS" aria-pressed="false"><b>LYS</b><span>Lyon</span></button>
-            <button type="button" data-ap="ZRH" aria-pressed="false"><b>ZRH</b><span>Zurich</span></button>
             <button type="button" data-ap="PAR" aria-pressed="false"><b>PAR</b><span>Paris</span></button>
+            <button type="button" data-ap="LIL" aria-pressed="false"><b>LIL</b><span>Lille</span></button>
+            <button type="button" data-ap="MRS" aria-pressed="false"><b>MRS</b><span>Marseille</span></button>
+            <button type="button" data-ap="NCE" aria-pressed="false"><b>NCE</b><span>Nice</span></button>
+            <button type="button" data-ap="MPL" aria-pressed="false"><b>MPL</b><span>Montpellier</span></button>
+            <button type="button" data-ap="TLS" aria-pressed="false"><b>TLS</b><span>Toulouse</span></button>
+            <button type="button" data-ap="BOD" aria-pressed="false"><b>BOD</b><span>Bordeaux</span></button>
+            <button type="button" data-ap="NTE" aria-pressed="false"><b>NTE</b><span>Nantes</span></button>
+            <button type="button" data-ap="ZRH" aria-pressed="false"><b>ZRH</b><span>Zurich</span></button>
           </div>
           <div class="pass" aria-hidden="true">
             <div class="pass-leg"><span class="pass-k">Départ</span><span class="pass-code" id="pass-from"></span><span class="pass-c" id="pass-fc">Bâle‑Mulhouse</span></div>
@@ -1341,7 +1349,6 @@ html.lenis,html.lenis body{height:auto}
       <li><span class="b-code">MS</span><span class="b-name">Egyptair</span></li>
       <li><span class="b-code">ET</span><span class="b-name">Ethiopian Airlines</span></li>
       <li><span class="b-code">KQ</span><span class="b-name">Kenya Airways</span></li>
-      <li><span class="b-code">BJ</span><span class="b-name">Nouvelair</span></li>
       <li><span class="b-code">AT</span><span class="b-name">Royal Air Maroc</span></li>
       <li><span class="b-code">WB</span><span class="b-name">RwandAir</span></li>
       <li><span class="b-code">LX</span><span class="b-name">Swiss</span></li>
@@ -1831,24 +1838,25 @@ html.lenis,html.lenis body{height:auto}
       directToLow: 'vols directs vers',
       directLow: 'vol direct',
       airTo: 'en vol direct',
-      orDirect: 'Vol direct possible depuis\u00a0:',
-      alsoDirect: 'Aussi en direct depuis\u00a0:',
       airPick: 'Choisissez l’aéroport d’arrivée',
     };
     // Vols directs relevés en octobre 2026 (programmes des aéroports), seulement les compagnies qui transportent les défunts.
     // Arrivée : départ et compagnies ; * = en saison. Pas de ligne = aucun vol direct connu : nous ne promettons rien (pas d'escale).
-    const AIR = { AF: 'Air France', AH: 'Air Algérie', AT: 'Royal Air Maroc', TU: 'Tunisair', BJ: 'Nouvelair', HC: 'Air Sénégal', HF: 'Air Côte d’Ivoire', SS: 'Corsair', MS: 'Egyptair', ET: 'Ethiopian Airlines', KQ: 'Kenya Airways', WB: 'RwandAir', LX: 'Swiss', UU: 'Air Austral', TK: 'Turkish Airlines', EK: 'Emirates', QR: 'Qatar Airways' };
+    const AIR = { AF: 'Air France', AH: 'Air Algérie', AT: 'Royal Air Maroc', TU: 'Tunisair', HC: 'Air Sénégal', HF: 'Air Côte d’Ivoire', SS: 'Corsair', MS: 'Egyptair', ET: 'Ethiopian Airlines', KQ: 'Kenya Airways', WB: 'RwandAir', LX: 'Swiss', UU: 'Air Austral', TK: 'Turkish Airlines', EK: 'Emirates', QR: 'Qatar Airways' };
     const ROUTES = {
-      ALG: 'BSL:AH SXB:AH LYS:AH PAR:AH,AF', AAE: 'LYS:AH PAR:AH', BJA: 'LYS:AH PAR:AH', CZL: 'LYS:AH PAR:AH', ORN: 'LYS:AH PAR:AH,AF', TLM: 'LYS:AH PAR:AH',
-      CAI: 'ZRH:MS,LX PAR:AF,MS',
-      AGA: 'PAR:AT', CMN: 'SXB:AT LYS:AT ZRH:AT PAR:AT,AF', FEZ: 'PAR:AT', RAK: 'LYS:AT PAR:AT,AF', OUD: 'PAR:AT', RBA: 'PAR:AT,AF', TNG: 'PAR:AT',
-      DJE: 'BSL:BJ* SXB:BJ* LYS:BJ,TU PAR:TU,AF*', MIR: 'LYS:TU,BJ* PAR:TU,BJ', TUN: 'BSL:BJ SXB:TU,BJ LYS:TU,BJ* PAR:AF,TU,BJ',
+      ALG: 'BSL:AH SXB:AH LYS:AH LIL:AH MRS:AH NCE:AH MPL:AH TLS:AH BOD:AH NTE:AH PAR:AH,AF', AAE: 'LYS:AH MRS:AH PAR:AH', BJA: 'LYS:AH MRS:AH PAR:AH',
+      CZL: 'LYS:AH LIL:AH MRS:AH NCE:AH TLS:AH PAR:AH', ORN: 'LYS:AH LIL:AH MRS:AH MPL:AH TLS:AH BOD:AH PAR:AH,AF', TLM: 'LYS:AH MRS:AH* PAR:AH',
+      CAI: 'PAR:AF,MS ZRH:MS,LX',
+      AGA: 'PAR:AT', CMN: 'SXB:AT LYS:AT PAR:AT,AF MRS:AT NCE:AT MPL:AT TLS:AT BOD:AT NTE:AT ZRH:AT', FEZ: 'PAR:AT', RAK: 'LYS:AT PAR:AT,AF MRS:AT TLS:AT BOD:AT NTE:AT',
+      OUD: 'PAR:AT', RBA: 'PAR:AT,AF MRS:AT', TNG: 'PAR:AT',
+      DJE: 'LYS:TU PAR:TU,AF* MRS:TU NCE:TU', MIR: 'LYS:TU PAR:TU MRS:TU NCE:TU', TUN: 'SXB:TU LYS:TU PAR:AF,TU MRS:TU NCE:TU TLS:TU BOD:TU',
       DSS: 'PAR:AF,HC', ABJ: 'PAR:AF,HF,SS', BKO: 'PAR:SS', CKY: 'PAR:AF', COO: 'PAR:AF,SS', LFW: 'PAR:AF', LOS: 'PAR:AF', NKC: 'PAR:AF',
       DLA: 'PAR:AF', LBV: 'PAR:AF', BZV: 'PAR:AF', FIH: 'PAR:AF', NDJ: 'PAR:AF', SSG: 'PAR:AF',
-      IST: 'LYS:TK ZRH:TK PAR:TK', DXB: 'LYS:EK ZRH:EK PAR:EK', DOH: 'ZRH:QR PAR:QR',
-      JNB: 'ZRH:LX PAR:AF', ADD: 'LYS:ET PAR:ET', JIB: 'PAR:AF', NBO: 'PAR:AF,KQ', TNR: 'PAR:AF,SS', KGL: 'PAR:WB', DZA: 'PAR:SS,UU*',
+      IST: 'LYS:TK PAR:TK ZRH:TK', DXB: 'LYS:EK PAR:EK ZRH:EK', DOH: 'PAR:QR ZRH:QR',
+      JNB: 'PAR:AF ZRH:LX', ADD: 'LYS:ET PAR:ET MRS:ET', JIB: 'PAR:AF', NBO: 'PAR:AF,KQ', TNR: 'PAR:AF,SS', KGL: 'PAR:WB', DZA: 'PAR:SS,UU* MRS:SS',
     };
-    const ORDER = ['BSL', 'SXB', 'LYS', 'ZRH', 'PAR'];
+    // Départs en France d'abord, du plus proche de notre base au plus loin ; Zurich en dernier
+    const ORDER = ['BSL', 'SXB', 'LYS', 'PAR', 'LIL', 'MRS', 'NCE', 'MPL', 'TLS', 'BOD', 'NTE', 'ZRH'];
     const routes = (code) => Object.fromEntries((ROUTES[code] || '').split(' ').filter(Boolean).map(x => x.split(':')).map(([a, l]) => [a, l.split(',')]));
     const input = document.getElementById('dsearch'), msg = document.getElementById('dsearch-msg');
     const passTo = document.getElementById('pass-to'), passCity = document.getElementById('pass-city');
@@ -1904,7 +1912,7 @@ html.lenis,html.lenis body{height:auto}
       return f;
     };
     // Départ : choisi par la personne, sinon l'aéroport le plus proche de notre base qui a un vol direct
-    const depBtns = [...document.querySelectorAll('.dep button')];
+    const depRow = document.querySelector('.dep'), depBtns = [...depRow.querySelectorAll('button')];
     const apName = Object.fromEntries(depBtns.map(b => [b.dataset.ap, b.querySelector('span').textContent]));
     const passFrom = document.getElementById('pass-from'), passFc = document.getElementById('pass-fc');
     const passAn = document.getElementById('pass-an'), passTag = document.getElementById('pass-tag');
@@ -1952,7 +1960,10 @@ html.lenis,html.lenis body{height:auto}
       const where = one ? (one === c.name ? one : `${one} (${c.name})`) : '';
       const r = one ? routes(c.code[one]) : {};
       const direct = ORDER.filter(a => r[a]);
-      setFrom(dep || direct[0] || 'BSL');
+      // Seuls les départs qui ont un vol direct vers cette ville restent proposés
+      depBtns.forEach(b => { b.hidden = !direct.includes(b.dataset.ap); });
+      depRow.hidden = !direct.length;
+      setFrom(direct.includes(dep) ? dep : direct[0] || 'BSL');
       // Seulement des vols directs : sans vol direct connu, on le dit et on invite à écrire
       const served = c.cities.filter(x => ORDER.some(a => routes(c.code[x])[a]));
       const ok = one ? direct.length > 0 : served.length > 0;
@@ -1961,14 +1972,6 @@ html.lenis,html.lenis body{height:auto}
       else if (!ok) { msg.append(`${where || c.name}${L.sep}${L.none}`); setAir(L.noneAir); }
       else if (r[from]) { msg.append(yes, `${L.direct} ${apName[from]} → ${where} ${L.with} ${airNames(r[from])}.`); setAir(airNames(r[from]), L.direct); }
       else { msg.append(`${L.noDirect} ${apName[from]} ${L.toward} ${where}.`); setAir(`${L.noDirect} ${apName[from]}`); }
-      const alt = direct.filter(a => a !== from);
-      if (one && alt.length) {
-        const pick = document.createElement('span');
-        pick.className = 'dask-pick dask-dep';
-        pick.append(r[from] ? L.alsoDirect : L.orDirect);
-        alt.forEach(a => pick.append(button(apName[a], () => { dep = a; show(c, city, rest); })));
-        msg.append(pick);
-      }
       if (c.cities.length > 1) {
         const pick = document.createElement('span');
         pick.className = 'dask-pick';
@@ -2000,7 +2003,7 @@ html.lenis,html.lenis body{height:auto}
     };
     const ask = () => {
       const q = norm(input.value);
-      if (!q) { countries.forEach(o => o.li.classList.remove('is-match')); msg.replaceChildren(); setPass(); setAir(); again = null; setFrom(dep || 'BSL'); asked = []; focus(asked); return; }
+      if (!q) { countries.forEach(o => o.li.classList.remove('is-match')); msg.replaceChildren(); setPass(); setAir(); again = null; depRow.hidden = true; setFrom('BSL'); asked = []; focus(asked); return; }
       const hits = [];
       [...countries, ...world].forEach(c => {
         if ((c.ns || [c.n]).some(n => n.startsWith(q) || (q.length > 2 && n.includes(q)))) { hits.push({ c }); return; }
@@ -2009,7 +2012,7 @@ html.lenis,html.lenis body{height:auto}
       });
       if (!hits.length) {
         countries.forEach(o => o.li.classList.remove('is-match'));
-        setPass(); setAir(); again = null;
+        setPass(); setAir(); again = null; depRow.hidden = true;
         msg.innerHTML = 'Destination introuvable sous ce nom. <a href="#contact">Écrivez-nous</a> : nous partons vers tout pays desservi.';
         asked = []; focus(asked); return;
       }
