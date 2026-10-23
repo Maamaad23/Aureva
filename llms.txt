@@ -1,6 +1,6 @@
 # AUREVA Freight
 
-> AUREVA Freight (AUREVA SAS) est un transitaire funéraire aérien et agent cargo IATA basé à Sausheim, en Alsace. Il organise le rapatriement aérien de défunts de la France vers toute l'Afrique, au premier vol disponible, pour le compte des pompes funèbres.
+> AUREVA Freight (AUREVA FREIGHT) est un transitaire funéraire aérien et agent cargo IATA basé à Sausheim, en Alsace. Il organise le rapatriement de corps par avion de toute la France vers toute l'Afrique et le reste du monde (Maroc, Algérie, Tunisie, Égypte, Sénégal, Mali, Côte d'Ivoire, Guinée et les autres pays), au premier vol disponible, pour le compte des pompes funèbres.
 
 ## L'essentiel
 
@@ -9,9 +9,10 @@
 - Accréditations : agent cargo accrédité IATA (réservation directe auprès des compagnies) et commissionnaire de transport.
 - AUREVA accompagne chaque défunt, quelle que soit sa religion.
 - AUREVA connaît l'urgence d'une inhumation musulmane : premier vol disponible, 7 jours sur 7.
-- Documents : sur demande, la liste exacte des documents exigés par le consulat du pays de destination, gratuitement.
+- Familles : en France, un rapatriement passe obligatoirement par une pompe funèbre habilitée. Une famille peut écrire à AUREVA (rubrique Familles du site), qui contacte sa pompe funèbre si elle en a une, ou lui propose des pompes funèbres partenaires proches de chez elle. AUREVA organise ensuite le vol avec la pompe funèbre. Aucun devis ni facture n'est adressé aux familles.
+- Équipe : basée à Sausheim, à côté de l'EuroAirport Bâle-Mulhouse, issue du fret aérien et de la douane. Elle a elle-même vécu le rapatriement d'un proche.
 - Bureau : 20 rue du Jura, 68390 Sausheim (Haut-Rhin, France). Aéroport de base : Bâle-Mulhouse (BSL).
-- Contact : support@aurevafreight.com. Société : AUREVA SAS, SIREN 102 873 577.
+- Contact : support@aurevafreight.com. Société : AUREVA FREIGHT, SIREN 102 873 577.
 
 ## Qui fait quoi
 
@@ -22,13 +23,13 @@
 
 Bâle-Mulhouse (base), Lyon, Strasbourg, Zurich, et tout autre aéroport utile au dossier.
 
-## Destinations (toute l'Afrique)
+## Destinations (toute l'Afrique en priorité, et le reste du monde)
 
 - Afrique de l'Ouest : Abidjan, Accra, Bamako, Banjul, Bissau, Conakry, Cotonou, Dakar, Lagos, Lomé, Niamey, Nouakchott, Ouagadougou.
 - Afrique centrale : Bangui, Brazzaville, Douala, Kinshasa, Libreville, Malabo, N'Djamena.
 - Afrique de l'Est et océan Indien : Addis-Abeba, Antananarivo, Dar es Salaam, Djibouti, Johannesburg, Kigali, Mayotte, Moroni, Nairobi.
 - Afrique du Nord : Agadir, Alger, Annaba, Béjaïa, Casablanca, Constantine, Djerba, Fès, Le Caire, Marrakech, Monastir, Nador, Oran, Oujda, Rabat, Tanger, Tlemcen, Tunis.
-- Autres villes et pays hors d'Afrique : étudiés sur demande.
+- Reste du monde : Europe, Moyen-Orient (Turquie, Liban…), Asie, Amériques, outre-mer. Départ de toute la France, depuis l'aéroport qui offre le premier vol.
 
 ## Compagnies
 
@@ -40,3 +41,5 @@ Air Algérie, Air France, Air Sénégal, Corsair, Egyptair, Emirates, Ethiopian 
 - [English](https://aurevafreight.com/en/)
 - [Deutsch](https://aurevafreight.com/de/)
 - [Mentions légales](https://aurevafreight.com/mentions-legales.html)
+- Fiche réflexe (PDF, 1 page, à garder au bureau des pompes funèbres) : https://aurevafreight.com/fiche-reflexe-aureva.pdf
+- Pompes funèbres partenaires : convention simple, sans engagement de volume ; les familles sans pompe funèbre sont orientées vers les partenaires.

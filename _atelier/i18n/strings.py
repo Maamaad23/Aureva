@@ -203,7 +203,7 @@ T = {
 
  # Pied de page
  "Le dernier voyage, avec dignité.": ("The last journey, with dignity.", "Die letzte Reise, in Würde."),
- "© 2026 AUREVA SAS · SIREN 102 873 577 · 20 rue du Jura, 68390 Sausheim": ("© 2026 AUREVA SAS · SIREN 102 873 577 · 20 rue du Jura, 68390 Sausheim, France", "© 2026 AUREVA SAS · SIREN 102 873 577 · 20 rue du Jura, 68390 Sausheim, Frankreich"),
+ "© 2026 AUREVA FREIGHT · SIREN 102 873 577 · 20 rue du Jura, 68390 Sausheim": ("© 2026 AUREVA FREIGHT · SIREN 102 873 577 · 20 rue du Jura, 68390 Sausheim, France", "© 2026 AUREVA FREIGHT · SIREN 102 873 577 · 20 rue du Jura, 68390 Sausheim, Frankreich"),
  "Mentions légales": ("Legal notice (French)", "Impressum (Französisch)"),
 
  # Head
@@ -223,6 +223,39 @@ JS = {
  "'Envoyer la demande '": ("'Send request '", "'Anfrage senden '"),
  "'BÂLE-MULHOUSE'": ("'BASEL-MULHOUSE'", "'BASEL-MÜLHAUSEN'"),
  "'Pas encore dans la liste. <a href=\"#contact\">Écrivez-nous</a> : nous étudions chaque demande.'": ("'Not on the list yet. <a href=\"#contact\">Write to us</a>: we look into every request.'", "'Noch nicht in der Liste. <a href=\"#contact\">Schreiben Sie uns</a>: Wir prüfen jede Anfrage.'"),
+ 'Beyrouth:BEY': ('Beirut:BEY', 'Beirut:BEY'),
+ 'Damas:DAM': ('Damascus:DAM', 'Damaskus:DAM'),
+ 'Bagdad:BGW': ('Baghdad:BGW', 'Bagdad:BGW'),
+ 'Djeddah:JED': ('Jeddah:JED', 'Dschidda:JED'),
+ 'Médine:MED': ('Medina:MED', 'Medina:MED'),
+ 'Riyad:RUH': ('Riyadh:RUH', 'Riad:RUH'),
+ 'Dubaï:DXB': ('Dubai:DXB', 'Dubai:DXB'),
+ 'Téhéran:IKA': ('Tehran:IKA', 'Teheran:IKA'),
+ 'Kaboul:KBL': ('Kabul:KBL', 'Kabul:KBL'),
+ 'Dacca:DAC': ('Dhaka:DAC', 'Dhaka:DAC'),
+ 'Hô Chi Minh-Ville:SGN': ('Ho Chi Minh City:SGN', 'Ho-Chi-Minh-Stadt:SGN'),
+ 'Hanoï:HAN': ('Hanoi:HAN', 'Hanoi:HAN'),
+ 'Pékin:PEK': ('Beijing:PEK', 'Peking:PEK'),
+ 'Manille:MNL': ('Manila:MNL', 'Manila:MNL'),
+ 'Erevan:EVN': ('Yerevan:EVN', 'Jerewan:EVN'),
+ 'Tbilissi:TBS': ('Tbilisi:TBS', 'Tiflis:TBS'),
+ 'Moscou:SVO': ('Moscow:SVO', 'Moskau:SVO'),
+ 'Lisbonne:LIS': ('Lisbon:LIS', 'Lissabon:LIS'),
+ 'Barcelone:BCN': ('Barcelona:BCN', 'Barcelona:BCN'),
+ 'Rome:FCO': ('Rome:FCO', 'Rom:FCO'),
+ 'Milan:MXP': ('Milan:MXP', 'Mailand:MXP'),
+ 'Varsovie:WAW': ('Warsaw:WAW', 'Warschau:WAW'),
+ 'Bucarest:OTP': ('Bucharest:OTP', 'Bukarest:OTP'),
+ 'Athènes:ATH': ('Athens:ATH', 'Athen:ATH'),
+ 'Londres:LHR': ('London:LHR', 'London:LHR'),
+ 'Francfort:FRA': ('Frankfurt:FRA', 'Frankfurt:FRA'),
+ 'Bruxelles:BRU': ('Brussels:BRU', 'Brüssel:BRU'),
+ 'Genève:GVA': ('Geneva:GVA', 'Genf:GVA'),
+ 'Montréal:YUL': ('Montreal:YUL', 'Montreal:YUL'),
+ "world: 'nous organisons le vol vers l’aéroport le plus proche.'": ("world: 'we arrange the flight to the nearest airport.'", "world: 'wir organisieren den Flug zum nächstgelegenen Flughafen.'"),
+ "dest: 'Destination'": ("dest: 'Destination'", "dest: 'Zielort'"),
+ '\'Destination introuvable sous ce nom. <a href="#contact">Écrivez-nous</a> : nous partons vers tout pays desservi.\'': ('\'No destination found under that name. <a href="#contact">Write to us</a>: we fly to any country served.\'', '\'Kein Ziel unter diesem Namen gefunden. <a href="#contact">Schreiben Sie uns</a>: Wir fliegen in jedes angeflogene Land.\''),
+ '\'Pas dans notre liste, mais nous organisons aussi les vols hors d\\\'Afrique. <a href="#contact">Écrivez-nous</a> avec la destination.\'': ('\'Not on our list, but we also arrange flights outside Africa. <a href="#contact">Write to us</a> with the destination.\'', '\'Nicht in unserer Liste, aber wir organisieren auch Flüge außerhalb Afrikas. <a href="#contact">Schreiben Sie uns</a> mit dem Zielort.\''),
  "`${shown.length} aéroports`": ("`${shown.length} airports`", "`${shown.length} Flughäfen`"),
 }
 
@@ -260,7 +293,7 @@ T.update({
 })
 
 # Noms propres de villes en allemand
-T.update({"Strasbourg": ("Strasbourg", "Straßburg"), "Zurich": ("Zurich", "Zürich")})
+T.update({"Strasbourg": ("Strasbourg", "Straßburg"), "Zurich": ("Zurich", "Zürich") })
 
 # Noms propres identiques dans toutes les langues (villes, compagnies) : pas d'alerte
 KEEP = {"Abidjan", "Accra", "Antananarivo", "Bamako", "Bangui", "Banjul", "Bissau", "Brazzaville", "Casablanca",
@@ -327,8 +360,8 @@ T.update({
  "Un cercueil hermétique avec enveloppe en zinc, conforme au transport international. Nous vous précisons les exigences de la compagnie dès la réservation.": ("A hermetically sealed coffin with a zinc lining, compliant with international transport. We tell you the airline's requirements as soon as we book.", "Ein hermetisch verschlossener Sarg mit Zinkeinsatz, konform für den internationalen Transport. Die Anforderungen der Fluggesellschaft nennen wir Ihnen bei der Buchung."),
  "Nous vous prévenons aussitôt et cherchons le vol suivant, pour que vous puissiez rassurer la famille.": ("We tell you at once and look for the next flight, so you can reassure the family.", "Wir informieren Sie sofort und suchen den nächsten Flug, damit Sie die Familie beruhigen können."),
  "Oui, 7 jours sur 7, jours fériés compris. Pour une inhumation musulmane, nous savons que chaque heure compte.": ("Yes, 7 days a week, including public holidays. For a Muslim burial, we know every hour counts.", "Ja, 7 Tage die Woche, auch an Feiertagen. Bei einer muslimischen Bestattung wissen wir, dass jede Stunde zählt."),
- "Joignables 7 jours sur 7. Nous revenons vers vous avec les options de vol et le devis.": ("Reachable 7 days a week. We come back to you with the flight options and the quote.", "7 Tage die Woche erreichbar. Wir melden uns mit den Flugoptionen und dem Angebot."),
- "Merci. Nous revenons vers vous avec les options de vol. En cas d'urgence, écrivez-nous aussi à": ("Thank you. We will come back to you with the flight options. If it is urgent, also write to us at", "Danke. Wir melden uns mit den Flugoptionen. Bei Dringlichkeit schreiben Sie uns auch an"),
+ "Joignables 7 jours sur 7. Nous vous répondons avec les options de vol et le devis.": ("Reachable 7 days a week. We reply with the flight options and the quote.", "7 Tage die Woche erreichbar. Wir melden uns mit den Flugoptionen und dem Angebot."),
+ "Merci. Nous vous répondons avec les options de vol. En cas d'urgence, écrivez-nous aussi à": ("Thank you. We will reply with the flight options. If it is urgent, also write to us at", "Danke. Wir melden uns mit den Flugoptionen. Bei Dringlichkeit schreiben Sie uns auch an"),
 })
 JS.update({
  "'Demande reçue : la liste arrive dans votre boîte mail.'": ("'Request received: the list is on its way to your inbox.'", "'Anfrage erhalten: Die Liste kommt per E-Mail.'"),
@@ -349,3 +382,214 @@ T.update({
  "Oui. Notre base est Bâle-Mulhouse, et nous réservons aussi depuis Lyon, Strasbourg, Zurich ou tout autre aéroport utile au dossier.": ("Yes. Our base is Basel-Mulhouse, and we also book from Lyon, Strasbourg, Zurich or any other airport that suits the case.", "Ja. Unsere Basis ist Basel-Mulhouse, und wir buchen auch ab Lyon, Straßburg, Zürich oder jedem anderen passenden Flughafen."),
  "Nous réservons directement auprès des compagnies, sans intermédiaire : un seul interlocuteur, du devis jusqu'à l'atterrissage.": ("We book directly with the airlines, with no middleman: one contact, from quotation to landing.", "Wir buchen direkt bei den Fluggesellschaften, ohne Zwischenhändler: ein Ansprechpartner, vom Angebot bis zur Landung."),
 })
+
+# À propos + Familles 2026-10-22
+T.update({
+ "À propos": ("About", "Über uns"),
+ "Familles": ("Families", "Familien"),
+ "Une équipe d'Alsace, issue du fret aérien": ("A team from Alsace, with an air freight background", "Ein Team aus dem Elsass, aus der Luftfracht"),
+ "AUREVA Freight est née à Sausheim, près de l'EuroAirport Bâle-Mulhouse. Notre équipe vient du fret aérien et de la douane.": ("AUREVA Freight was founded in Sausheim, near EuroAirport Basel-Mulhouse. Our team comes from air freight and customs.", "AUREVA Freight wurde in Sausheim gegründet, nahe dem EuroAirport Basel-Mulhouse. Unser Team kommt aus der Luftfracht und dem Zoll."),
+ "Nous avons connu le rapatriement d'un proche. Nous savons ce que coûte chaque heure d'attente pour une famille, et ce qu'un vol bien organisé change.": ("We have been through the repatriation of a loved one. We know what every hour of waiting costs a family, and what a well-organised flight changes.", "Wir haben die Überführung eines Angehörigen selbst erlebt. Wir wissen, was jede Stunde Warten für eine Familie bedeutet, und was ein gut organisierter Flug verändert."),
+ "Sur place": ("On site", "Vor Ort"),
+ "Un bureau à Sausheim et une base à l'EuroAirport Bâle-Mulhouse.": ("An office in Sausheim and a base at EuroAirport Basel-Mulhouse.", "Ein Büro in Sausheim und eine Basis am EuroAirport Basel-Mulhouse."),
+ "Accrédités": ("Accredited", "Zugelassen"),
+ "et agent cargo IATA": ("and IATA cargo agent", "und IATA-Frachtagent"),
+ "Les rites respectés": ("Rites respected", "Riten respektiert"),
+ "Nous connaissons les délais d'une inhumation musulmane, et accompagnons chaque défunt, quelle que soit sa religion.": ("We know the time constraints of a Muslim burial, and we accompany every deceased person, whatever their religion.", "Wir kennen die Fristen einer muslimischen Bestattung und begleiten jede verstorbene Person, unabhängig von ihrer Religion."),
+ "Toutes nos condoléances. Écrivez-nous : nous vous mettons en relation avec une pompe funèbre proche de chez vous, et nous organisons le vol avec elle.": ("Our deepest condolences. Write to us: we put you in touch with a funeral home near you, and we organise the flight with them.", "Unser herzliches Beileid. Schreiben Sie uns: Wir vermitteln Ihnen ein Bestattungsunternehmen in Ihrer Nähe und organisieren den Flug gemeinsam mit ihm."),
+ "Vous nous écrivez, même sans pompe funèbre.": ("You write to us, even without a funeral home.", "Sie schreiben uns, auch ohne Bestattungsunternehmen."),
+ "Nous vous orientons vers une pompe funèbre, qui s'occupe des démarches.": ("We refer you to a funeral home, which handles the formalities.", "Wir vermitteln Sie an ein Bestattungsunternehmen, das sich um die Formalitäten kümmert."),
+ "Nous organisons le vol, jusqu'à l'arrivée.": ("We organise the flight, until arrival.", "Wir organisieren den Flug bis zur Ankunft."),
+ "Vous avez déjà une pompe funèbre ? Envoyez-lui nos coordonnées ": ("Already have a funeral home? Send them our details", "Sie haben bereits ein Bestattungsunternehmen? Senden Sie ihm unsere Kontaktdaten"),
+ "Votre email": ("Your email", "Ihre E-Mail"),
+ "nom@exemple.fr": ("name@example.com", "name@beispiel.de"),
+ "Ville où se trouve le défunt": ("City where the deceased is", "Ort, an dem sich die verstorbene Person befindet"),
+ "Ex. Mulhouse": ("E.g. Mulhouse", "z. B. Mulhouse"),
+ "Indiquez la ville.": ("Enter the city.", "Geben Sie den Ort an."),
+ "Pays d'inhumation": ("Country of burial", "Land der Bestattung"),
+ "Téléphone": ("Phone", "Telefon"),
+ "Pour que la pompe funèbre vous rappelle": ("So the funeral home can call you back", "Damit das Bestattungsunternehmen Sie zurückruft"),
+ "Votre message": ("Your message", "Ihre Nachricht"),
+ "Date d'inhumation souhaitée, questions": ("Preferred burial date, questions", "Gewünschter Bestattungstermin, Fragen"),
+ "J'accepte qu'AUREVA transmette ma demande à une pompe funèbre, qui me recontactera.": ("I agree that AUREVA may pass my request on to a funeral home, which will contact me.", "Ich bin einverstanden, dass AUREVA meine Anfrage an ein Bestattungsunternehmen weiterleitet, das mich kontaktiert."),
+ "Cochez la case pour que nous puissions transmettre votre demande.": ("Tick the box so we can pass on your request.", "Kreuzen Sie das Feld an, damit wir Ihre Anfrage weiterleiten können."),
+ "Envoyer ma demande": ("Send my request", "Anfrage senden"),
+})
+JS.update({
+ "'Demande reçue. Nous vous répondons par email et vous orientons vers une pompe funèbre.'": ("'Request received. We will reply by email and refer you to a funeral home.'", "'Anfrage erhalten. Wir antworten per E-Mail und vermitteln Sie an ein Bestattungsunternehmen.'"),
+})
+
+# Textes humanisés + SEO 2026-10-22
+T.update({
+ "Rapatriement de corps vers l'Afrique · AUREVA Freight": ("Repatriation of the deceased to Africa · AUREVA Freight", "Überführung Verstorbener nach Afrika · AUREVA Freight"),
+ "Rapatriement de corps vers l'Afrique, aux côtés des pompes funèbres": ("Repatriation of the deceased to Africa, alongside funeral homes", "Überführung Verstorbener nach Afrika, an der Seite der Bestatter"),
+ "Nous partons de Bâle-Mulhouse, ou de l'aéroport qui offre le vol le plus rapide. Cherchez une ville ou un pays.": ("We fly from Basel-Mulhouse, or from whichever airport offers the fastest flight. Search for a city or a country.", "Wir fliegen ab Basel-Mulhouse oder ab dem Flughafen mit der schnellsten Verbindung. Suchen Sie eine Stadt oder ein Land."),
+ "Des accréditations, pas des promesses": ("Accreditations, not promises", "Zulassungen statt Versprechen"),
+ "Nous avons vécu ce voyage avant de l'organiser": ("We lived this journey before we organised it", "Wir haben diese Reise erlebt, bevor wir sie organisierten"),
+ "Comme beaucoup de familles africaines de France, nous avons un jour raccompagné un proche jusqu'à sa terre. Nous nous souvenons de l'attente, des papiers, des appels restés sans réponse.": ("Like many African families in France, we once took a loved one home to rest. We remember the waiting, the paperwork, the calls that went unanswered.", "Wie viele afrikanische Familien in Frankreich haben auch wir einen Angehörigen in seine Heimat zurückbegleitet. Wir erinnern uns an das Warten, die Papiere, die unbeantworteten Anrufe."),
+ "AUREVA est née de ce souvenir, à Sausheim, à côté de l'EuroAirport. Notre équipe vient du fret aérien et de la douane. Elle met ce métier au service d'un seul moment : le dernier voyage.": ("AUREVA was born from that memory, in Sausheim, next to EuroAirport. Our team comes from air freight and customs, and puts that expertise at the service of a single moment: the last journey.", "AUREVA ist aus dieser Erinnerung entstanden, in Sausheim, neben dem EuroAirport. Unser Team kommt aus der Luftfracht und dem Zoll und stellt dieses Können in den Dienst eines einzigen Moments: der letzten Reise."),
+ "Nous répondons comme nous aurions aimé qu'on nous réponde : vite, clairement, avec respect.": ("We answer the way we would have liked to be answered: quickly, clearly, with respect.", "Wir antworten so, wie wir uns damals eine Antwort gewünscht hätten: schnell, klar, respektvoll."),
+ "Vous venez de perdre un proche ?": ("Have you just lost a loved one?", "Sie haben einen Angehörigen verloren?"),
+ "Toutes nos condoléances. En France, un rapatriement passe obligatoirement par une pompe funèbre habilitée. Écrivez-nous : nous vous orientons vers l'une de nos partenaires, près de chez vous.": ("Our deepest condolences. In France, a repatriation must go through a licensed funeral home. Write to us: we refer you to one of our partners near you.", "Unser herzliches Beileid. In Frankreich muss eine Überführung über ein zugelassenes Bestattungsunternehmen laufen. Schreiben Sie uns: Wir vermitteln Ihnen einen unserer Partner in Ihrer Nähe."),
+ "Nous vous orientons vers une pompe funèbre partenaire, qui s'occupe des démarches.": ("We refer you to a partner funeral home, which handles the formalities.", "Wir vermitteln Sie an ein Partner-Bestattungsunternehmen, das sich um die Formalitäten kümmert."),
+ "Des mains qui se tiennent, en signe de soutien": ("Hands holding each other, in support", "Hände, die sich halten, als Zeichen des Beistands"),
+ "Vers quels pays rapatriez-vous ?": ("Which countries do you repatriate to?", "In welche Länder überführen Sie?"),
+ "Vers toute l'Afrique : l'Afrique du Nord (Maroc, Algérie, Tunisie, Égypte), l'Afrique de l'Ouest (Sénégal, Mali, Côte d'Ivoire, Guinée, Burkina Faso et les autres), l'Afrique centrale et l'Afrique de l'Est. Pour un autre pays, nous étudions chaque demande.": ("To all of Africa: North Africa (Morocco, Algeria, Tunisia, Egypt), West Africa (Senegal, Mali, Côte d'Ivoire, Guinea, Burkina Faso and the others), Central Africa and East Africa. For any other country, we look at each request.", "In ganz Afrika: Nordafrika (Marokko, Algerien, Tunesien, Ägypten), Westafrika (Senegal, Mali, Elfenbeinküste, Guinea, Burkina Faso und weitere), Zentral- und Ostafrika. Für jedes andere Land prüfen wir jede Anfrage."),
+ "Une famille peut-elle vous contacter directement ?": ("Can a family contact you directly?", "Kann sich eine Familie direkt an Sie wenden?"),
+ "Oui. En France, un rapatriement passe obligatoirement par une pompe funèbre habilitée : écrivez-nous depuis la rubrique Familles, nous vous orientons vers une pompe funèbre partenaire et nous organisons le vol avec elle.": ("Yes. In France, a repatriation must go through a licensed funeral home: write to us from the Families section, we refer you to a partner funeral home and we organise the flight with them.", "Ja. In Frankreich muss eine Überführung über ein zugelassenes Bestattungsunternehmen laufen: Schreiben Sie uns über den Bereich Familien, wir vermitteln Ihnen ein Partnerunternehmen und organisieren den Flug gemeinsam mit ihm."),
+ "Rapatriement de corps par avion vers le Maroc, l'Algérie, la Tunisie, le Sénégal, le Mali et toute l'Afrique, avec votre pompe funèbre. 7 jours sur 7.": ("Air repatriation of the deceased to Morocco, Algeria, Tunisia, Senegal, Mali and all of Africa, with your funeral home. 7 days a week.", "Luftüberführung Verstorbener nach Marokko, Algerien, Tunesien, Senegal, Mali und ganz Afrika, mit Ihrem Bestattungsunternehmen. An 7 Tagen."),
+ "Rapatriement de corps par avion vers toute l'Afrique, au premier vol disponible. Pour les pompes funèbres et les familles, 7 jours sur 7.": ("Air repatriation of the deceased to all of Africa, on the first available flight. For funeral homes and families, 7 days a week.", "Luftüberführung Verstorbener in ganz Afrika, mit dem ersten verfügbaren Flug. Für Bestatter und Familien, an 7 Tagen."),
+})
+LD.update({
+ "Transitaire funéraire aérien, agent cargo IATA et commissionnaire de transport, basé à Sausheim près de l'EuroAirport Bâle-Mulhouse. Rapatriement de corps par avion depuis la France vers toute l'Afrique, avec les pompes funèbres, 7 jours sur 7.": ("Funeral air forwarder, IATA cargo agent and freight forwarder, based in Sausheim near EuroAirport Basel-Mulhouse. Air repatriation of the deceased from France to all of Africa, with funeral homes, 7 days a week.", "Luftfracht-Spediteur für Überführungen, IATA-Frachtagent und Spediteur, mit Sitz in Sausheim nahe dem EuroAirport Basel-Mulhouse. Luftüberführung Verstorbener von Frankreich in ganz Afrika, mit Bestattern, an 7 Tagen."),
+ "Rapatriement de corps par avion vers l'Afrique": ("Air repatriation of the deceased to Africa", "Luftüberführung Verstorbener nach Afrika"),
+ "Pompes funèbres et familles endeuillées": ("Funeral homes and bereaved families", "Bestatter und trauernde Familien"),
+})
+LD.update({
+ "Rapatriement de corps": ("Repatriation of the deceased", "Überführung Verstorbener"),
+ "Transport aérien de défunts (HUM)": ("Air transport of human remains (HUM)", "Lufttransport Verstorbener (HUM)"),
+ "Lettre de transport aérien": ("Air waybill", "Luftfrachtbrief"),
+ "Inhumation musulmane": ("Muslim burial", "Muslimische Bestattung"),
+ "Rapatriement vers le Maroc, l'Algérie, la Tunisie, le Sénégal et le Mali": ("Repatriation to Morocco, Algeria, Tunisia, Senegal and Mali", "Überführung nach Marokko, Algerien, Tunesien, Senegal und Mali"),
+})
+# Familles : pompe funèbre existante ou orientation (2026-10-22)
+_FAQ_FAM = "Oui. En France, un rapatriement passe obligatoirement par une pompe funèbre habilitée : écrivez-nous depuis la rubrique Familles. Nous contactons votre pompe funèbre, ou nous vous proposons l'une de nos partenaires, et nous organisons le vol avec elle. Nous ne facturons jamais les familles : le devis passe par la pompe funèbre."
+_FAQ_FAM_T = ("Yes. In France, a repatriation must go through a licensed funeral home: write to us from the Families section. We contact your funeral home, or suggest one of our partners, and we organise the flight with them. We never bill families: the quote goes through the funeral home.",
+              "Ja. In Frankreich muss eine Überführung über ein zugelassenes Bestattungsunternehmen laufen: Schreiben Sie uns über den Bereich Familien. Wir kontaktieren Ihr Bestattungsunternehmen oder schlagen Ihnen einen unserer Partner vor und organisieren den Flug gemeinsam mit ihm. Familien stellen wir nie etwas in Rechnung: Das Angebot läuft über das Bestattungsunternehmen.")
+T.update({
+ "Toutes nos condoléances. En France, un rapatriement passe obligatoirement par une pompe funèbre habilitée. Écrivez-nous : si vous avez déjà une pompe funèbre, nous la contactons pour le vol. Sinon, nous vous proposons des pompes funèbres partenaires près de chez vous.": ("Our deepest condolences. In France, a repatriation must go through a licensed funeral home. Write to us: if you already have a funeral home, we contact them about the flight. If not, we suggest partner funeral homes near you.", "Unser herzliches Beileid. In Frankreich muss eine Überführung über ein zugelassenes Bestattungsunternehmen laufen. Schreiben Sie uns: Haben Sie bereits ein Bestattungsunternehmen, kontaktieren wir es für den Flug. Wenn nicht, schlagen wir Ihnen Partnerunternehmen in Ihrer Nähe vor."),
+ "Vous nous écrivez, avec ou sans pompe funèbre.": ("You write to us, with or without a funeral home.", "Sie schreiben uns, mit oder ohne Bestattungsunternehmen."),
+ "Nous contactons votre pompe funèbre, ou vous choisissez l'une de nos partenaires. Elle s'occupe des démarches.": ("We contact your funeral home, or you choose one of our partners. They handle the formalities.", "Wir kontaktieren Ihr Bestattungsunternehmen, oder Sie wählen einen unserer Partner. Er kümmert sich um die Formalitäten."),
+ "Nous organisons le vol avec elle, jusqu'à l'arrivée.": ("We organise the flight with them, through to arrival.", "Wir organisieren den Flug gemeinsam mit ihm, bis zur Ankunft."),
+ "Avez-vous déjà une pompe funèbre ?": ("Do you already have a funeral home?", "Haben Sie bereits ein Bestattungsunternehmen?"),
+ "Non, orientez-moi": ("No, refer me", "Nein, bitte vermitteln"),
+ "Indiquez si vous avez déjà une pompe funèbre.": ("Tell us whether you already have a funeral home.", "Geben Sie an, ob Sie bereits ein Bestattungsunternehmen haben."),
+ "Nom et ville de votre pompe funèbre": ("Name and town of your funeral home", "Name und Ort Ihres Bestattungsunternehmens"),
+ "Ex. Pompes funèbres du Rhin, Colmar": ("E.g. Pompes funèbres du Rhin, Colmar", "z. B. Pompes funèbres du Rhin, Colmar"),
+ "Indiquez le nom de votre pompe funèbre.": ("Enter the name of your funeral home.", "Geben Sie den Namen Ihres Bestattungsunternehmens an."),
+ "J'accepte qu'AUREVA transmette ma demande à ma pompe funèbre ou, si je n'en ai pas, à la pompe funèbre partenaire que je choisirai.": ("I agree that AUREVA may pass my request to my funeral home or, if I have none, to the partner funeral home I choose.", "Ich bin einverstanden, dass AUREVA meine Anfrage an mein Bestattungsunternehmen weitergibt oder, falls ich keines habe, an das Partnerunternehmen meiner Wahl."),
+ _FAQ_FAM: _FAQ_FAM_T,
+})
+LD.update({_FAQ_FAM: _FAQ_FAM_T})
+JS.update({
+ "'Demande reçue. Nous vous répondons par email, puis nous contactons votre pompe funèbre ou vous en proposons une.'": ("'Request received. We will reply by email, then contact your funeral home or suggest one.'", "'Anfrage erhalten. Wir antworten per E-Mail und kontaktieren dann Ihr Bestattungsunternehmen oder schlagen Ihnen eines vor.'"),
+})
+# Refonte Destinations, À propos, Familles (2026-10-22)
+T.update({
+ "Toute l'Afrique, au premier vol disponible": ("All of Africa, on the first available flight", "Ganz Afrika, mit dem ersten verfügbaren Flug"),
+ "Notre base est Bâle-Mulhouse. Si un vol part plus tôt de Lyon, Strasbourg, Zurich ou d'un autre aéroport, nous le prenons.": ("Our base is Basel-Mulhouse. If a flight leaves earlier from Lyon, Strasbourg, Zurich or another airport, we take it.", "Unsere Basis ist Basel-Mulhouse. Startet ein Flug früher ab Lyon, Straßburg, Zürich oder einem anderen Flughafen, nehmen wir ihn."),
+ "Où doit reposer le défunt ?": ("Where will the deceased be laid to rest?", "Wo soll der Verstorbene beigesetzt werden?"),
+ "Ex. Dakar, Maroc, Bamako": ("E.g. Dakar, Morocco, Bamako", "z. B. Dakar, Marokko, Bamako"),
+ "Un autre pays, en Afrique ou ailleurs :": ("Another country, in Africa or elsewhere:", "Ein anderes Land, in Afrika oder anderswo:"),
+ "écrivez-nous": ("write to us", "schreiben Sie uns"),
+ ", nous étudions chaque demande.": (", we look into every request.", ", wir prüfen jede Anfrage."),
+ "Ce ne sont pas des marchandises. C'est un dernier voyage.": ("This is not freight. It is a last journey.", "Das ist keine Fracht. Es ist eine letzte Reise."),
+ "Pourquoi": ("Why", "Warum"),
+ "Qui": ("Who", "Wer"),
+ "Notre promesse": ("Our promise", "Unser Versprechen"),
+ "Comme beaucoup de familles africaines de France, nous avons raccompagné un proche jusqu'à sa terre. Nous nous souvenons de l'attente et des appels restés sans réponse.": ("Like many African families in France, we have taken a loved one back to their homeland. We remember the waiting, and the calls that went unanswered.", "Wie viele afrikanische Familien in Frankreich haben wir einen Angehörigen in seine Heimat zurückbegleitet. Wir erinnern uns an das Warten und an die unbeantworteten Anrufe."),
+ "Une équipe d'Alsace, venue du fret aérien et de la douane. Notre bureau est à Sausheim, à côté de l'EuroAirport Bâle-Mulhouse.": ("A team from Alsace, with a background in air freight and customs. Our office is in Sausheim, next to EuroAirport Basel-Mulhouse.", "Ein Team aus dem Elsass, aus Luftfracht und Zoll. Unser Büro liegt in Sausheim, neben dem EuroAirport Basel-Mulhouse."),
+ "Répondre comme nous aurions aimé qu'on nous réponde : vite, clairement, avec respect. Nous connaissons les délais d'une inhumation musulmane, et accompagnons chaque défunt, quelle que soit sa religion.": ("To answer the way we would have liked to be answered: quickly, clearly, with respect. We know the time constraints of a Muslim burial, and we accompany every deceased person, whatever their faith.", "So zu antworten, wie wir uns damals eine Antwort gewünscht hätten: schnell, klar, respektvoll. Wir kennen die Fristen einer muslimischen Bestattung und begleiten jeden Verstorbenen, gleich welcher Religion."),
+ "Toutes nos condoléances. En France, un rapatriement passe obligatoirement par une pompe funèbre : nous faisons le lien avec elle, puis nous organisons le vol.": ("Our deepest condolences. In France, a repatriation must go through a funeral home: we make the link with them, then we organise the flight.", "Unser herzliches Beileid. In Frankreich muss eine Überführung über ein Bestattungsunternehmen laufen: Wir stellen den Kontakt her und organisieren dann den Flug."),
+ "J'ai déjà une pompe funèbre": ("I already have a funeral home", "Ich habe bereits ein Bestattungsunternehmen"),
+ "Nous la contactons pour le vol.": ("We contact them about the flight.", "Wir kontaktieren es für den Flug."),
+ "Je n'ai pas de pompe funèbre": ("I don't have a funeral home", "Ich habe kein Bestattungsunternehmen"),
+ "Nous vous en proposons près de chez vous.": ("We suggest some near you.", "Wir schlagen Ihnen welche in Ihrer Nähe vor."),
+ "Le plus simple : envoyez-lui nos coordonnées depuis votre messagerie.": ("The simplest way: send them our details from your email.", "Am einfachsten: Senden Sie ihm unsere Kontaktdaten per E-Mail."),
+ "Envoyer nos coordonnées à ma pompe funèbre": ("Send our details to my funeral home", "Unsere Kontaktdaten an mein Bestattungsunternehmen senden"),
+ "Ou laissez-nous son nom : nous l'appelons pour vous.": ("Or leave us their name: we will call them for you.", "Oder nennen Sie uns den Namen: Wir rufen es für Sie an."),
+ "Email ou téléphone": ("Email or phone", "E-Mail oder Telefon"),
+ "Pour vous répondre": ("So we can reply", "Damit wir antworten können"),
+ "Indiquez un email ou un numéro de téléphone.": ("Enter an email or a phone number.", "Geben Sie eine E-Mail-Adresse oder Telefonnummer an."),
+ "J'accepte qu'AUREVA contacte ma pompe funèbre au sujet du vol.": ("I agree that AUREVA may contact my funeral home about the flight.", "Ich bin einverstanden, dass AUREVA mein Bestattungsunternehmen wegen des Fluges kontaktiert."),
+ "J'accepte qu'AUREVA transmette ma demande à la pompe funèbre partenaire que je choisirai.": ("I agree that AUREVA may pass my request to the partner funeral home I choose.", "Ich bin einverstanden, dass AUREVA meine Anfrage an das Partnerunternehmen meiner Wahl weitergibt."),
+ "Cochez la case pour que nous puissions vous aider.": ("Tick the box so that we can help you.", "Kreuzen Sie das Feld an, damit wir Ihnen helfen können."),
+ "Vos données servent uniquement à traiter votre demande. Nous ne facturons jamais les familles.": ("Your data is used only to handle your request. We never bill families.", "Ihre Daten dienen nur der Bearbeitung Ihrer Anfrage. Familien stellen wir nie etwas in Rechnung."),
+ "Votre situation": ("Your situation", "Ihre Situation"),
+})
+JS.update({
+ "yes: 'Oui.'": ("yes: 'Yes.'", "yes: 'Ja.'"),
+ "to: 'Nous rapatrions vers'": ("to: 'We repatriate to'", "to: 'Wir überführen nach'"),
+ "toLow: 'nous rapatrions vers'": ("toLow: 'we repatriate to'", "toLow: 'wir überführen nach'"),
+ "and: ' et '": ("and: ' and '", "and: ' und '"),
+ "sep: '\\u00a0: '": ("sep: ': '", "sep: ': '"),
+ "go: 'Ouvrir un dossier pour ce pays'": ("go: 'Open a case for this country'", "go: 'Einen Fall für dieses Land eröffnen'"),
+ "also: 'Voir aussi\\u00a0:'": ("also: 'See also:'", "also: 'Siehe auch:'"),
+ "'Demande reçue. Nous contactons votre pompe funèbre pour le vol, et nous vous tenons informés.'": ("'Request received. We are contacting your funeral home about the flight, and will keep you informed.'", "'Anfrage erhalten. Wir kontaktieren Ihr Bestattungsunternehmen wegen des Fluges und halten Sie auf dem Laufenden.'"),
+ "'Demande reçue. Nous vous contactons avec des pompes funèbres proches de chez vous.'": ("'Request received. We will get in touch with funeral homes near you.'", "'Anfrage erhalten. Wir melden uns mit Bestattungsunternehmen in Ihrer Nähe.'"),
+})
+# Partenaires et fiche réflexe (2026-10-23) : fiche et convention en français uniquement
+T.update({
+ "Partenaires": ("Partners", "Partner"),
+ "Devenez pompe funèbre partenaire": ("Become a partner funeral home", "Werden Sie Partner-Bestatter"),
+ "Une convention simple, sans engagement de volume. Vous gardez la famille, nous prenons le vol.": ("A simple agreement, with no volume commitment. You keep the family, we take care of the flight.", "Eine einfache Vereinbarung, ohne Mindestvolumen. Sie behalten die Familie, wir übernehmen den Flug."),
+ "Des familles vous sont confiées": ("Families are referred to you", "Familien werden an Sie vermittelt"),
+ "Les familles qui nous écrivent sans pompe funèbre sont orientées vers nos partenaires, près de chez elles.": ("Families who write to us without a funeral home are referred to our partners near them.", "Familien, die uns ohne Bestattungsunternehmen schreiben, vermitteln wir an unsere Partner in ihrer Nähe."),
+ "Aucun engagement de volume": ("No volume commitment", "Kein Mindestvolumen"),
+ "Vous nous confiez un dossier quand vous en avez besoin. La convention se résilie par email, sans pénalité.": ("You hand us a case whenever you need to. The agreement can be ended by email, with no penalty.", "Sie übergeben uns einen Fall, wann immer Sie ihn brauchen. Die Vereinbarung ist per E-Mail kündbar, ohne Vertragsstrafe."),
+ "Un seul interlocuteur, 7 jours sur 7": ("One single contact, 7 days a week", "Ein einziger Ansprechpartner, an 7 Tagen"),
+ "Options de vol, devis, lettre de transport aérien et suivi jusqu'à l'atterrissage.": ("Flight options, quote, air waybill and tracking until landing.", "Flugoptionen, Angebot, Luftfrachtbrief und Begleitung bis zur Landung."),
+ "La fiche réflexe, à garder au bureau": ("The quick-reference sheet, to keep at the office", "Das Merkblatt für Ihr Büro"),
+ "Une page : ce qu'il faut nous envoyer, les documents à préparer, le cercueil et qui fait quoi.": ("One page: what to send us, the documents to prepare, the coffin and who does what (in French).", "Eine Seite: was Sie uns senden, welche Unterlagen nötig sind, der Sarg und wer was übernimmt (auf Französisch)."),
+ "Télécharger la fiche réflexe": ("Download the quick-reference sheet", "Merkblatt herunterladen"),
+ "Recevoir la convention": ("Request the agreement", "Vereinbarung anfordern"),
+ "Fiche réflexe": ("Quick-reference sheet", "Merkblatt"),
+ "Télécharger la fiche réflexe (PDF, 1 page)": ("Download the quick-reference sheet (PDF, 1 page, in French)", "Merkblatt herunterladen (PDF, 1 Seite, auf Französisch)"),
+ "Télécharger le PDF (1 page)": ("Download the PDF (1 page, in French)", "PDF herunterladen (1 Seite, auf Französisch)"),
+})
+# Destinations : carte d'embarquement (2026-10-23)
+T.update({
+ "Arrivée": ("Arrival", "Ankunft"),
+ "Votre destination": ("Your destination", "Ihr Ziel"),
+ "Tapez une ville ou un pays, ou choisissez plus bas": ("Type a city or a country, or choose below", "Stadt oder Land eingeben, oder unten wählen"),
+ "Ou depuis l'aéroport qui offre le premier vol : Lyon, Strasbourg, Zurich…": ("Or from whichever airport has the first flight: Lyon, Strasbourg, Zurich…", "Oder ab dem Flughafen mit dem ersten Flug: Lyon, Straßburg, Zürich…"),
+})
+JS.update({
+ "pick: 'Choisissez l’aéroport d’arrivée\\u00a0:'": ("pick: 'Choose the arrival airport:'", "pick: 'Ankunftsflughafen wählen:'"),
+})
+
+# À propos en questions, compagnies, le monde aussi (2026-10-23)
+T.update({
+'Avant de nous confier un défunt': ('Before you entrust a deceased person to us', 'Bevor Sie uns einen Verstorbenen anvertrauen'),
+ 'Ce que les pompes funèbres nous demandent en premier, et nos réponses.': ('What funeral homes ask us first, and our answers.', 'Was Bestattungsunternehmen uns zuerst fragen, und unsere Antworten.'),
+ "Comme beaucoup de familles africaines de France, nous avons raccompagné un proche jusqu'à sa terre. Nous nous souvenons de l'attente et des appels restés sans réponse. AUREVA est née de ce souvenir.": ('Like many African families in France, we have taken a loved one back to their homeland. We remember the waiting, and the calls that went unanswered. AUREVA was born from that memory.', 'Wie viele afrikanische Familien in Frankreich haben wir einen Angehörigen in seine Heimat zurückbegleitet. Wir erinnern uns an das Warten und an die unbeantworteten Anrufe. Aus dieser Erinnerung ist AUREVA entstanden.'),
+ 'Qui êtes-vous ?': ('Who are you?', 'Wer sind Sie?'),
+ "AUREVA Freight, transitaire aérien du transport de défunts, créée en 2026. Une équipe d'Alsace venue du fret aérien et de la douane.": ('AUREVA Freight, an air freight forwarder for the transport of the deceased, founded in 2026. A team from Alsace with a background in air freight and customs.', 'AUREVA Freight, Luftfrachtspediteur für die Überführung Verstorbener, gegründet 2026. Ein Team aus dem Elsass, aus Luftfracht und Zoll.'),
+ 'Peut-on vous vérifier ?': ('Can we check you out?', 'Kann man Sie überprüfen?'),
+ 'Oui. SIREN 102 873 577, RCS Mulhouse. Commissionnaire de transport inscrit au registre de la DREAL Grand Est': ('Yes. SIREN 102 873 577, Mulhouse trade register. Freight forwarder listed in the DREAL Grand Est register', 'Ja. SIREN 102 873 577, Handelsregister Mulhouse. Als Spediteur im Register der DREAL Grand Est eingetragen'),
+ ', agent cargo IATA': (', IATA cargo agent', ', IATA-Frachtagent'),
+ "Voir notre fiche sur l'Annuaire des entreprises": ('See our entry in the French business directory', 'Unser Eintrag im französischen Unternehmensverzeichnis'),
+ 'Où êtes-vous ?': ('Where are you?', 'Wo sind Sie?'),
+ "20 rue du Jura, à Sausheim, à côté de l'EuroAirport Bâle-Mulhouse. Nous venons vous rencontrer dans tout le Grand Est.": ('20 rue du Jura, Sausheim, next to EuroAirport Basel-Mulhouse. We come to meet you anywhere in the Grand Est.', '20 rue du Jura, Sausheim, neben dem EuroAirport Basel-Mulhouse. Wir besuchen Sie überall im Grand Est.'),
+ 'Qui suit mon dossier ?': ('Who handles my case?', 'Wer betreut meinen Auftrag?'),
+ "Un seul interlocuteur, du premier message à l'atterrissage. Joignables 7 jours sur 7.": ('One single contact, from the first message to landing. Reachable 7 days a week.', 'Ein einziger Ansprechpartner, von der ersten Nachricht bis zur Landung. Erreichbar 7 Tage die Woche.'),
+ 'Avec quelles compagnies ?': ('Which airlines?', 'Mit welchen Fluggesellschaften?'),
+ 'Celle qui part la première. Les plus fréquentes :': ('Whichever leaves first. The most frequent:', 'Die, die zuerst fliegt. Am häufigsten:'),
+ "Seulement l'Afrique ?": ('Only Africa?', 'Nur Afrika?'),
+ "Non. L'Afrique d'abord, et le reste du monde dès qu'une famille le demande : Europe, Moyen-Orient, Asie, Amériques. Écrivez-nous sans hésiter.": ('No. Africa first, and the rest of the world whenever a family asks: Europe, the Middle East, Asia, the Americas. Do not hesitate to write to us.', 'Nein. Afrika zuerst, und der Rest der Welt, sobald eine Familie es wünscht: Europa, Naher Osten, Asien, Amerika. Schreiben Sie uns ohne Zögern.'),
+ 'Et la famille ?': ('And the family?', 'Und die Familie?'),
+ 'Elle reste la vôtre. Nous ne la démarchons pas et ne lui facturons rien. Les familles qui nous écrivent seules sont orientées vers nos partenaires.': ('It remains yours. We never solicit it and never bill it. Families who write to us on their own are referred to our partners.', 'Sie bleibt Ihre. Wir werben sie nicht ab und stellen ihr nichts in Rechnung. Familien, die uns direkt schreiben, verweisen wir an unsere Partner.'),
+ 'Connaissez-vous les rites ?': ('Do you know the rites?', 'Kennen Sie die Riten?'),
+ "Nous connaissons les délais d'une inhumation musulmane et accompagnons chaque défunt, quelle que soit sa religion.": ('We know the time constraints of a Muslim burial, and we accompany every deceased person, whatever their faith.', 'Wir kennen die Fristen einer muslimischen Bestattung und begleiten jeden Verstorbenen, gleich welcher Religion.'),
+ "Pas seulement l'Afrique : Europe, Moyen-Orient, Asie, Amériques.": ('Not only Africa: Europe, the Middle East, Asia, the Americas.', 'Nicht nur Afrika: Europa, Naher Osten, Asien, Amerika.'),
+ 'Écrivez-nous sans hésiter': ('Write to us without hesitation', 'Schreiben Sie uns ohne Zögern'),
+ ', nous organisons le vol vers tout pays desservi.': (', we arrange the flight to any country served.', ', wir organisieren den Flug in jedes angeflogene Land.'),
+ "Vers toute l'Afrique : l'Afrique du Nord (Maroc, Algérie, Tunisie, Égypte), l'Afrique de l'Ouest (Sénégal, Mali, Côte d'Ivoire, Guinée, Burkina Faso et les autres), l'Afrique centrale et l'Afrique de l'Est. Vers le reste du monde aussi (Europe, Moyen-Orient, Asie, Amériques) : écrivez-nous avec la destination.": ("To all of Africa: North Africa (Morocco, Algeria, Tunisia, Egypt), West Africa (Senegal, Mali, Côte d'Ivoire, Guinea, Burkina Faso and the others), Central Africa and East Africa. To the rest of the world too (Europe, the Middle East, Asia, the Americas): write to us with the destination.", 'In ganz Afrika: Nordafrika (Marokko, Algerien, Tunesien, Ägypten), Westafrika (Senegal, Mali, Elfenbeinküste, Guinea, Burkina Faso und weitere), Zentral- und Ostafrika. Auch in den Rest der Welt (Europa, Naher Osten, Asien, Amerika): Schreiben Sie uns mit dem Zielort.'),
+})
+
+T.update({
+ "AUREVA Freight, transitaire aérien du transport de défunts, créée en 2026. Une équipe venue du fret aérien et de la douane, à Sausheim, à côté de l'EuroAirport Bâle-Mulhouse. SIREN 102 873 577.": ('AUREVA Freight, an air freight forwarder for the transport of the deceased, founded in 2026. A team with a background in air freight and customs, in Sausheim, next to EuroAirport Basel-Mulhouse. SIREN 102 873 577.', 'AUREVA Freight, Luftfrachtspediteur für die Überführung Verstorbener, gegründet 2026. Ein Team aus Luftfracht und Zoll, in Sausheim, neben dem EuroAirport Basel-Mulhouse. SIREN 102 873 577.'),
+ 'Vers quels pays ?': ('To which countries?', 'In welche Länder?'),
+ "De partout en France vers tout pays desservi. L'Afrique est notre priorité, le reste du monde aussi.": ('From anywhere in France to any country served. Africa is our priority, the rest of the world too.', 'Von überall in Frankreich in jedes angeflogene Land. Afrika hat Vorrang, der Rest der Welt ebenso.'),
+ "Ou depuis l'aéroport qui offre le premier vol, partout en France : Paris, Lyon, Strasbourg, Zurich…": ('Or from whichever airport offers the first flight, anywhere in France: Paris, Lyon, Strasbourg, Zurich…', 'Oder vom Flughafen mit dem ersten Flug, überall in Frankreich: Paris, Lyon, Straßburg, Zürich…'),
+ "L'Afrique en priorité, le reste du monde aussi : Europe, Moyen-Orient, Asie, Amériques, outre-mer.": ('Africa first, the rest of the world too: Europe, the Middle East, Asia, the Americas, French overseas territories.', 'Afrika zuerst, der Rest der Welt ebenso: Europa, Naher Osten, Asien, Amerika, französische Überseegebiete.'),
+ 'Nous réservons sur celle qui part la première.': ('We book whichever leaves first.', 'Wir buchen die, die zuerst fliegt.'),
+})
+
+T.update({
+"Oui, partout en France. Notre base est Bâle-Mulhouse, et nous réservons depuis l'aéroport qui offre le premier vol : Paris, Lyon, Strasbourg, Zurich ou un autre.": ('Yes, anywhere in France. Our base is Basel-Mulhouse, and we book from whichever airport offers the first flight: Paris, Lyon, Strasbourg, Zurich or another.', 'Ja, überall in Frankreich. Unsere Basis ist Basel-Mulhouse, und wir buchen ab dem Flughafen mit dem ersten Flug: Paris, Lyon, Straßburg, Zürich oder einem anderen.'),
+})
+
+T.update({"contact@pompes-funebres.fr": ("contact@funeral-home.com", "kontakt@bestattungen.de")})
+
+LD.update({"Transitaire funéraire aérien, agent cargo IATA et commissionnaire de transport, basé à Sausheim près de l'EuroAirport Bâle-Mulhouse. Rapatriement de corps par avion depuis toute la France vers toute l'Afrique et le reste du monde, avec les pompes funèbres, 7 jours sur 7.": ('Funeral air forwarder, IATA cargo agent and freight forwarder, based in Sausheim near EuroAirport Basel-Mulhouse. Air repatriation of the deceased from anywhere in France to all of Africa and the rest of the world, with funeral homes, 7 days a week.', 'Luftfrachtspediteur für Überführungen, IATA-Frachtagent und Spediteur mit Sitz in Sausheim beim EuroAirport Basel-Mulhouse. Überführung Verstorbener per Flugzeug von ganz Frankreich nach ganz Afrika und in den Rest der Welt, mit Bestattungsunternehmen, 7 Tage die Woche.')})
