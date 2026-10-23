@@ -453,9 +453,9 @@ LD.update({
  "Rapatriement vers le Maroc, l'Algérie, la Tunisie, le Sénégal et le Mali": ("Repatriation to Morocco, Algeria, Tunisia, Senegal and Mali", "Überführung nach Marokko, Algerien, Tunesien, Senegal und Mali"),
 })
 # Familles : pompe funèbre existante ou orientation (2026-10-22)
-_FAQ_FAM = "Oui. En France, un rapatriement passe obligatoirement par une pompe funèbre habilitée : écrivez-nous depuis la rubrique Familles. Nous contactons votre pompe funèbre, ou nous vous proposons l'une de nos partenaires, et nous organisons le vol avec elle. Nous ne facturons jamais les familles : le devis passe par la pompe funèbre."
-_FAQ_FAM_T = ("Yes. In France, a repatriation must go through a licensed funeral home: write to us from the Families section. We contact your funeral home, or suggest one of our partners, and we organise the flight with them. We never bill families: the quote goes through the funeral home.",
-              "Ja. In Frankreich muss eine Überführung über ein zugelassenes Bestattungsunternehmen laufen: Schreiben Sie uns über den Bereich Familien. Wir kontaktieren Ihr Bestattungsunternehmen oder schlagen Ihnen einen unserer Partner vor und organisieren den Flug gemeinsam mit ihm. Familien stellen wir nie etwas in Rechnung: Das Angebot läuft über das Bestattungsunternehmen.")
+_FAQ_FAM = "Oui. En France, un rapatriement passe obligatoirement par une pompe funèbre habilitée : écrivez-nous depuis la rubrique Particuliers. Nous contactons votre pompe funèbre, ou nous vous proposons l'une de nos partenaires, et nous organisons le vol avec elle. Nous ne facturons jamais les familles : le devis passe par la pompe funèbre."
+_FAQ_FAM_T = ("Yes. In France, a repatriation must go through a licensed funeral home: write to us from the Private individuals section. We contact your funeral home, or suggest one of our partners, and we organise the flight with them. We never bill families: the quote goes through the funeral home.",
+              "Ja. In Frankreich muss eine Überführung über ein zugelassenes Bestattungsunternehmen laufen: Schreiben Sie uns über den Bereich Privatpersonen. Wir kontaktieren Ihr Bestattungsunternehmen oder schlagen Ihnen einen unserer Partner vor und organisieren den Flug gemeinsam mit ihm. Familien stellen wir nie etwas in Rechnung: Das Angebot läuft über das Bestattungsunternehmen.")
 T.update({
  "Toutes nos condoléances. En France, un rapatriement passe obligatoirement par une pompe funèbre habilitée. Écrivez-nous : si vous avez déjà une pompe funèbre, nous la contactons pour le vol. Sinon, nous vous proposons des pompes funèbres partenaires près de chez vous.": ("Our deepest condolences. In France, a repatriation must go through a licensed funeral home. Write to us: if you already have a funeral home, we contact them about the flight. If not, we suggest partner funeral homes near you.", "Unser herzliches Beileid. In Frankreich muss eine Überführung über ein zugelassenes Bestattungsunternehmen laufen. Schreiben Sie uns: Haben Sie bereits ein Bestattungsunternehmen, kontaktieren wir es für den Flug. Wenn nicht, schlagen wir Ihnen Partnerunternehmen in Ihrer Nähe vor."),
  "Vous nous écrivez, avec ou sans pompe funèbre.": ("You write to us, with or without a funeral home.", "Sie schreiben uns, mit oder ohne Bestattungsunternehmen."),
@@ -601,3 +601,17 @@ T.update({
  'Tapez une ville ou un pays': ('Type a city or a country', 'Stadt oder Land eingeben'),
  'Voir tous les pays': ('See all countries', 'Alle Länder anzeigen'),
 })
+
+# PF d'abord, particuliers en plus (2026-10-23)
+_PF = {
+ "Transitaire aérien des pompes funèbres : rapatriement de corps par avion vers le Maroc, l'Algérie, la Tunisie, le Sénégal, le Mali et toute l'Afrique. 7 jours sur 7.": ("Air freight forwarder for funeral homes: repatriation of the deceased by air to Morocco, Algeria, Tunisia, Senegal, Mali and all of Africa. 7 days a week.", "Luftfracht-Spediteur für Bestatter: Überführung Verstorbener per Flugzeug nach Marokko, Algerien, Tunesien, Senegal, Mali und in ganz Afrika. 7 Tage die Woche."),
+ "Transitaire aérien des pompes funèbres : rapatriement de corps par avion vers toute l'Afrique, au premier vol disponible. 7 jours sur 7.": ("Air freight forwarder for funeral homes: repatriation of the deceased by air to all of Africa, on the first available flight. 7 days a week.", "Luftfracht-Spediteur für Bestatter: Überführung Verstorbener per Flugzeug in ganz Afrika, mit dem ersten verfügbaren Flug. 7 Tage die Woche."),
+ "Pompes funèbres": ("Funeral homes", "Bestatter"),
+ "Rapatriement de corps vers l'Afrique, au service des pompes funèbres": ("Repatriation of the deceased to Africa, for funeral homes", "Überführung Verstorbener nach Afrika, im Dienst der Bestatter"),
+ "Pompes funèbres : vous accompagnez la famille, nous organisons le vol jusqu'à l'arrivée.": ("Funeral homes: you support the family, we arrange the flight all the way to arrival.", "Bestatter: Sie begleiten die Familie, wir organisieren den Flug bis zur Ankunft."),
+ "Particulier ? Nous vous orientons": ("A private individual? We will guide you", "Privatperson? Wir helfen Ihnen weiter"),
+ "Particuliers": ("Private individuals", "Privatpersonen"),
+ "Toutes nos condoléances. Nous travaillons avec les pompes funèbres, et nous aidons aussi les familles : en France, un rapatriement passe obligatoirement par une pompe funèbre. Nous faisons le lien avec elle, puis nous organisons le vol.": ("Our deepest condolences. We work with funeral homes, and we also help families: in France, a repatriation must go through a funeral home. We make the link with them, then we organise the flight.", "Unser herzliches Beileid. Wir arbeiten mit Bestattern und helfen auch Familien: In Frankreich muss eine Überführung über ein Bestattungsunternehmen laufen. Wir stellen den Kontakt her und organisieren dann den Flug."),
+}
+T.update(_PF)
+LD.update(_PF)
