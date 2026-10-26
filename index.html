@@ -1109,7 +1109,7 @@ html.lenis,html.lenis body{height:auto}
 .dregs-more[open] > summary::after{content:" \2212"}
 .dregs-more .dregs{margin-top:0;padding-bottom:var(--s-4)}
 @media (max-width:52rem){
-  .dm{max-width:16rem}
+  .dest-grid .dm{order:-2;max-width:16rem}
   #garanties .about-grid{grid-template-columns:1fr;gap:var(--s-6);margin-top:var(--s-7)}
 }
 @media (max-width:40rem){.cine-stage{height:72svh;min-height:26rem}}
@@ -1381,7 +1381,6 @@ html.lenis,html.lenis body{height:auto}
   <div class="wrap">
     <div class="sec-head">
       <h2 id="h-creds" class="rv">Avant de nous confier un défunt</h2>
-      <p class="lead rv" data-d="1">Nos accréditations, et nos réponses aux questions que les pompes funèbres nous posent en premier.</p>
     </div>
     <div class="cred-grid">
     <div class="creds rv" data-d="2">
@@ -1437,9 +1436,9 @@ html.lenis,html.lenis body{height:auto}
     </div>
     <div class="part-grid">
       <ul class="part-list rv" data-d="1">
-        <li><h3>Des familles vous sont confiées</h3><p>Les familles qui nous écrivent sans pompe funèbre sont orientées vers nos partenaires, près de chez elles.</p></li>
-        <li><h3>Aucun engagement de volume</h3><p>Vous nous confiez un dossier quand vous en avez besoin. La convention se résilie par email, sans pénalité.</p></li>
-        <li><h3>Un seul interlocuteur, 7 jours sur 7</h3><p>Options de vol, devis, lettre de transport aérien et suivi jusqu’à l’atterrissage.</p></li>
+        <li><h3>Des familles vous sont confiées</h3><p>Les familles sans pompe funèbre vous sont orientées.</p></li>
+        <li><h3>Aucun engagement de volume</h3><p>Résiliable par email, sans pénalité.</p></li>
+        <li><h3>Un seul interlocuteur, 7 jours sur 7</h3><p>Du devis jusqu’à l’atterrissage.</p></li>
       </ul>
       <aside class="part-box rv" data-d="2">
         <h3>La fiche réflexe, à garder au bureau</h3>
@@ -1821,6 +1820,20 @@ html.lenis,html.lenis body{height:auto}
       flight = requestAnimationFrame(step);
     };
 
+    // Au repos, un vol part de Bâle-Mulhouse vers une ville au hasard : la carte vit sans qu'on la touche.
+    // Une recherche en cours prend la main ; rien si mouvement réduit.
+    let idle = 0, last = '';
+    const ambient = () => {
+      if (asked.length || document.hidden) return;
+      const names = [...items.keys()].filter(n => n !== last);
+      last = names[(Math.random() * names.length) | 0];
+      focus([last]); fly(last);
+    };
+    if (!calm && 'IntersectionObserver' in window) new IntersectionObserver(([e]) => {
+      clearInterval(idle);
+      if (e.isIntersecting) idle = setInterval(ambient, 2600);
+    }, { threshold: .3 }).observe(root);
+
     // La question remplit une carte d'embarquement : départ Bâle-Mulhouse, arrivée choisie, phrase de réponse.
     const L = {
       yes: 'Oui.',
@@ -2100,7 +2113,8 @@ html.lenis,html.lenis body{height:auto}
           clearInterval(timer);
           if (!e.isIntersecting) return;
           if (!done) { done = true; rows.forEach((r, i) => roll(r, i * 45)); }
-          timer = setInterval(() => { next = (next + 1) % rows.length; roll(rows[next], 0); }, 1100);
+          // Une ligne au hasard, jamais deux fois de suite la même, toutes les 1,1 s
+          timer = setInterval(() => { let k; do { k = (Math.random() * rows.length) | 0; } while (k === next && rows.length > 1); next = k; roll(rows[k], 0); }, 1100);
         }, { threshold: .3 }).observe(board);
       }
     }

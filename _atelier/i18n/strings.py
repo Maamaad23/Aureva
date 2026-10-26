@@ -463,3 +463,6 @@ JS.update({
 KEEP |= {"Lille", "Marseille", "Nice", "Montpellier", "Toulouse", "Bordeaux", "Nantes"}
 T.update({"Départ en vol direct": ("Direct departure", "Direktabflug")})
 T.update({"Ville d'arrivée": ("Arrival city", "Zielstadt")})
+T.update({"Les familles sans pompe funèbre vous sont orientées.": ("Families without a funeral home are referred to you.", "Familien ohne Bestatter werden an Sie vermittelt."),
+ "Résiliable par email, sans pénalité.": ("Cancel by email, no penalty.", "Per E-Mail kündbar, ohne Vertragsstrafe."),
+ "Du devis jusqu'à l'atterrissage.": ("From the quote to landing.", "Vom Angebot bis zur Landung.")})

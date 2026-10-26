@@ -1381,7 +1381,6 @@ html.lenis,html.lenis body{height:auto}
   <div class="wrap">
     <div class="sec-head">
       <h2 id="h-creds" class="rv">Before you entrust a deceased person to us</h2>
-      <p class="lead rv" data-d="1">Our accreditations, and our answers to the questions funeral homes ask us first.</p>
     </div>
     <div class="cred-grid">
     <div class="creds rv" data-d="2">
@@ -1437,9 +1436,9 @@ html.lenis,html.lenis body{height:auto}
     </div>
     <div class="part-grid">
       <ul class="part-list rv" data-d="1">
-        <li><h3>Families are referred to you</h3><p>Families who write to us without a funeral home are referred to our partners near them.</p></li>
-        <li><h3>No volume commitment</h3><p>You hand us a case whenever you need to. The agreement can be ended by email, with no penalty.</p></li>
-        <li><h3>One single contact, 7 days a week</h3><p>Flight options, quote, air waybill and tracking until landing.</p></li>
+        <li><h3>Families are referred to you</h3><p>Families without a funeral home are referred to you.</p></li>
+        <li><h3>No volume commitment</h3><p>Cancel by email, no penalty.</p></li>
+        <li><h3>One single contact, 7 days a week</h3><p>From the quote to landing.</p></li>
       </ul>
       <aside class="part-box rv" data-d="2">
         <h3>The quick-reference sheet, to keep at the office</h3>
@@ -1821,6 +1820,20 @@ html.lenis,html.lenis body{height:auto}
       flight = requestAnimationFrame(step);
     };
 
+    // Au repos, un vol part de Bâle-Mulhouse vers une ville au hasard : la carte vit sans qu'on la touche.
+    // Une recherche en cours prend la main ; rien si mouvement réduit.
+    let idle = 0, last = '';
+    const ambient = () => {
+      if (asked.length || document.hidden) return;
+      const names = [...items.keys()].filter(n => n !== last);
+      last = names[(Math.random() * names.length) | 0];
+      focus([last]); fly(last);
+    };
+    if (!calm && 'IntersectionObserver' in window) new IntersectionObserver(([e]) => {
+      clearInterval(idle);
+      if (e.isIntersecting) idle = setInterval(ambient, 2600);
+    }, { threshold: .3 }).observe(root);
+
     // La question remplit une carte d'embarquement : départ Bâle-Mulhouse, arrivée choisie, phrase de réponse.
     const L = {
       yes: 'Yes.',
@@ -2100,7 +2113,8 @@ html.lenis,html.lenis body{height:auto}
           clearInterval(timer);
           if (!e.isIntersecting) return;
           if (!done) { done = true; rows.forEach((r, i) => roll(r, i * 45)); }
-          timer = setInterval(() => { next = (next + 1) % rows.length; roll(rows[next], 0); }, 1100);
+          // Une ligne au hasard, jamais deux fois de suite la même, toutes les 1,1 s
+          timer = setInterval(() => { let k; do { k = (Math.random() * rows.length) | 0; } while (k === next && rows.length > 1); next = k; roll(rows[k], 0); }, 1100);
         }, { threshold: .3 }).observe(board);
       }
     }
