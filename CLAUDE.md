@@ -13,7 +13,7 @@ Agrément IATA et commissionnaire de transport **obtenus** (confirmé le 2026-10
 - HTML/CSS/JS pur, tout inline, aucun build
 - Fonts : Marcellus (display) + Hanken Grotesk (texte), hébergées dans `fonts/` et préchargées (plus de Google Fonts : CLS 0, RGPD)
 - Images : `Images/*.webp` (variantes réduites en srcset, WebP qualité ~62). Images de partage `Images/og-image(-en|-de).jpg` 1200×630, faites à partir de `photo-piste.webp`.
-- Photos : uniquement des photos réelles (Unsplash, crédits dans `mentions-legales.html`), jamais d'image IA. Hero = `Images/photo-piste.webp` (préchargée). Vidéo hero et film retirés le 2026-10-22 (archivés dans `_atelier/prive/videos-retirees/`, le film sert pour LinkedIn / WhatsApp).
+- Photos : uniquement des photos réelles (Unsplash, crédits dans `mentions-legales.html`), jamais d'image IA. Hero = `Images/photo-piste.webp` (préchargée). Vidéo hero et film retirés le 2026-10-22 (films courts dans `../videos/courts/`, pour LinkedIn / WhatsApp).
 - SEO : H1 = mot-clé (« Rapatriement de défunts vers l'Afrique… »), slogan en `.hero-title`. JSON-LD Organization + Service + FAQPage (garder synchro avec la FAQ visible). `llms.txt` à la racine.
 - Formulaire : Formspree AJAX `https://formspree.io/f/mvzlovrr`, objectif Plausible `Contact` au succès
 - Analytics : Plausible (sans cookie)
@@ -29,7 +29,7 @@ Agrément IATA et commissionnaire de transport **obtenus** (confirmé le 2026-10
 | `fiche-reflexe-aureva.pdf` | Copie de `Marketing/Kit commercial/AUREVA_Fiche_Reflexe.pdf` (téléchargeable sur le site) |
 | `plaquette-aureva.pdf` | Copie de `Marketing/Kit commercial/AUREVA_Plaquette.pdf` (téléchargeable sur le site) |
 | `js/lenis-1.3.26.min.js` | Défilement fluide (MIT, hébergé ici), chargé seulement à la souris, jamais si mouvement réduit |
-| `_atelier/` | Outils internes, hors site : `i18n/` (traductions), `carte/build-map.mjs` (régénère la carte SVG, à recoller dans index.html), `DESIGN.md`, `PRODUCT.md`, `prive/` (hors git : `engagement-futur.html` à remettre avec preuves, `videos-retirees/` films courts FR / EN / DE pour LinkedIn et WhatsApp). Jamais publié : `_config.yml` laisse Jekyll écarter les dossiers en `_` (ne pas remettre `.nojekyll`) |
+| `_atelier/` | Outils internes, hors site : `i18n/` (traductions), `carte/build-map.mjs` (régénère la carte SVG, à recoller dans index.html), `DESIGN.md`, `PRODUCT.md`, `prive/` (hors git : `engagement-futur.html` à remettre avec preuves). Jamais publié : `_config.yml` laisse Jekyll écarter les dossiers en `_` (ne pas remettre `.nojekyll`) |
 
 ## Structure de index.html
 
