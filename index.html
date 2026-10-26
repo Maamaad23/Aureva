@@ -901,6 +901,7 @@ html.lenis,html.lenis body{height:auto}
 .mt .w>span{display:inline-block}
 .js .mt .w>span{transform:translateY(110%);transition:transform 1s var(--ease-out) calc(var(--i) * 45ms)}
 .js .mt.in .w>span{transform:none}
+.js .rv.now,.js .rv.now *{transition:none!important}
 
 /* La phrase : chaque mot s'éclaire au fil du défilement */
 .js .wr .w{opacity:var(--o,.16);transition:opacity .2s linear}
@@ -2210,6 +2211,16 @@ html.lenis,html.lenis body{height:auto}
       });
     }, { rootMargin: '0px 0px -12% 0px' });
     document.querySelectorAll('.rv').forEach(el => io.observe(el));
+    // Saut depuis un lien interne : la section visée est déjà en place à l'arrivée, sans page vide
+    const land = (id) => {
+      const sec = id ? document.getElementById(id) : null;
+      sec?.querySelectorAll('.rv:not(.in)').forEach(el => { el.classList.add('now', 'in'); io.unobserve(el); });
+    };
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a[href^="#"]');
+      if (a) land(decodeURIComponent(a.hash.slice(1)));
+    });
+    land(decodeURIComponent(location.hash.slice(1)));
   } else {
     document.querySelectorAll('.rv').forEach(el => el.classList.add('in'));
   }
