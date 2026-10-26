@@ -372,7 +372,6 @@ T.update({
  "Votre destination": ("Your destination", "Ihr Ziel"),
 })
 JS.update({
- "pick: 'Choisissez l’aéroport d’arrivée\\u00a0:'": ("pick: 'Choose the arrival airport:'", "pick: 'Ankunftsflughafen wählen:'"),
 })
 
 # À propos en questions, compagnies, le monde aussi (2026-10-23)
@@ -435,7 +434,8 @@ JS.update({
  "with: 'avec'": ("with: 'with'", "with: 'mit'"),
  "season: 'en saison'": ("season: 'seasonal'", "season: 'saisonal'"),
  "noDirect: 'Pas de vol direct depuis'": ("noDirect: 'No direct flight from'", "noDirect: 'Kein Direktflug ab'"),
- "airPick: 'Choisissez l’aéroport d’arrivée'": ("airPick: 'Choose the arrival airport'", "airPick: 'Wählen Sie den Zielflughafen'"),
+ "airPick: 'Selon la ville d’arrivée'": ("airPick: 'Depends on the arrival city'", "airPick: 'Je nach Zielstadt'"),
+ "pickAbove: 'choisissez la ville d’arrivée ci-dessus.'": ("pickAbove: 'choose the arrival city above.'", "pickAbove: 'wählen Sie oben die Zielstadt.'"),
 })
 
 # Vols directs seulement, tableau interactif (2026-10-23)
@@ -462,3 +462,4 @@ JS.update({
 # Départs dans toute la France (2026-10-24)
 KEEP |= {"Lille", "Marseille", "Nice", "Montpellier", "Toulouse", "Bordeaux", "Nantes"}
 T.update({"Départ en vol direct": ("Direct departure", "Direktabflug")})
+T.update({"Ville d'arrivée": ("Arrival city", "Zielstadt")})

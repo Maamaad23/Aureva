@@ -982,7 +982,8 @@ html.lenis,html.lenis body{height:auto}
 .dask-pick button{font:inherit;padding:.3rem .75rem;border:1px solid var(--line-strong);background:none;color:var(--paper);cursor:pointer;transition:border-color .2s ease,color .2s ease}
 .dask-pick button:hover{border-color:oklch(96% .012 85 / .45)}
 .dask-pick button[aria-pressed="true"]{border-color:var(--gold);color:var(--gold-hi)}
-.dask-go{display:inline-block;margin-top:var(--s-3);font-size:var(--t-sm)}
+.dask-go{display:flex;width:fit-content;align-items:center;min-height:2.75rem;margin-top:var(--s-4);padding:.5rem 1rem;border:1px solid var(--gold);color:var(--gold-hi);font-size:var(--t-sm);font-weight:600;text-decoration:none}
+.dask-go:hover{background:oklch(74% .115 85 / .12)}
 .dreg button{font:inherit;font-size:var(--t-sm);color:var(--paper-2);background:none;border:0;border-bottom:1px solid transparent;padding:.1rem 0;cursor:pointer;transition:color .2s ease,border-color .2s ease}
 .dreg button:hover{color:var(--paper);border-color:var(--line-strong)}
 .dreg button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
@@ -1147,8 +1148,9 @@ html.lenis,html.lenis body{height:auto}
 
 /* ══ Départs réels 2026-10-23 : choix de l'aéroport, compagnie en vol direct ══ */
 .dep[hidden],.dep button[hidden]{display:none}
-.dep{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-2);margin-top:var(--s-4)}
-.dep-k{font-size:var(--t-xs);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--paper-3);margin-right:var(--s-1)}
+.dep{position:relative;margin-top:var(--s-5)}
+.dep-list{display:flex;flex-wrap:wrap;gap:var(--s-2)}
+.dep-k{display:block;margin-bottom:var(--s-2);font-size:var(--t-xs);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--paper-3)}
 .dep button{display:inline-flex;align-items:baseline;gap:.4rem;min-height:2.5rem;padding:.4rem .8rem;font:inherit;font-size:var(--t-sm);color:var(--paper-2);background:none;border:1px solid var(--line-strong);cursor:pointer;transition:border-color .2s ease,color .2s ease,background-color .2s ease;-webkit-tap-highlight-color:transparent}
 .dep button b{font-weight:600;letter-spacing:.08em;color:var(--paper)}
 @media (hover:hover){.dep button:hover{border-color:oklch(96% .012 85 / .45);color:var(--paper)}}
@@ -1160,8 +1162,8 @@ html.lenis,html.lenis body{height:auto}
 .pass-tag{font-size:var(--t-xs);font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-hi);padding:.2rem .55rem;border:1px solid var(--gold)}
 .dask-src{margin-top:var(--s-4);font-size:var(--t-xs);line-height:1.5;color:var(--paper-3)}
 @media (max-width:40rem){
-  .dep{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:0;min-width:calc(100% + var(--s-5) * 2);margin-inline:calc(var(--s-5) * -1);padding-inline:var(--s-5)}
-  .dep::-webkit-scrollbar{display:none}
+  .dep-list{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:0;min-width:calc(100% + var(--s-5) * 2);margin-inline:calc(var(--s-5) * -1);padding-inline:var(--s-5)}
+  .dep-list::-webkit-scrollbar{display:none}
   .dep button{flex:none;min-height:2.75rem}
   .pass-an{font-size:var(--t-base)}
 }
@@ -1304,8 +1306,10 @@ html.lenis,html.lenis body{height:auto}
         <div class="dask rv">
           <label class="dask-q" for="dsearch">Where will the deceased be laid to rest?</label>
           <input id="dsearch" type="search" placeholder="Type a city or a country" autocomplete="off" spellcheck="false" aria-describedby="dsearch-msg">
+          <div class="dep dep-arr" role="group" aria-label="Arrival city" hidden><span class="dep-k">Arrival city</span><div class="dep-list"></div></div>
           <div class="dep" role="group" aria-label="Departure airport" hidden>
             <span class="dep-k">Direct departure</span>
+            <div class="dep-list">
             <button type="button" data-ap="BSL" aria-pressed="false"><b>BSL</b><span>Basel‑Mulhouse</span></button>
             <button type="button" data-ap="SXB" aria-pressed="false"><b>SXB</b><span>Strasbourg</span></button>
             <button type="button" data-ap="LYS" aria-pressed="false"><b>LYS</b><span>Lyon</span></button>
@@ -1318,6 +1322,7 @@ html.lenis,html.lenis body{height:auto}
             <button type="button" data-ap="BOD" aria-pressed="false"><b>BOD</b><span>Bordeaux</span></button>
             <button type="button" data-ap="NTE" aria-pressed="false"><b>NTE</b><span>Nantes</span></button>
             <button type="button" data-ap="ZRH" aria-pressed="false"><b>ZRH</b><span>Zurich</span></button>
+            </div>
           </div>
           <div class="pass" aria-hidden="true">
             <div class="pass-leg"><span class="pass-k">Departure</span><span class="pass-code" id="pass-from"></span><span class="pass-c" id="pass-fc">Basel‑Mulhouse</span></div>
@@ -1824,7 +1829,6 @@ html.lenis,html.lenis body{height:auto}
       go: 'Open a case for this country',
       also: 'See also:',
       dest: 'Destination',
-      pick: 'Choose the arrival airport:',
       direct: 'Direct flight',
       with: 'with',
       season: 'seasonal',
@@ -1839,7 +1843,8 @@ html.lenis,html.lenis body{height:auto}
       directToLow: 'direct flights to',
       directLow: 'direct flight',
       airTo: 'direct flights',
-      airPick: 'Choose the arrival airport',
+      airPick: 'Depends on the arrival city',
+      pickAbove: 'choose the arrival city above.',
     };
     // Vols directs relevés en octobre 2026 (programmes des aéroports), seulement les compagnies qui transportent les défunts.
     // Arrivée : départ et compagnies ; * = en saison. Pas de ligne = aucun vol direct connu : nous ne promettons rien (pas d'escale).
@@ -1913,7 +1918,7 @@ html.lenis,html.lenis body{height:auto}
       return f;
     };
     // Départ : choisi par la personne, sinon l'aéroport le plus proche de notre base qui a un vol direct
-    const depRow = document.querySelector('.dep'), depBtns = [...depRow.querySelectorAll('button')];
+    const depRow = document.querySelector('.dep:not(.dep-arr)'), arrRow = document.querySelector('.dep-arr'), arrList = arrRow.querySelector('.dep-list'), depBtns = [...depRow.querySelectorAll('button')];
     const apName = Object.fromEntries(depBtns.map(b => [b.dataset.ap, b.querySelector('span').textContent]));
     const passFrom = document.getElementById('pass-from'), passFc = document.getElementById('pass-fc');
     const passAn = document.getElementById('pass-an'), passTag = document.getElementById('pass-tag');
@@ -1955,7 +1960,9 @@ html.lenis,html.lenis body{height:auto}
       msg.replaceChildren();
       const yes = document.createElement('strong');
       yes.textContent = L.yes + ' ';
-      const one = city || c.cities.length === 1 ? (city || c.cities[0]) : null;
+      // Seules les villes avec un vol direct relevé sont proposées ; une seule ville desservie est choisie d'office
+      const served = c.cities.filter(x => ORDER.some(a => routes(c.code[x])[a]));
+      const one = city || (c.cities.length === 1 ? c.cities[0] : served.length === 1 ? served[0] : null);
       again = () => show(c, city, rest);
       setPass(one && c.code[one], one ? (one === c.name ? one : `${one}, ${c.name}`) : c.name);
       const where = one ? (one === c.name ? one : `${one} (${c.name})`) : '';
@@ -1966,20 +1973,21 @@ html.lenis,html.lenis body{height:auto}
       depRow.hidden = !direct.length;
       setFrom(direct.includes(dep) ? dep : direct[0] || 'BSL');
       // Seulement des vols directs : sans vol direct connu, on le dit et on invite à écrire
-      const served = c.cities.filter(x => ORDER.some(a => routes(c.code[x])[a]));
       const ok = one ? direct.length > 0 : served.length > 0;
-      if (!one && ok) { msg.append(yes, `${c.name}${L.sep}${L.directToLow} ${list(served)}.`); setAir(L.airPick); }
+      if (!one && ok) { msg.append(yes, `${c.name}${L.sep}${L.pickAbove}`); setAir(L.airPick); }
       else if (!ok && c.world) { msg.append(`${where || c.name}${L.sep}${L.check}`); setAir(L.checkAir); }
       else if (!ok) { msg.append(`${where || c.name}${L.sep}${L.none}`); setAir(L.noneAir); }
-      else if (r[from]) { msg.append(yes, `${L.direct} ${apName[from]} → ${where} ${L.with} ${airNames(r[from])}.`); setAir(airNames(r[from]), L.direct); }
+      else if (r[from]) { const sr = document.createElement('span'); sr.className = 'sr-only'; sr.textContent = `${L.yes} ${L.direct} ${apName[from]} → ${where} ${L.with} ${airNames(r[from])}.`; msg.append(sr); setAir(airNames(r[from]), L.direct); }
       else { msg.append(`${L.noDirect} ${apName[from]} ${L.toward} ${where}.`); setAir(`${L.noDirect} ${apName[from]}`); }
-      if (c.cities.length > 1) {
-        const pick = document.createElement('span');
-        pick.className = 'dask-pick';
-        pick.append(L.pick);
-        c.cities.forEach(x => { const b = button(x, () => show(c, x, rest)); b.setAttribute('aria-pressed', String(x === one)); pick.append(b); });
-        msg.append(pick);
-      }
+      arrList.replaceChildren(...(served.length > 1 ? served : []).map(x => {
+        const b = document.createElement('button'), code = document.createElement('b'), name = document.createElement('span');
+        b.type = 'button'; code.textContent = c.code[x]; name.textContent = x; b.append(code, name);
+        b.setAttribute('aria-pressed', String(x === one)); b.addEventListener('click', () => show(c, x, rest));
+        return b;
+      }));
+      arrRow.hidden = served.length < 2;
+      const onArr = arrList.querySelector('[aria-pressed="true"]');
+      if (onArr && arrList.scrollWidth > arrList.clientWidth) arrList.scrollTo({ left: onArr.offsetLeft - arrList.clientWidth / 2 + onArr.offsetWidth / 2, behavior: calm ? 'auto' : 'smooth' });
       const go = document.createElement('a');
       go.href = '#contact'; go.className = 'dask-go'; go.textContent = ok ? L.go : L.ask;
       go.addEventListener('click', () => {
@@ -2004,7 +2012,7 @@ html.lenis,html.lenis body{height:auto}
     };
     const ask = () => {
       const q = norm(input.value);
-      if (!q) { countries.forEach(o => o.li.classList.remove('is-match')); msg.replaceChildren(); setPass(); setAir(); again = null; depRow.hidden = true; setFrom('BSL'); asked = []; focus(asked); return; }
+      if (!q) { countries.forEach(o => o.li.classList.remove('is-match')); msg.replaceChildren(); setPass(); setAir(); again = null; depRow.hidden = true; arrRow.hidden = true; setFrom('BSL'); asked = []; focus(asked); return; }
       const hits = [];
       [...countries, ...world].forEach(c => {
         if ((c.ns || [c.n]).some(n => n.startsWith(q) || (q.length > 2 && n.includes(q)))) { hits.push({ c }); return; }
@@ -2013,7 +2021,7 @@ html.lenis,html.lenis body{height:auto}
       });
       if (!hits.length) {
         countries.forEach(o => o.li.classList.remove('is-match'));
-        setPass(); setAir(); again = null; depRow.hidden = true;
+        setPass(); setAir(); again = null; depRow.hidden = true; arrRow.hidden = true;
         msg.innerHTML = 'No destination found under that name. <a href="#contact">Write to us</a>: we fly to any country served.';
         asked = []; focus(asked); return;
       }
