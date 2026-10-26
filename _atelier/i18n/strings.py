@@ -455,8 +455,8 @@ JS.update({
  "airTo: 'en vol direct'": ("airTo: 'direct flights'", "airTo: 'im Direktflug'"),
 })
 JS.update({
- "check: 'nous vérifions les vols directs avec vous, écrivez-nous.'": ("check: 'we check the direct flights with you, write to us.'", "check: 'Wir prüfen die Direktflüge mit Ihnen, schreiben Sie uns.'"),
- "checkAir: 'À vérifier avec nous'": ("checkAir: 'To check with us'", "checkAir: 'Mit uns zu prüfen'"),
+ "check: 'nous partons aussi vers ce pays. Écrivez-nous, nous vous confirmons le vol direct et la compagnie.'": ("check: 'we fly there too. Write to us and we confirm the direct flight and the airline.'", "check: 'Wir fliegen auch dorthin. Schreiben Sie uns, wir bestätigen den Direktflug und die Fluggesellschaft.'"),
+ "checkAir: 'Confirmée sur demande'": ("checkAir: 'Confirmed on request'", "checkAir: 'Auf Anfrage bestätigt'"),
 })
 
 # Départs dans toute la France (2026-10-24)

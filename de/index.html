@@ -1109,7 +1109,7 @@ html.lenis,html.lenis body{height:auto}
 .dregs-more[open] > summary::after{content:" \2212"}
 .dregs-more .dregs{margin-top:0;padding-bottom:var(--s-4)}
 @media (max-width:52rem){
-  .dm{display:none}
+  .dm{max-width:16rem}
   #garanties .about-grid{grid-template-columns:1fr;gap:var(--s-6);margin-top:var(--s-7)}
 }
 @media (max-width:40rem){.cine-stage{height:72svh;min-height:26rem}}
@@ -1835,8 +1835,8 @@ html.lenis,html.lenis body{height:auto}
       noDirect: 'Kein Direktflug ab',
       none: 'Kein bekannter Direktflug ab unseren Abflughäfen. Schreiben Sie uns: Wir prüfen es mit den Fluggesellschaften.',
       toward: 'nach',
-      check: 'Wir prüfen die Direktflüge mit Ihnen, schreiben Sie uns.',
-      checkAir: 'Mit uns zu prüfen',
+      check: 'Wir fliegen auch dorthin. Schreiben Sie uns, wir bestätigen den Direktflug und die Fluggesellschaft.',
+      checkAir: 'Auf Anfrage bestätigt',
       noneAir: 'Kein bekannter Direktflug',
       ask: 'Schreiben Sie uns zu diesem Ziel',
       depart: 'Abflug',
@@ -1858,6 +1858,7 @@ html.lenis,html.lenis body{height:auto}
       DJE: 'LYS:TU PAR:TU,AF* MRS:TU NCE:TU', MIR: 'LYS:TU PAR:TU MRS:TU NCE:TU', TUN: 'SXB:TU LYS:TU PAR:AF,TU MRS:TU NCE:TU TLS:TU BOD:TU',
       DSS: 'PAR:AF,HC', ABJ: 'PAR:AF,HF,SS', BKO: 'PAR:SS', CKY: 'PAR:AF', COO: 'PAR:AF,SS', LFW: 'PAR:AF', LOS: 'PAR:AF', NKC: 'PAR:AF',
       DLA: 'PAR:AF', LBV: 'PAR:AF', BZV: 'PAR:AF', FIH: 'PAR:AF', NDJ: 'PAR:AF', SSG: 'PAR:AF',
+      YUL: 'PAR:AF', JFK: 'PAR:AF', GRU: 'PAR:AF', PTP: 'PAR:AF,SS', FDF: 'PAR:AF,SS', RUN: 'PAR:AF,SS', CAY: 'PAR:AF',
       IST: 'LYS:TK PAR:TK ZRH:TK', DXB: 'LYS:EK PAR:EK ZRH:EK', DOH: 'PAR:QR ZRH:QR',
       JNB: 'PAR:AF ZRH:LX', ADD: 'LYS:ET PAR:ET MRS:ET', JIB: 'PAR:AF', NBO: 'PAR:AF,KQ', TNR: 'PAR:AF,SS', KGL: 'PAR:WB', DZA: 'PAR:SS,UU* MRS:SS',
     };
@@ -2094,12 +2095,12 @@ html.lenis,html.lenis body{height:auto}
         requestAnimationFrame(step);
       }, delay);
       if ('IntersectionObserver' in window) {
-        let timer = 0, done = false;
+        let timer = 0, done = false, next = -1;
         new IntersectionObserver(([e]) => {
           clearInterval(timer);
           if (!e.isIntersecting) return;
           if (!done) { done = true; rows.forEach((r, i) => roll(r, i * 45)); }
-          timer = setInterval(() => roll(rows[(Math.random() * rows.length) | 0], 0), 2600);
+          timer = setInterval(() => { next = (next + 1) % rows.length; roll(rows[next], 0); }, 1100);
         }, { threshold: .3 }).observe(board);
       }
     }
