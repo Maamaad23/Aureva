@@ -6,7 +6,7 @@ brand
 
 ## Users
 
-Directeurs de pompes funèbres (PF) et responsables rapatriement en France. Contexte B2B exclusif : aucune famille endeuillée. Cherchent un prestataire fiable, certifié, capable de gérer des situations urgentes et sensibles vers toute l'Afrique. Leur clientèle est majoritairement africaine : Afrique de l'Ouest en priorité, puis Afrique centrale, de l'Est et du Nord. Pompes funèbres suisses et allemandes proches de Bâle-Mulhouse : public secondaire (site en FR / EN / DE). Habitués à un niveau d'exigence élevé; peu tolérants au doute ou à l'ambiguïté.
+Directeurs de pompes funèbres (PF) et responsables rapatriement en France. Contexte B2B exclusif : aucune famille endeuillée. Cherchent un prestataire fiable, certifié, capable de gérer des situations urgentes et sensibles vers toute l'Afrique. Leur clientèle est majoritairement africaine : Afrique de l'Ouest en priorité, puis Afrique centrale, de l'Est et du Nord. Pompes funèbres suisses et allemandes proches de Bâle-Mulhouse : public secondaire (départ de Suisse ou d'Allemagne seulement en sous-traitance, au cas par cas ; AUREVA est accréditée en France) (site en FR / EN / DE). Habitués à un niveau d'exigence élevé; peu tolérants au doute ou à l'ambiguïté.
 
 ## Product Purpose
 

@@ -21,7 +21,7 @@
 
 ## Aéroports de départ
 
-Bâle-Mulhouse (base), Lyon, Strasbourg, Zurich, et tout autre aéroport utile au dossier.
+Bâle-Mulhouse (base), Strasbourg, Lyon, Paris, et tout autre aéroport de France utile au dossier.
 
 ## Destinations (toute l'Afrique en priorité, et le reste du monde)
 
@@ -33,7 +33,7 @@ Bâle-Mulhouse (base), Lyon, Strasbourg, Zurich, et tout autre aéroport utile a
 
 ## Compagnies
 
-Air Algérie, Air France, Air Côte d'Ivoire, Air Sénégal, Corsair, Egyptair, Ethiopian Airlines, Kenya Airways, Royal Air Maroc, RwandAir, Swiss, Tunisair (vols directs relevés en octobre 2026, compagnies qui transportent les défunts). AUREVA réserve uniquement des vols directs, sur la compagnie qui offre le premier départ, depuis l'aéroport français qui a la liaison (Bâle-Mulhouse, Strasbourg, Lyon, Paris, Lille, Marseille, Nice, Montpellier, Toulouse, Bordeaux, Nantes) ou Zurich.
+Air Algérie, Air France, Air Côte d'Ivoire, Air Sénégal, Corsair, Egyptair, Ethiopian Airlines, Kenya Airways, Royal Air Maroc, RwandAir, Tunisair (vols directs relevés en octobre 2026, compagnies qui transportent les défunts). AUREVA réserve uniquement des vols directs, sur la compagnie qui offre le premier départ, depuis l'aéroport français qui a la liaison (Bâle-Mulhouse, Strasbourg, Lyon, Paris, Lille, Marseille, Nice, Montpellier, Toulouse, Bordeaux, Nantes).
 
 ## Pages
 

@@ -55,7 +55,7 @@ Sur le site, le nom « AUREVA / Freight » est écrit en texte (Marcellus + Hank
 ## Signature visuelle
 
 - **Bandeau « lettre de transport »** (`.awb`) : champs numérotés 01 à 04, filets fins, valeur en Marcellus. Repris du formulaire LTA.
-- **Tableaux Solari** (`.board`, `.flap`) : Départs (BSL, LYS, SXB, ZRH) et Arrivées par région, choisies avec des onglets illustrés (`.rtab`). Les tuiles défilent à l'apparition et à chaque changement d'onglet.
+- **Tableaux Solari** (`.board`, `.flap`) : Départs (aéroports de France) et Arrivées par région, choisies avec des onglets illustrés (`.rtab`). Les tuiles défilent à l'apparition et à chaque changement d'onglet.
 - **Frise de la chronologie** (`.chrono`) : 9 étapes alternées Vous (gauche) / AUREVA (droite, fond `--ink-2`, numéro or). La ligne or se trace au défilement et chaque étape s'allume au passage.
 - **Vidéos** : boucle muette « Le voyage » en fond de hero (sans texte), film sous-titré de 29 s dans la chronologie (FR / EN / DE, logo + carte finale).
 

@@ -63,7 +63,6 @@ T = {
  "Afrique de l'Est et océan Indien": ("East Africa and Indian Ocean", "Ostafrika und Indischer Ozean"),
  "Afrique du Nord": ("North Africa", "Nordafrika"),
  "Départs": ("Departures", "Abflüge"),
- "France et Suisse": ("France and Switzerland", "Frankreich und Schweiz"),
  "Aéroports de départ": ("Departure airports", "Abflughäfen"),
  "Code": ("Code", "Code"),
  "Aéroport": ("Airport", "Flughafen"),
@@ -194,7 +193,7 @@ LD = {
  "Rapatriement aérien de défunts vers l'Afrique": ("Air repatriation of the deceased to Africa", "Luftüberführung Verstorbener nach Afrika"),
  "Transport funéraire aérien international": ("International funeral air transport", "Internationaler Leichentransport per Luftfracht"),
  "Pompes funèbres": ("Funeral homes", "Bestattungsunternehmen"),
- "Recherche du premier vol disponible, réservation auprès de la compagnie, lettre de transport aérien, remise à la compagnie à l'aéroport et suivi du vol jusqu'à l'atterrissage, vers toute l'Afrique. Départs de Bâle-Mulhouse, Lyon, Strasbourg et Zurich.": ("Search for the first available flight, booking with the airline, air waybill, handover to the airline at the airport and flight tracking until landing, to all of Africa. Departures from Basel-Mulhouse, Lyon, Strasbourg and Zurich.", "Suche nach dem ersten verfügbaren Flug, Buchung bei der Fluggesellschaft, Luftfrachtbrief, Übergabe an die Fluggesellschaft am Flughafen und Flugverfolgung bis zur Landung, in ganz Afrika. Abflüge ab Basel-Mulhouse, Lyon, Straßburg und Zürich."),
+ "Recherche du premier vol disponible, réservation auprès de la compagnie, lettre de transport aérien, remise à la compagnie à l'aéroport et suivi du vol jusqu'à l'atterrissage, vers toute l'Afrique. Départs de Bâle-Mulhouse, Strasbourg, Lyon, Paris et de toute la France.": ("Search for the first available flight, booking with the airline, air waybill, handover to the airline at the airport and flight tracking until landing, to all of Africa. Departures from Basel-Mulhouse, Strasbourg, Lyon, Paris and all of France.", "Suche nach dem ersten verfügbaren Flug, Buchung bei der Fluggesellschaft, Luftfrachtbrief, Übergabe an die Fluggesellschaft am Flughafen und Flugverfolgung bis zur Landung, in ganz Afrika. Abflüge ab Basel-Mulhouse, Straßburg, Lyon, Paris und ganz Frankreich."),
  "Agent cargo accrédité IATA": ("IATA accredited cargo agent", "IATA-akkreditierter Frachtagent"),
  "Commissionnaire de transport": ("Licensed freight forwarder", "Zugelassener Spediteur"),
  "accréditation": ("accreditation", "Akkreditierung"),
@@ -207,7 +206,7 @@ T.update({
 })
 
 # Noms propres de villes en allemand
-T.update({"Strasbourg": ("Strasbourg", "Straßburg"), "Zurich": ("Zurich", "Zürich") })
+T.update({"Strasbourg": ("Strasbourg", "Straßburg") })
 
 # Noms propres identiques dans toutes les langues (villes, compagnies) : pas d'alerte
 KEEP = {"Abidjan", "Accra", "Antananarivo", "Bamako", "Bangui", "Banjul", "Bissau", "Brazzaville", "Casablanca",
@@ -223,7 +222,7 @@ LD.update({
 
 # Carte des destinations
 T.update({
- "Carte : départs de France et de Suisse, arrivées dans toute l'Afrique": ("Map: departures from France and Switzerland, arrivals across Africa", "Karte: Abflüge aus Frankreich und der Schweiz, Ankünfte in ganz Afrika"),
+ "Carte : départs de France, arrivées dans toute l'Afrique": ("Map: departures from France, arrivals across Africa", "Karte: Abflüge aus Frankreich, Ankünfte in ganz Afrika"),
 })
 
 # Refonte du 2026-10-22 : moins de texte, plus d'images, plus de « sous 2 heures »
@@ -392,7 +391,7 @@ T.update({
 })
 
 T.update({
-"Oui, partout en France. Notre base est Bâle-Mulhouse, et nous réservons depuis l'aéroport qui offre le premier vol : Paris, Lyon, Strasbourg, Zurich ou un autre.": ('Yes, anywhere in France. Our base is Basel-Mulhouse, and we book from whichever airport offers the first flight: Paris, Lyon, Strasbourg, Zurich or another.', 'Ja, überall in Frankreich. Unsere Basis ist Basel-Mulhouse, und wir buchen ab dem Flughafen mit dem ersten Flug: Paris, Lyon, Straßburg, Zürich oder einem anderen.'),
+"Oui, partout en France. Notre base est Bâle-Mulhouse, et nous réservons depuis l'aéroport qui offre le premier vol : Paris, Lyon, Strasbourg ou un autre.": ('Yes, anywhere in France. Our base is Basel-Mulhouse, and we book from whichever airport offers the first flight: Paris, Lyon, Strasbourg or another.', 'Ja, überall in Frankreich. Unsere Basis ist Basel-Mulhouse, und wir buchen ab dem Flughafen mit dem ersten Flug: Paris, Lyon, Straßburg oder einem anderen.'),
 })
 
 T.update({"contact@pompes-funebres.fr": ("contact@funeral-home.com", "kontakt@bestattungen.de")})
