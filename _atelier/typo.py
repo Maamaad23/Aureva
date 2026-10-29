@@ -64,6 +64,8 @@ def html_typo(src):
     for p in parts:
         if p.startswith("<script") or p.startswith("<style") or p.startswith("<!--"):
             out.append(p)
+        elif p.startswith("<") and "http-equiv" in p:
+            out.append(p)  # en-têtes de sécurité (CSP) : jamais d'espace insécable, la politique ne serait plus lue
         elif p.startswith("<"):
             low = p[:5].lower()
             if low.startswith(("<pre", "<code")):

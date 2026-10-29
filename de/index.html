@@ -11,6 +11,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formspree.io https://plausible.io; form-action https://formspree.io; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Überführung Verstorbener nach Afrika · AUREVA Freight</title>
 <meta name="description" content="Luftfracht-Spediteur für Bestatter: Überführung Verstorbener per Flugzeug nach Marokko, Algerien, Tunesien, Senegal, Mali und in ganz Afrika. 7 Tage die Woche.">
 <link rel="canonical" href="https://aurevafreight.com/de/">
@@ -2222,11 +2224,13 @@ form{display:grid;gap:var(--s-5)}
       const sec = id ? document.getElementById(id) : null;
       sec?.querySelectorAll('.rv:not(.in)').forEach(el => { el.classList.add('now', 'in'); io.unobserve(el); });
     };
+    // Un lien mal formé (#%E0) ne doit pas arrêter le reste du script, dont les formulaires
+    const hashId = (h) => { try { return decodeURIComponent(h.slice(1)); } catch { return ''; } };
     document.addEventListener('click', (e) => {
       const a = e.target.closest('a[href^="#"]');
-      if (a) land(decodeURIComponent(a.hash.slice(1)));
+      if (a) land(hashId(a.hash));
     });
-    land(decodeURIComponent(location.hash.slice(1)));
+    land(hashId(location.hash));
   } else {
     document.querySelectorAll('.rv').forEach(el => el.classList.add('in'));
   }
