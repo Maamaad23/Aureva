@@ -144,6 +144,9 @@ T = {
  "© 2026 AUREVA FREIGHT · SIREN 102 873 577 · 20 rue du Jura, 68390 Sausheim": ("© 2026 AUREVA FREIGHT · SIREN 102 873 577 · 20 rue du Jura, 68390 Sausheim, France", "© 2026 AUREVA FREIGHT · SIREN 102 873 577 · 20 rue du Jura, 68390 Sausheim, Frankreich"),
  "Rapatriement par pays": ("Repatriation by country (in French)", "Überführung nach Land (auf Französisch)"),
  "Rapatriement de corps vers": ("Repatriation of the deceased to", "Überführung Verstorbener nach"),
+ "Délais et disponibilité": ("Timing and availability", "Fristen und Erreichbarkeit"),
+ "Documents et cercueil": ("Documents and coffin", "Dokumente und Sarg"),
+ "Tarif, agrément et familles": ("Pricing, accreditation and families", "Preise, Zulassung und Familien"),
  "Mentions légales": ("Legal notice (French)", "Impressum (Französisch)"),
 
  # Head

@@ -1,8 +1,10 @@
 import fs from 'fs';
 import { feature } from 'topojson-client';
+import { presimplify, simplify, quantile } from 'topojson-simplify';
 import { geoAzimuthalEqualArea, geoPath } from 'd3-geo';
-const topo = JSON.parse(fs.readFileSync('node_modules/world-atlas/countries-110m.json'));
-const all = feature(topo, topo.objects.countries).features;
+// Afrique en 50m (côtes et îles justes : Tunis, Djerba, Djibouti, Comores, Bioko), reste du monde en 110m (léger)
+const load = (r, q) => { let t = JSON.parse(fs.readFileSync(`node_modules/world-atlas/countries-${r}.json`)); if (q) { t = presimplify(t); t = simplify(t, quantile(t, q)); } return feature(t, t.objects.countries).features; };
+const fine = load('50m', +(process.env.Q || 0.4)), coarse = load('110m');
 const R = {
   ouest: [686,270,624,324,694,430,384,288,768,204,566,562,466,854,478,132],
   centre: [120,148,140,226,266,178,180,678,24],
@@ -18,6 +20,7 @@ proj.fitExtent([[18, 14], [W - 18, H - 14]], frame);
 const path = geoPath(proj).digits(1);
 const out = { ouest: [], centre: [], est: [], nord: [], afrique: [], monde: [] };
 const AFR = new Set([...Object.values(R).flat(), 732, 706]); // + Sahara occidental (neutre)
+const all = [...fine.filter(f => AFR.has(+f.id)), ...coarse.filter(f => !AFR.has(+f.id))];
 for (const f of all) {
   const id = +f.id; const b = path.bounds(f);
   if (!isFinite(b[0][0]) || b[1][0] < 0 || b[0][0] > W || b[1][1] < 0 || b[0][1] > H) continue;
@@ -28,8 +31,8 @@ for (const f of all) {
 const P = (ll) => proj([ll[1], ll[0]]).map((v) => +v.toFixed(1));
 const CITIES = {
   ouest: [['Abidjan',5.26,-3.93],['Accra',5.6,-0.17],['Bamako',12.53,-7.95],['Banjul',13.34,-16.65],['Bissau',11.89,-15.65],['Conakry',9.58,-13.61],['Cotonou',6.36,2.38],['Dakar',14.67,-17.07],['Lagos',6.58,3.32],['Lomé',6.17,1.25],['Niamey',13.48,2.18],['Nouakchott',18.1,-15.95],['Ouagadougou',12.35,-1.51]],
-  centre: [['Bangui',4.4,18.52],['Brazzaville',-4.25,15.25],['Douala',4.01,9.72],['Kinshasa',-4.39,15.44],['Libreville',0.46,9.41],['Malabo',3.76,8.71],["N'Djamena",12.13,15.03]],
-  est: [['Addis-Abeba',8.98,38.8],['Antananarivo',-18.8,47.48],['Dar es Salaam',-6.88,39.2],['Djibouti',11.55,43.15],['Johannesburg',-26.14,28.25],['Kigali',-1.97,30.14],['Mayotte',-12.8,45.28],['Moroni',-11.53,43.27],['Nairobi',-1.32,36.93]],
+  centre: [['Bangui',4.4,18.52],['Brazzaville',-4.25,15.25],['Douala',4.01,9.72],['Kinshasa',-4.39,15.44],['Libreville',0.42,9.5],['Malabo',3.75,8.78],["N'Djamena",12.13,15.03]],
+  est: [['Addis-Abeba',8.98,38.8],['Antananarivo',-18.8,47.48],['Dar es Salaam',-6.88,39.2],['Djibouti',11.53,43.08],['Johannesburg',-26.14,28.25],['Kigali',-1.97,30.14],['Mayotte',-12.8,45.28],['Moroni',-11.53,43.27],['Nairobi',-1.32,36.93]],
   nord: [['Agadir',30.33,-9.41],['Alger',36.69,3.22],['Annaba',36.82,7.81],['Béjaïa',36.71,5.07],['Casablanca',33.37,-7.59],['Constantine',36.28,6.62],['Djerba',33.87,10.78],['Fès',33.93,-4.98],['Le Caire',30.12,31.41],['Marrakech',31.61,-8.04],['Monastir',35.76,10.75],['Nador',34.99,-3.03],['Oran',35.62,-0.62],['Oujda',34.79,-1.92],['Rabat',34.05,-6.75],['Tanger',35.73,-5.92],['Tlemcen',35.02,-1.46],['Tunis',36.85,10.23]],
 };
 const DEP = [['BSL',47.59,7.53],['LYS',45.72,5.08],['SXB',48.54,7.63]];
@@ -40,6 +43,9 @@ const data = {
 };
 let svg = `<svg class="dm-svg" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="dm-t"><title id="dm-t">Carte : départs de France, arrivées dans toute l'Afrique</title>`;
 svg += `<path class="dm-world" d="${out.monde.join('')}"/>`;
+// Mayotte n'existe pas dans world-atlas (rattachée à la France) : petite île dessinée à sa place
+const [mx, my] = P([-12.8, 45.15]);
+out.afrique.push(`M${mx - 1.6},${my}a1.6,1.6 0 1,0 3.2,0a1.6,1.6 0 1,0 -3.2,0Z`);
 svg += `<path class="dm-afr" d="${out.afrique.join('')}"/>`;
 for (const k of ['ouest','centre','est','nord']) svg += `<path class="dm-reg" data-r="${k}" d="${out[k].join('')}"/>`;
 svg += `<g class="dm-routes"></g><g class="dm-dots"></g>`;
