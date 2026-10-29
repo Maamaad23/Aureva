@@ -28,6 +28,7 @@ Agrément IATA et commissionnaire de transport **obtenus** (confirmé le 2026-10
 | `_atelier/PRODUCT.md` | Cible, ton, anti-références |
 | `fiche-reflexe-aureva.pdf` | Copie de `Marketing/Kit commercial/AUREVA_Fiche_Reflexe.pdf` (téléchargeable sur le site) |
 | `plaquette-aureva.pdf` | Copie de `Marketing/Kit commercial/AUREVA_Plaquette.pdf` (téléchargeable sur le site) |
+| `rapatriement-corps-<pays>.html` | Pages SEO par pays (FR seul), générées : `python3 _atelier/pays/build.py` (lit `../Operations/_sources/documents_pays/pays.json` + `ROUTES`/`AIR` d'index.html, met à jour sitemap et llms.txt). Ne jamais modifier à la main ; relancer après chaque changement de vols ou de documents |
 | `js/lenis-1.3.26.min.js` | Plus chargé depuis le 2026-10-27 (défilement natif, plus rapide). Ne pas remettre : le défilement « fluide » donnait une impression de retard |
 | `_atelier/` | Outils internes, hors site : `i18n/` (traductions), `carte/build-map.mjs` (régénère la carte SVG, à recoller dans index.html), `DESIGN.md`, `PRODUCT.md`, `prive/` (hors git : `engagement-futur.html` à remettre avec preuves). Jamais publié : `_config.yml` laisse Jekyll écarter les dossiers en `_` (ne pas remettre `.nojekyll`) |
 
