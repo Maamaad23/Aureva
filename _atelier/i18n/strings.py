@@ -393,7 +393,7 @@ T.update({
 })
 
 T.update({
-"Oui, partout en France. Notre base est Bâle-Mulhouse, et nous réservons depuis l'aéroport qui offre le premier vol : Paris, Lyon, Strasbourg ou un autre.": ('Yes, anywhere in France. Our base is Basel-Mulhouse, and we book from whichever airport offers the first flight: Paris, Lyon, Strasbourg or another.', 'Ja, überall in Frankreich. Unsere Basis ist Basel-Mulhouse, und wir buchen ab dem Flughafen mit dem ersten Flug: Paris, Lyon, Straßburg oder einem anderen.'),
+"Oui, partout en France. Notre base est Bâle-Mulhouse, et nous réservons depuis l'aéroport qui offre le premier vol direct : Paris, Lyon, Strasbourg ou un autre.": ('Yes, anywhere in France. Our base is Basel-Mulhouse, and we book from whichever airport offers the first direct flight: Paris, Lyon, Strasbourg or another.', 'Ja, überall in Frankreich. Unsere Basis ist Basel-Mulhouse, und wir buchen ab dem Flughafen mit dem ersten Direktflug: Paris, Lyon, Straßburg oder einem anderen.'),
 })
 
 T.update({"contact@pompes-funebres.fr": ("contact@funeral-home.com", "kontakt@bestattungen.de")})
@@ -402,7 +402,7 @@ LD.update({"Transitaire funéraire aérien, agent cargo IATA et commissionnaire 
 
 T.update({
  'Confiance': ('Trust', 'Vertrauen'),
- "De toute la France, depuis l'aéroport qui offre le premier vol. L'Afrique en priorité, le reste du monde aussi.": ('From anywhere in France, from whichever airport offers the first flight. Africa first, the rest of the world too.', 'Von überall in Frankreich, ab dem Flughafen mit dem ersten Flug. Afrika zuerst, der Rest der Welt ebenso.'),
+ "De toute la France, depuis l'aéroport qui offre le premier vol direct. L'Afrique en priorité, le reste du monde aussi.": ('From anywhere in France, from whichever airport offers the first direct flight. Africa first, the rest of the world too.', 'Von überall in Frankreich, ab dem Flughafen mit dem ersten Direktflug. Afrika zuerst, der Rest der Welt ebenso.'),
  'Nos accréditations, et nos réponses aux questions que les pompes funèbres nous posent en premier.': ('Our accreditations, and our answers to the questions funeral homes ask us first.', 'Unsere Zulassungen und unsere Antworten auf die Fragen, die Bestattungsunternehmen uns zuerst stellen.'),
  'Tapez une ville ou un pays': ('Type a city or a country', 'Stadt oder Land eingeben'),
  'Voir tous les pays': ('See all countries', 'Alle Länder anzeigen'),
@@ -414,7 +414,7 @@ _PF = {
  "Transitaire aérien des pompes funèbres : rapatriement de corps par avion vers toute l'Afrique, au premier vol disponible. 7 jours sur 7.": ("Air freight forwarder for funeral homes: repatriation of the deceased by air to all of Africa, on the first available flight. 7 days a week.", "Luftfracht-Spediteur für Bestatter: Überführung Verstorbener per Flugzeug in ganz Afrika, mit dem ersten verfügbaren Flug. 7 Tage die Woche."),
  "Pompes funèbres": ("Funeral homes", "Bestatter"),
  "Rapatriement de corps vers l'Afrique, au service des pompes funèbres": ("Repatriation of the deceased to Africa, for funeral homes", "Überführung Verstorbener nach Afrika, im Dienst der Bestatter"),
- "Pompes funèbres : vous accompagnez la famille, nous organisons le vol jusqu'à l'arrivée.": ("Funeral homes: you support the family, we arrange the flight all the way to arrival.", "Bestatter: Sie begleiten die Familie, wir organisieren den Flug bis zur Ankunft."),
+ "Pompes funèbres : vous accompagnez la famille. Nous trouvons le premier vol direct et suivons le défunt jusqu'à l'atterrissage.": ("Funeral homes: you support the family. We find the first direct flight and follow the deceased until landing.", "Bestatter: Sie begleiten die Familie. Wir finden den ersten Direktflug und begleiten den Verstorbenen bis zur Landung."),
  "Particulier ? Nous vous orientons": ("A private individual? We will guide you", "Privatperson? Wir helfen Ihnen weiter"),
  "Particuliers": ("Private individuals", "Privatpersonen"),
  "Toutes nos condoléances. Nous travaillons avec les pompes funèbres, et nous aidons aussi les familles : en France, un rapatriement passe obligatoirement par une pompe funèbre. Nous faisons le lien avec elle, puis nous organisons le vol.": ("Our deepest condolences. We work with funeral homes, and we also help families: in France, a repatriation must go through a funeral home. We make the link with them, then we organise the flight.", "Unser herzliches Beileid. Wir arbeiten mit Bestattern und helfen auch Familien: In Frankreich muss eine Überführung über ein Bestattungsunternehmen laufen. Wir stellen den Kontakt her und organisieren dann den Flug."),
