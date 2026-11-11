@@ -292,7 +292,9 @@ JS.update({
 # Textes humanisés + SEO 2026-10-22
 T.update({
  "Rapatriement de corps vers l'Afrique · AUREVA Freight": ("Repatriation of the deceased to Africa · AUREVA Freight", "Überführung Verstorbener nach Afrika · AUREVA Freight"),
- "Vous venez de perdre un proche ?": ("Have you just lost a loved one?", "Sie haben einen Angehörigen verloren?"),
+ "Vous venez de perdre un être cher ?": ("Have you just lost a loved one?", "Sie haben einen geliebten Menschen verloren?"),
+ "Nous vous présentons nos sincères condoléances. En France, un rapatriement passe obligatoirement par une pompe funèbre : nous faisons le lien avec elle, puis nous organisons le vol, avec respect et humanité.": ("Please accept our sincere condolences. In France, a repatriation must go through a funeral home: we make the link with them, then we organise the flight, with respect and care.", "Wir sprechen Ihnen unser aufrichtiges Beileid aus. In Frankreich muss eine Überführung über ein Bestattungsunternehmen laufen: Wir stellen den Kontakt her und organisieren dann den Flug, mit Respekt und Menschlichkeit."),
+ "Les étapes et les documents, expliqués aux familles": ("Steps and documents explained for families (in French)", "Schritte und Unterlagen für Familien erklärt (auf Französisch)"),
  "Une famille peut-elle vous contacter directement ?": ("Can a family contact you directly?", "Kann sich eine Familie direkt an Sie wenden?"),
 })
 LD.update({

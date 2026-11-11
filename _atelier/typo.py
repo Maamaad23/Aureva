@@ -81,7 +81,7 @@ def html_typo(src):
 
 if __name__ == "__main__":
     root = Path(__file__).resolve().parents[1]
-    for name in ("index.html", "mentions-legales.html"):
+    for name in ("index.html", "mentions-legales.html", "familles.html"):
         f = root / name
         s = f.read_text(encoding="utf-8")
         n = html_typo(s)

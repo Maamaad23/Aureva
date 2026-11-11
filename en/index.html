@@ -950,6 +950,8 @@ form{display:grid;gap:var(--s-5)}
 .fam-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--ink-1),oklch(21% .04 250 / .55) 45%,var(--ink-1))}
 .fam-wrap h2{font-size:var(--t-h2);line-height:1.1}
 .fam-wrap .lead{margin-top:var(--s-5);max-width:48ch}
+.fam-more{margin-top:var(--s-4)}
+.fam-more a{color:var(--gold-hi);font-weight:500;text-underline-offset:.25em}
 .fam-choice{max-width:52rem;margin-top:var(--s-7);display:grid;grid-template-columns:1fr 1fr;gap:var(--s-4)}
 .fam-opt{display:grid;gap:var(--s-2);align-content:start;text-align:left;padding:var(--s-6);background:oklch(15% .03 250 / .78);border:1px solid var(--line-strong);color:var(--paper);font:inherit;cursor:pointer;transition:border-color .2s ease,background-color .2s ease}
 .fam-opt b{font-family:var(--f-display);font-weight:400;font-size:var(--t-h3);line-height:1.2}
@@ -1617,7 +1619,8 @@ form{display:grid;gap:var(--s-5)}
   <div class="wrap fam-wrap">
     <p class="kicker rv">Private individuals</p>
     <h2 id="h-fam" class="rv" data-d="1">Have you just lost a loved one?</h2>
-    <p class="lead rv" data-d="2">Our deepest condolences. We work with funeral homes, and we also help families: in France, a repatriation must go through a funeral home. We make the link with them, then we organise the flight.</p>
+    <p class="lead rv" data-d="2">Please accept our sincere condolences. In France, a repatriation must go through a funeral home: we make the link with them, then we organise the flight, with respect and care.</p>
+    <p class="fam-more rv" data-d="2"><a href="../familles.html">Steps and documents explained for families (in French) <span aria-hidden="true">→</span></a></p>
     <div class="fam-choice rv" data-d="2" role="group" aria-label="Your situation">
       <button type="button" class="fam-opt" data-mode="a" aria-pressed="false" aria-controls="fam-panel"><b>I already have a funeral home</b><span>We contact them about the flight.</span></button>
       <button type="button" class="fam-opt" data-mode="b" aria-pressed="false" aria-controls="fam-panel"><b>I don't have a funeral home</b><span>We suggest some near you.</span></button>
