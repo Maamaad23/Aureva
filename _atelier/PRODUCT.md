@@ -8,6 +8,10 @@ brand
 
 Directeurs de pompes funèbres (PF) et responsables rapatriement en France. Contexte B2B exclusif : aucune famille endeuillée. Cherchent un prestataire fiable, certifié, capable de gérer des situations urgentes et sensibles vers toute l'Afrique. Leur clientèle est majoritairement africaine : Afrique de l'Ouest en priorité, puis Afrique centrale, de l'Est et du Nord. Pompes funèbres suisses et allemandes proches de Bâle-Mulhouse : public secondaire (départ de Suisse ou d'Allemagne seulement en sous-traitance, au cas par cas ; AUREVA est accréditée en France) (site en FR / EN / DE). Habitués à un niveau d'exigence élevé; peu tolérants au doute ou à l'ambiguïté.
 
+### Espace familles (depuis le 2026-11-12)
+
+`familles.html` s'adresse aux familles endeuillées, souvent sur téléphone, le soir. Univers à part : clair, sable et ambre, formes douces, voix humaine (« vous », phrases courtes, message de l'équipe). Jamais de discours commercial ni de tarif ; la famille est orientée vers une pompe funèbre et n'est jamais facturée. L'accueil (index.html) reste l'espace des pompes funèbres, avec deux cartes d'aiguillage sous le haut de page.
+
 ## Product Purpose
 
 Site vitrine d'AUREVA Freight : transitaire funéraire aérien, agent cargo IATA et commissionnaire de transport, France → toute l'Afrique. AUREVA prend le vol en charge (premier vol, réservation, LTA, remise à la compagnie, suivi) ; la pompe funèbre garde la famille, les démarches, le consulat, la mise en bière, l'acheminement à l'aéroport et le contact à l'arrivée. Défunts uniquement (pas d'urnes). Objectif : convaincre les PF de faire appel à AUREVA plutôt qu'à Eclip's ou un concurrent généraliste. Succès = demande de contact ou mise en relation directe.

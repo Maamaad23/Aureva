@@ -311,7 +311,7 @@
      "name": "Une famille peut-elle vous contacter directement ?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Oui. En France, un rapatriement passe obligatoirement par une pompe funèbre habilitée : écrivez-nous depuis la rubrique Particuliers. Nous contactons votre pompe funèbre, ou nous vous proposons l'une de nos partenaires, et nous organisons le vol avec elle. Nous ne facturons jamais les familles : le devis passe par la pompe funèbre."
+      "text": "Oui. En France, un rapatriement passe obligatoirement par une pompe funèbre habilitée : écrivez-nous depuis l’espace familles du site. Nous contactons votre pompe funèbre, ou nous vous proposons l'une de nos partenaires, et nous organisons le vol avec elle. Nous ne facturons jamais les familles : le devis passe par la pompe funèbre."
      }
     },
     {
@@ -438,6 +438,8 @@ p{text-wrap:pretty}
 .nav-links a:not(.btn):hover{color:var(--paper)}
 .nav-links a:not(.btn):hover::after{transform:scaleX(1)}
 .nav-links .btn{min-height:2.75rem;padding:0 var(--s-5)}
+.nav-links a.nav-fam{color:var(--gold-hi);padding-left:var(--s-5);border-left:1px solid var(--line-strong)}
+.nav-links a.nav-fam::after{left:var(--s-5)}
 .lang{display:inline-flex;gap:2px;font-size:var(--t-xs);font-weight:600;letter-spacing:.08em}
 .lang a{display:inline-grid;place-items:center;min-width:2.25rem;min-height:2.25rem;color:var(--paper-3);text-decoration:none;border:1px solid transparent}
 .lang a:hover{color:var(--paper)}
@@ -468,7 +470,7 @@ p{text-wrap:pretty}
 .menu-li:hover{color:var(--gold-hi)}
 .menu-close{position:absolute;top:calc((var(--nav-h) - 2.75rem)/2);right:var(--gutter)}
 
-@media (max-width:72rem){
+@media (max-width:80rem){
   .nav-links{display:none}
   .burger{display:block}
 }
@@ -639,6 +641,7 @@ form{display:grid;gap:var(--s-5)}
   transition:border-color .2s ease,background-color .2s ease;
 }
 .field select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--gold) 50%),linear-gradient(135deg,var(--gold) 50%,transparent 50%);background-position:calc(100% - 1.25rem) 55%,calc(100% - .9rem) 55%;background-size:.35rem .35rem;background-repeat:no-repeat;padding-right:2.5rem}
+.field input[type=date]{color-scheme:dark}
 .field textarea{min-height:7rem;resize:vertical;line-height:1.6}
 .field ::placeholder{color:var(--paper-3);opacity:1}
 .field input:hover,.field select:hover,.field textarea:hover{border-color:oklch(96% .012 85 / .4)}
@@ -779,7 +782,7 @@ form{display:grid;gap:var(--s-5)}
 .hero-media img,.step-fig img{filter:saturate(.78) contrast(1.04)}
 
 /* Sections du bas rendues seulement à l'approche (premier affichage plus rapide) */
-#faq,#familles,.foot{content-visibility:auto;contain-intrinsic-size:auto 900px}
+#faq,.foot{content-visibility:auto;contain-intrinsic-size:auto 900px}
 
 /* ══ REFONTE 2026-10-22 : plus d'images, moins de texte ══ */
 /* 01 : trois étapes en photo */
@@ -817,16 +820,8 @@ form{display:grid;gap:var(--s-5)}
 .about-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:var(--s-8);padding-bottom:var(--s-10);align-items:start}
 
 @media (max-width:52rem){.about-grid{grid-template-columns:1fr;gap:var(--s-6);padding-bottom:var(--s-9)}}
-/* 05 : familles, orientées vers une pompe funèbre */
 
-.fam-box{padding:var(--s-7);background:var(--ink-2);box-shadow:inset 0 2px 0 var(--gold)}
-.fam-box form{display:grid;gap:var(--s-5)}
-.consent label{display:flex;gap:var(--s-3);align-items:flex-start;text-transform:none;letter-spacing:0;font-weight:400;font-size:var(--t-sm);color:var(--paper-2);cursor:pointer}
-.consent input{width:1.15rem;height:1.15rem;margin-top:.15rem;flex:none;accent-color:var(--gold)}
-.field[hidden]{display:none}
 
-.fam-msg{font-size:var(--t-sm);color:var(--gold-hi);min-height:1.5em}
-@media (max-width:56rem){.fam-box{padding:var(--s-5)}}
 
 /* Allemand : mots composés très longs, césure dans les titres */
 :lang(de) :is(h2,h3){hyphens:auto;overflow-wrap:break-word}
@@ -944,29 +939,6 @@ form{display:grid;gap:var(--s-5)}
 @media (max-width:40rem){.dask{padding:var(--s-5)}}
 
 
-.fam{position:relative;isolation:isolate;overflow:hidden;background:var(--ink-1)}
-.fam-bg{position:absolute;inset:0;z-index:-1}
-.fam-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;opacity:.14;filter:saturate(.6)}
-.fam-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--ink-1),oklch(21% .04 250 / .55) 45%,var(--ink-1))}
-.fam-wrap h2{font-size:var(--t-h2);line-height:1.1}
-.fam-wrap .lead{margin-top:var(--s-5);max-width:48ch}
-.fam-more{margin-top:var(--s-4)}
-.fam-more a{color:var(--gold-hi);font-weight:500;text-underline-offset:.25em}
-.fam-choice{max-width:52rem;margin-top:var(--s-7);display:grid;grid-template-columns:1fr 1fr;gap:var(--s-4)}
-.fam-opt{display:grid;gap:var(--s-2);align-content:start;text-align:left;padding:var(--s-6);background:oklch(15% .03 250 / .78);border:1px solid var(--line-strong);color:var(--paper);font:inherit;cursor:pointer;transition:border-color .2s ease,background-color .2s ease}
-.fam-opt b{font-family:var(--f-display);font-weight:400;font-size:var(--t-h3);line-height:1.2}
-.fam-opt span{font-size:var(--t-sm);color:var(--paper-2)}
-.fam-opt:hover{border-color:oklch(96% .012 85 / .4)}
-.fam-opt[aria-pressed="true"]{border-color:var(--gold);background:oklch(72% .11 85 / .12)}
-.fam-opt[aria-pressed="true"] b{color:var(--gold-hi)}
-.fam-opt:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-.fam .fam-box{max-width:52rem;margin-top:var(--s-4)}
-.fam-ready .fam-box:not(.open){display:none}
-.fam-ready .fam-box.open{animation:rise .5s var(--ease-out) both}
-[data-show][hidden]{display:none!important}
-.fam-quick{display:grid;gap:var(--s-3);padding-bottom:var(--s-5);border-bottom:1px solid var(--line)}
-.fam-quick p{font-size:var(--t-sm);color:var(--paper-2)}
-@media (max-width:40rem){.fam-choice{grid-template-columns:1fr}.fam-opt{padding:var(--s-5)}.fam .fam-box{padding:var(--s-5)}}
 
 /* Carte d'embarquement de la recherche : codes d'aéroport en tuiles d'affichage */
 .flap{display:inline-flex;gap:2px}
@@ -1000,6 +972,22 @@ form{display:grid;gap:var(--s-5)}
 .part-list li{padding-block:var(--s-5);border-bottom:1px solid var(--line)}
 .part-list h3{font-size:var(--t-lg);color:var(--paper)}
 .part-list p{margin-top:var(--s-2);color:var(--paper-2);max-width:52ch}
+.route{background:var(--ink-0);padding-block:var(--s-8)}
+.route-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-5)}
+.route-card{display:grid;gap:var(--s-3);align-content:start;padding:var(--s-7);text-decoration:none;border-radius:6px;transition:transform .5s var(--ease-out),background-color .3s ease}
+.route-card b{font-family:var(--f-display);font-weight:400;font-size:var(--t-h3);line-height:1.2}
+.route-card span{font-size:var(--t-sm);line-height:1.6;max-width:42ch}
+.route-card em{justify-self:start;font-style:normal;font-weight:600;font-size:var(--t-sm);margin-top:var(--s-3);padding:.4rem 1rem;border-radius:999px}
+.route-ic{width:2.25rem;height:2.25rem;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-bottom:var(--s-2)}
+.route-pro .route-ic{color:var(--gold)}.route-fam .route-ic{color:oklch(55% .1 70)}
+.route-pro{background:var(--ink-2);color:var(--paper)}
+.route-pro span{color:var(--paper-2)}.route-pro em{color:var(--paper);background:oklch(96% .012 85 / .1)}
+.route-fam{background:oklch(95% .018 75);color:oklch(24% .035 250)}
+.route-fam span{color:oklch(38% .03 250)}.route-fam em{color:oklch(28% .035 250);background:oklch(24% .035 250 / .08)}
+@media (hover:hover){.route-card:hover{transform:translateY(-3px)}.route-pro:hover{background:oklch(28% .045 250)}.route-fam:hover{background:oklch(97% .014 75)}}
+@media (max-width:48rem){.route{padding-block:var(--s-7)}.route-grid{grid-template-columns:1fr;gap:var(--s-4)}.route-card{padding:var(--s-6)}}
+.calm .route-card{transform:none!important}
+.part-cta{margin-top:var(--s-6)}
 .part-box{display:grid;gap:var(--s-4);padding:var(--s-7);background:var(--ink-2);box-shadow:inset 0 2px 0 var(--gold)}
 .part-box h3{font-size:var(--t-h3);line-height:1.2}
 .part-box p{color:var(--paper-2);font-size:var(--t-sm)}
@@ -1097,23 +1085,7 @@ form{display:grid;gap:var(--s-5)}
 .faq-list details[open] .ans{animation:ans-in .45s var(--ease-out) both}
 @keyframes ans-in{from{opacity:0;transform:translateY(-.5rem)}}
 /* Familles : la photo se pose, les deux choix réagissent, le formulaire arrive champ par champ */
-.js .fam-bg img{transform:scale(1.08);transition:transform 2.4s var(--ease-out)}
-.fam-bg.in img{transform:none}
-.fam-opt{position:relative;transition:border-color .2s ease,background-color .2s ease,transform .35s var(--ease-out)}
-.fam-opt::before{content:"";position:absolute;left:-1px;right:-1px;top:-1px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease-out)}
-.fam-opt[aria-pressed="true"]::before{transform:none}
-@media (hover:hover){.fam-opt:hover{transform:translateY(-3px)}}
-.fam-opt:active{transform:scale(.98)}
-.js .fam-choice.rv .fam-opt{opacity:0;transform:translateY(1rem);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out),border-color .2s ease,background-color .2s ease}
-.js .fam-choice.rv.in .fam-opt{opacity:1;transform:none}
-.js .fam-choice.rv.in .fam-opt+.fam-opt{transition-delay:.12s,.12s,0s,0s}
-.fam-box.open form>:not([hidden]){animation:rise .5s var(--ease-out) both}
-.fam-box.open form>:nth-child(n+6){animation-delay:.06s}
-.fam-box.open form>:nth-child(n+8){animation-delay:.12s}
-.fam-box.open form>:nth-child(n+10){animation-delay:.18s}
-.fam-box.open form>:nth-child(n+12){animation-delay:.24s}
-.calm .chrono-more[open] .chrono,.calm .faq-list details[open] .ans,.calm .fam-box.open form>*{animation:none}
-.calm .fam-bg img,.calm .fam-opt,.calm .fam-choice .fam-opt{transform:none!important}
+.calm .chrono-more[open] .chrono,.calm .faq-list details[open] .ans{animation:none}
 .calm .rv,.calm .hero .fade,.calm .chrono li.rv,.calm .chrono li.rv .card,.calm .chrono li .num,.calm .hero-title .l>span,.calm .step.rv .step-fig img{transform:none!important}
 .calm h2.rv{clip-path:none;opacity:0;transition:opacity .9s var(--ease-out)}
 .calm h2.rv.in{opacity:1}
@@ -1239,8 +1211,9 @@ form{display:grid;gap:var(--s-5)}
       <a href="#nous">Confiance</a>
       <a href="#partenaires">Partenaires</a>
       <a href="#faq">Questions</a>
+      <a class="nav-fam" href="familles.html">Familles</a>
       <span class="lang" role="group" aria-label="Langue"><!--LANG--><a href="./" lang="fr" hreflang="fr" aria-current="true">FR</a><a href="en/" lang="en" hreflang="en">EN</a><a href="de/" lang="de" hreflang="de">DE</a><!--/LANG--></span>
-      <a class="btn btn-gold" href="#contact">Ouvrir un dossier</a>
+      <a class="btn btn-gold" href="#contact">Demander un devis</a>
     </nav>
     <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
   </div>
@@ -1255,9 +1228,10 @@ form{display:grid;gap:var(--s-5)}
       <li><a href="#nous">Confiance</a></li>
       <li><a href="#partenaires">Partenaires</a></li>
       <li><a href="#faq">Questions</a></li>
+      <li><a href="familles.html">Espace familles</a></li>
     </ol>
   </nav>
-  <a class="btn btn-gold" href="#contact">Ouvrir un dossier <span class="arr" aria-hidden="true">→</span></a>
+  <a class="btn btn-gold" href="#contact">Demander un devis <span class="arr" aria-hidden="true">→</span></a>
   <span class="lang menu-lang" role="group" aria-label="Langue"><!--LANG--><a href="./" lang="fr" hreflang="fr" aria-current="true">FR</a><a href="en/" lang="en" hreflang="en">EN</a><a href="de/" lang="de" hreflang="de">DE</a><!--/LANG--></span>
   <a class="menu-li" href="https://www.linkedin.com/company/aurevafreight/" target="_blank" rel="noopener">Suivez-nous sur LinkedIn</a>
 </div>
@@ -1280,7 +1254,7 @@ form{display:grid;gap:var(--s-5)}
     <p class="lead fade f2">Pompes funèbres : vous accompagnez la famille. Nous trouvons le premier vol direct et suivons le défunt jusqu’à l’atterrissage.</p>
     <div class="hero-cta fade f3">
       <a class="btn btn-gold" href="#contact">Ouvrir un dossier <span class="arr" aria-hidden="true">→</span></a>
-      <a class="mail" href="#familles">Particulier ? Nous vous orientons</a>
+      <a class="mail" href="familles.html">Vous êtes une famille ? Espace familles</a>
     </div>
   </div>
   <div class="wrap fade f3">
@@ -1292,6 +1266,24 @@ form{display:grid;gap:var(--s-5)}
     </dl>
   </div>
 </section>
+
+<!-- ══ AIGUILLAGE : pompes funèbres ou familles ══ -->
+<nav class="route" aria-label="Choisir votre espace">
+  <div class="wrap route-grid">
+    <a class="route-card route-pro rv" href="#chronologie">
+      <svg class="route-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
+      <b>Vous êtes une pompe funèbre ?</b>
+      <span>Découvrez nos solutions de rapatriement et nos modalités de partenariat.</span>
+      <em>Espace professionnels <span aria-hidden="true">↓</span></em>
+    </a>
+    <a class="route-card route-fam rv" data-d="1" href="familles.html">
+      <svg class="route-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="m18 15-2-2"/><path d="m15 18-2-2"/></svg>
+      <b>Vous êtes un particulier ?</b>
+      <span>Nous vous accompagnons avec respect et bienveillance dans l’organisation du rapatriement d’un proche.</span>
+      <em>Espace familles <span aria-hidden="true">→</span></em>
+    </a>
+  </div>
+</nav>
 
 <!-- ══ 01 FONCTIONNEMENT ══ -->
 <section class="sec" id="chronologie" aria-labelledby="h-chrono">
@@ -1462,18 +1454,19 @@ form{display:grid;gap:var(--s-5)}
     <div class="sec-head">
       <p class="kicker rv"><span>04</span> Partenaires</p>
       <h2 id="h-part" class="rv" data-d="1">Devenez pompe funèbre partenaire</h2>
-      <p class="lead rv" data-d="2">Une convention simple, sans engagement de volume. Vous gardez la famille, nous prenons le vol.</p>
+      <p class="lead rv" data-d="2">Une coordination fiable et un accompagnement professionnel pour simplifier vos rapatriements et vous laisser l’essentiel : les familles que vous accompagnez.</p>
+      <div class="part-cta rv" data-d="2"><a class="btn btn-gold" href="#contact">Demander un devis professionnel <span class="arr" aria-hidden="true">→</span></a></div>
     </div>
     <div class="part-grid">
       <ul class="part-list rv" data-d="1">
         <li><h3>Des familles vous sont confiées</h3><p>Les familles sans pompe funèbre vous sont orientées.</p></li>
-        <li><h3>Aucun engagement de volume</h3><p>Résiliable par email, sans pénalité.</p></li>
+        <li><h3>Une convention simple</h3><p>Aucun engagement de volume, résiliable par email, sans pénalité.</p></li>
         <li><h3>Un seul interlocuteur, 7 jours sur 7</h3><p>Du devis jusqu’à l’atterrissage.</p></li>
       </ul>
       <aside class="part-box rv" data-d="2">
         <h3>La fiche réflexe, à garder au bureau</h3>
         <p>Une page : ce qu’il faut nous envoyer, les copies que la compagnie demande, le cercueil et qui fait quoi.</p>
-        <a class="btn btn-gold" href="fiche-reflexe-aureva.pdf" download data-goal="Fiche">Télécharger la fiche réflexe <span class="arr" aria-hidden="true">↓</span></a>
+        <a class="btn btn-line" href="fiche-reflexe-aureva.pdf" download data-goal="Fiche">Télécharger la fiche réflexe <span class="arr" aria-hidden="true">↓</span></a>
         <a class="btn btn-line" href="#contact" data-prefill="Bonjour, je souhaite recevoir la convention partenaire AUREVA.">Recevoir la convention</a>
       </aside>
     </div>
@@ -1532,7 +1525,7 @@ form{display:grid;gap:var(--s-5)}
         </details>
         <details name="faq">
           <summary>Une famille peut-elle vous contacter directement ?<span class="pm" aria-hidden="true"></span></summary>
-          <div class="ans"><p>Oui. En France, un rapatriement passe obligatoirement par une pompe funèbre habilitée : écrivez-nous depuis la rubrique Particuliers. Nous contactons votre pompe funèbre, ou nous vous proposons l’une de nos partenaires, et nous organisons le vol avec elle. Nous ne facturons jamais les familles : le devis passe par la pompe funèbre.</p></div>
+          <div class="ans"><p>Oui. En France, un rapatriement passe obligatoirement par une pompe funèbre habilitée : écrivez-nous depuis l’espace familles du site. Nous contactons votre pompe funèbre, ou nous vous proposons l’une de nos partenaires, et nous organisons le vol avec elle. Nous ne facturons jamais les familles : le devis passe par la pompe funèbre.</p></div>
         </details>
       </div>
     </div>
@@ -1557,10 +1550,11 @@ form{display:grid;gap:var(--s-5)}
     </div>
     <div class="contact-form">
       <div id="form-wrap">
-        <h3>Nous écrire</h3>
-        <p class="sub">Quatre champs suffisent. La destination est facultative.</p>
+        <h3>Demander un devis professionnel</h3>
+        <p class="sub">Réservé aux pompes funèbres. Trois champs obligatoires, les autres nous aident à préparer le devis. Vous êtes une famille ? <a href="familles.html">Espace familles</a></p>
         <form id="contact-form" action="https://formspree.io/f/mvzlovrr" method="POST" novalidate>
           <input type="hidden" name="_subject" value="Nouvelle demande · AUREVA Freight">
+          <input type="hidden" name="type" value="Demande de devis professionnel">
           <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="row2">
             <div class="field">
@@ -1581,6 +1575,12 @@ form{display:grid;gap:var(--s-5)}
               <span class="err" id="e-email">Indiquez une adresse email valide.</span>
             </div>
             <div class="field">
+              <label for="f-tel">Téléphone <span class="opt">(facultatif)</span></label>
+              <input id="f-tel" name="telephone" type="tel" autocomplete="tel" maxlength="30" placeholder="Pour vous rappeler">
+            </div>
+          </div>
+          <div class="row2">
+            <div class="field">
               <label for="f-dest">Destination <span class="opt">(facultatif)</span></label>
               <select id="f-dest" name="destination">
                 <option value="">Choisir</option>
@@ -1591,11 +1591,14 @@ form{display:grid;gap:var(--s-5)}
                 <option>Autre destination</option>
               </select>
             </div>
+            <div class="field">
+              <label for="f-date">Date souhaitée <span class="opt">(facultatif)</span></label>
+              <input id="f-date" name="date_souhaitee" type="date">
+            </div>
           </div>
           <div class="field">
-            <label for="f-msg">Votre demande</label>
-            <textarea id="f-msg" name="message" required maxlength="2000" placeholder="Urgence, ville de départ, informations utiles" aria-describedby="e-msg"></textarea>
-            <span class="err" id="e-msg">Décrivez votre demande en quelques mots.</span>
+            <label for="f-msg">Précisions <span class="opt">(facultatif)</span></label>
+            <textarea id="f-msg" name="message" maxlength="2000" placeholder="Urgence, ville de départ, informations utiles"></textarea>
           </div>
           <p class="form-msg error" id="form-error" role="alert">L’envoi n’a pas abouti. Réessayez, ou écrivez directement à <a href="mailto:support@aurevafreight.com">support@aurevafreight.com</a>.</p>
           <div class="form-foot">
@@ -1613,78 +1616,6 @@ form{display:grid;gap:var(--s-5)}
   </div>
 </section>
 
-<!-- ══ FAMILLES ══ -->
-<section class="sec fam" id="familles" aria-labelledby="h-fam">
-  <div class="fam-bg rv" aria-hidden="true"><img src="Images/photo-mains-700.webp" srcset="Images/photo-mains-700.webp 700w, Images/photo-mains.webp 1400w" sizes="100vw" alt="" width="1400" height="2100" loading="lazy" decoding="async"></div>
-  <div class="wrap fam-wrap">
-    <p class="kicker rv">Particuliers</p>
-    <h2 id="h-fam" class="rv" data-d="1">Vous venez de perdre un être cher ?</h2>
-    <p class="lead rv" data-d="2">Nous vous présentons nos sincères condoléances. En France, un rapatriement passe obligatoirement par une pompe funèbre : nous faisons le lien avec elle, puis nous organisons le vol, avec respect et humanité.</p>
-    <p class="fam-more rv" data-d="2"><a href="familles.html">Les étapes et les documents, expliqués aux familles <span aria-hidden="true">→</span></a></p>
-    <div class="fam-choice rv" data-d="2" role="group" aria-label="Votre situation">
-      <button type="button" class="fam-opt" data-mode="a" aria-pressed="false" aria-controls="fam-panel"><b>J’ai déjà une pompe funèbre</b><span>Nous la contactons pour le vol.</span></button>
-      <button type="button" class="fam-opt" data-mode="b" aria-pressed="false" aria-controls="fam-panel"><b>Je n’ai pas de pompe funèbre</b><span>Nous vous en proposons près de chez vous.</span></button>
-    </div>
-    <div class="fam-box" id="fam-panel">
-      <form id="fam-form" action="https://formspree.io/f/mvzlovrr" method="POST" novalidate>
-        <input type="hidden" name="_subject" value="Famille · orientation pompe funèbre · AUREVA Freight">
-        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <input type="hidden" name="pompe_funebre" id="p-mode" value="Non">
-        <input type="hidden" name="email" id="p-email">
-        <div class="fam-quick" data-show="a" hidden>
-          <p>Le plus simple : envoyez-lui nos coordonnées depuis votre messagerie.</p>
-          <a class="btn btn-line" id="fam-mail" href="mailto:?subject=Rapatriement%20de%20notre%20proche%20%3A%20AUREVA%20Freight&amp;body=Bonjour%2C%0A%0APour%20le%20vol%20de%20rapatriement%20de%20notre%20proche%2C%20vous%20pouvez%20travailler%20avec%20AUREVA%20Freight%2C%20transitaire%20a%C3%A9rien%20fun%C3%A9raire%2C%20joignable%207%20jours%20sur%207%20%3A%0A%0Asupport%40aurevafreight.com%0Aaurevafreight.com%0A%0ACordialement%2C">Envoyer nos coordonnées à ma pompe funèbre</a>
-          <p>Ou laissez-nous son nom : nous l’appelons pour vous.</p>
-        </div>
-        <div class="field" data-show="a" hidden>
-          <label for="p-pfnom">Nom et ville de votre pompe funèbre</label>
-          <input id="p-pfnom" name="pompe_funebre_nom" type="text" maxlength="150" required disabled placeholder="Ex. Pompes funèbres du Rhin, Colmar" aria-describedby="e-ppfnom">
-          <span class="err" id="e-ppfnom">Indiquez le nom de votre pompe funèbre.</span>
-        </div>
-        <div class="row2">
-          <div class="field">
-            <label for="p-nom">Votre nom</label>
-            <input id="p-nom" name="nom" type="text" autocomplete="name" required maxlength="100" placeholder="Prénom et nom" aria-describedby="e-pnom">
-            <span class="err" id="e-pnom">Indiquez votre nom.</span>
-          </div>
-          <div class="field">
-            <label for="p-contact">Email ou téléphone</label>
-            <input id="p-contact" name="contact" type="text" inputmode="email" autocomplete="email" required maxlength="254" placeholder="Pour vous répondre" aria-describedby="e-pcontact">
-            <span class="err" id="e-pcontact">Indiquez un email ou un numéro de téléphone.</span>
-          </div>
-        </div>
-        <div class="row2" data-show="b">
-          <div class="field">
-            <label for="p-ville">Ville où se trouve le défunt</label>
-            <input id="p-ville" name="ville" type="text" autocomplete="address-level2" required maxlength="100" placeholder="Ex. Mulhouse" aria-describedby="e-pville">
-            <span class="err" id="e-pville">Indiquez la ville.</span>
-          </div>
-          <div class="field">
-            <label for="p-pays">Pays d’inhumation</label>
-            <select id="p-pays" name="pays" required aria-describedby="e-ppays">
-                  <option value="">Choisir un pays</option>
-                  <optgroup label="Afrique de l’Ouest"><option>Burkina Faso</option><option>Bénin</option><option>Côte d’Ivoire</option><option>Gambie</option><option>Ghana</option><option>Guinée</option><option>Guinée-Bissau</option><option>Mali</option><option>Mauritanie</option><option>Niger</option><option>Nigeria</option><option>Sénégal</option><option>Togo</option></optgroup>
-                  <optgroup label="Afrique centrale"><option>Cameroun</option><option>Centrafrique</option><option>Congo</option><option>Gabon</option><option>Guinée équatoriale</option><option>RD Congo</option><option>Tchad</option></optgroup>
-                  <optgroup label="Afrique de l’Est et océan Indien"><option>Afrique du Sud</option><option>Comores</option><option>Djibouti</option><option>Éthiopie</option><option>Kenya</option><option>Madagascar</option><option>Mayotte</option><option>Rwanda</option><option>Tanzanie</option></optgroup>
-                  <optgroup label="Afrique du Nord"><option>Algérie</option><option>Égypte</option><option>Maroc</option><option>Tunisie</option></optgroup>
-                  <option>Autre pays</option>
-          </select>
-            <span class="err" id="e-ppays">Choisissez un pays.</span>
-          </div>
-        </div>
-        <div class="field consent">
-          <label><input id="p-ok" name="accord" type="checkbox" value="oui" required aria-describedby="e-pok"> <span data-show="a" hidden>J’accepte qu’AUREVA contacte ma pompe funèbre au sujet du vol.</span><span data-show="b">J’accepte qu’AUREVA transmette ma demande à la pompe funèbre partenaire que je choisirai.</span></label>
-          <span class="err" id="e-pok">Cochez la case pour que nous puissions vous aider.</span>
-        </div>
-        <div class="form-foot">
-          <small>Vos données servent uniquement à traiter votre demande. Nous ne facturons jamais les familles. <a href="mentions-legales.html#donnees">En savoir plus</a></small>
-          <button class="btn btn-gold" type="submit" id="p-submit">Envoyer ma demande <span class="arr" aria-hidden="true">→</span></button>
-        </div>
-        <p class="fam-msg" id="fam-msg" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-  </div>
-</section>
 
 </main>
 
@@ -1706,7 +1637,7 @@ form{display:grid;gap:var(--s-5)}
           <li><a href="#partenaires">Partenaires</a></li>
           <li><a href="#faq">Questions</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#familles">Particuliers</a></li>
+          <li><a href="familles.html">Espace familles</a></li>
           <li><a href="https://www.linkedin.com/company/aurevafreight/" target="_blank" rel="noopener">LinkedIn <span class="sr-only">(nouvel onglet)</span></a></li>
         </ul>
       </nav>
@@ -2390,61 +2321,6 @@ form{display:grid;gap:var(--s-5)}
     else qa.classList.add('qa-run');
   }
 
-  // Familles : demande transmise à une pompe funèbre, envoi sans quitter la page
-  const pform = document.getElementById('fam-form');
-  const pmsg = document.getElementById('fam-msg');
-  const fam = document.getElementById('familles');
-  const fbox = document.getElementById('fam-panel');
-  const opts = [...fam.querySelectorAll('.fam-opt')];
-  const pcontact = document.getElementById('p-contact');
-  let mode = 'b';
-  // Deux situations : la famille a déjà une pompe funèbre (a) ou non (b). Les champs de l'autre cas sont désactivés.
-  const setMode = (m, focus) => {
-    mode = m;
-    fbox.classList.add('open');
-    opts.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode === m)));
-    document.getElementById('p-mode').value = m === 'a' ? 'Oui' : 'Non';
-    pform._subject.value = m === 'a' ? 'Famille · pompe funèbre déjà choisie · AUREVA Freight' : 'Famille · orientation pompe funèbre · AUREVA Freight';
-    pform.querySelectorAll('[data-show]').forEach(el => {
-      el.hidden = el.dataset.show !== m;
-      el.querySelectorAll('input,select').forEach(f => { f.disabled = el.hidden; });
-    });
-    pmsg.textContent = '';
-    if (focus) pform.querySelector('input:not([type=hidden]):not(.hp):not(:disabled)').focus({ preventScroll: true });
-  };
-  fam.classList.add('fam-ready');
-  opts.forEach(b => b.addEventListener('click', () => { setMode(b.dataset.mode, true); fbox.scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'nearest' }); }));
-  // Email ou téléphone : un des deux suffit
-  const isContact = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) || v.replace(/\D/g, '').length >= 8;
-  const pcheck = el => {
-    const ok = el.type === 'checkbox' ? el.checked
-      : el === pcontact ? isContact(el.value.trim())
-      : el.value.trim() !== '' && el.checkValidity();
-    el.closest('.field').classList.toggle('bad', !ok);
-    el.setAttribute('aria-invalid', String(!ok));
-    return ok;
-  };
-  pform.querySelectorAll('[required]').forEach(el => el.addEventListener(el.type === 'checkbox' ? 'change' : 'input', () => { if (el.closest('.field').classList.contains('bad')) pcheck(el); }));
-  pform.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const bad = [...pform.querySelectorAll('[required]:not(:disabled)')].filter(el => !pcheck(el));
-    if (bad.length) { bad[0].focus(); return; }
-    document.getElementById('p-email').value = pcontact.value.includes('@') ? pcontact.value.trim() : '';
-    pmsg.textContent = '';
-    try {
-      const res = await fetch(pform.action, { method: 'POST', body: new FormData(pform), headers: { Accept: 'application/json' } });
-      if (!res.ok) throw new Error(res.status);
-      if (window.plausible) plausible('Famille');
-      const done = mode;
-      pform.reset();
-      setMode(done);
-      pmsg.textContent = done === 'a'
-        ? 'Demande reçue. Nous contactons votre pompe funèbre pour le vol, et nous vous tenons informés.'
-        : 'Demande reçue. Nous vous contactons avec des pompes funèbres proches de chez vous.';
-    } catch {
-      pmsg.textContent = 'L\'envoi n\'a pas abouti. Écrivez-nous à support@aurevafreight.com.';
-    }
-  });
 
   // Téléchargements suivis (objectif Plausible) et demande de convention préremplie
   document.querySelectorAll('[data-goal]').forEach(a => a.addEventListener('click', () => { if (window.plausible) plausible(a.dataset.goal); }));
@@ -2453,9 +2329,6 @@ form{display:grid;gap:var(--s-5)}
     if (msg && !msg.value.trim()) msg.value = a.dataset.prefill;
   }));
 
-  // Familles : message prêt à transmettre à la pompe funèbre
-  document.getElementById('fam-mail').href = 'mailto:?subject=' + encodeURIComponent('Rapatriement aérien : AUREVA Freight')
-    + '&body=' + encodeURIComponent('Bonjour, pour organiser le vol du rapatriement, vous pouvez contacter AUREVA Freight, transitaire aérien funéraire : support@aurevafreight.com · https://aurevafreight.com');
 })();
 </script>
 </body>
