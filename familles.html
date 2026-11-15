@@ -7,7 +7,7 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Rapatriement d’un proche : l’espace familles · AUREVA Freight</title>
 <meta name="robots" content="index, follow">
-<meta name="description" content="Vous venez de perdre un être cher ? Nous faisons le lien avec la pompe funèbre et organisons le rapatriement de votre proche vers son pays : notre accompagnement, les étapes, les documents. Nous ne facturons jamais les familles.">
+<meta name="description" content="Vous venez de perdre un être cher ? Nous faisons le lien avec la pompe funèbre et organisons le rapatriement de votre proche vers son pays : les étapes et les documents. Nous ne facturons jamais les familles.">
 <link rel="canonical" href="https://aurevafreight.com/familles.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AUREVA Freight">
@@ -99,27 +99,18 @@ h1{font-size:clamp(2.4rem,1.6rem + 3.2vw,4.25rem);line-height:1.04;letter-spacin
 .promise li{font-size:.875rem;font-weight:500;color:var(--ink-soft);background:var(--sand-2);padding:.4rem .9rem;border-radius:999px}
 .hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:68% 50%;border-radius:var(--r)}
 
-/* ── 1. Notre accompagnement ── */
+/* ── Blocs ── */
 .blk{padding-block:clamp(4rem,8vw,6.5rem)}
 .head{max-width:42rem;margin-bottom:clamp(2rem,4.5vw,3.25rem)}
 .head h2{margin-top:.75rem}
 h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
 .head p:not(.label){margin-top:.9rem;color:var(--ink-soft);font-size:1.125rem}
-.with{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
-.with figure img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:62% 50%;border-radius:var(--r)}
-.roles{list-style:none;display:grid;gap:1.6rem}
-.roles li{display:grid;grid-template-columns:3rem 1fr;gap:1rem;align-items:start}
-.roles .who{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:var(--sheet);color:var(--amber)}
-.roles li.us .who{background:var(--navy);color:var(--gold)}
-.roles .who svg{width:1.35rem;height:1.35rem;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.roles h3{font-family:var(--f-text);font-size:1.125rem;font-weight:600;line-height:1.35;padding-top:.2rem}
-.roles p{color:var(--ink-soft);margin-top:.2rem}
 
 /* Un mot de l'équipe */
 .word{background:var(--sand-2);padding-block:clamp(3.5rem,8vw,6.5rem)}
-.word .wrap{max-width:50rem;text-align:center}
-.word .mark{display:block;width:2.6rem;margin:0 auto 1rem}
-.word blockquote{font-family:var(--f-display);font-size:clamp(1.4rem,1.1rem + 1.3vw,2.15rem);line-height:1.4;color:var(--ink);margin-top:1.25rem}
+.word-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.word-grid img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:62% 50%;border-radius:var(--r)}
+.word blockquote{font-family:var(--f-display);font-size:clamp(1.35rem,1.1rem + 1.1vw,1.9rem);line-height:1.4;color:var(--ink);margin-top:1rem}
 .word cite{display:block;margin-top:1.6rem;font-style:normal;font-size:.9375rem;color:var(--muted)}
 .word cite b{display:block;color:var(--ink);font-weight:600}
 
@@ -127,7 +118,7 @@ h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
 .path{background:var(--sheet);border-radius:clamp(0px,2.5vw,32px);margin:clamp(3rem,6vw,5rem) clamp(0rem,2vw,1.5rem) 0}
 .path-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:start}
 .path-photo{position:sticky;top:calc(var(--head) + var(--tabs) + 2rem)}
-.path-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:88% 50%;border-radius:var(--r)}
+.path-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:88% 50%;border-radius:var(--r);filter:brightness(1.18) saturate(.92)}
 .steps{list-style:none;counter-reset:s;position:relative}
 .steps::before{content:"";position:absolute;left:1.2rem;top:1.5rem;bottom:1.5rem;width:1px;background:var(--rule-2)}
 .steps li{counter-increment:s;position:relative;display:grid;grid-template-columns:2.4rem 1fr;gap:1.25rem;padding-bottom:2rem}
@@ -224,8 +215,8 @@ h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
 
 /* Apparition douce : l'accueil en cascade au chargement, le reste une fois au défilement */
 @keyframes rise{from{opacity:0;transform:translateY(.9rem)}to{opacity:1;transform:none}}
-.js .in-load{opacity:0;animation:rise 1s var(--ease) forwards}
-.js .in-load.d1{animation-delay:.08s}.js .in-load.d2{animation-delay:.18s}.js .in-load.d3{animation-delay:.3s}.js .in-load.d4{animation-delay:.42s}
+.js .in-load{opacity:0;animation:rise .7s var(--ease) forwards}
+.js .in-load.d1{animation-delay:.05s}.js .in-load.d2{animation-delay:.1s}.js .in-load.d3{animation-delay:.16s}.js .in-load.d4{animation-delay:.22s}
 .js .rv{opacity:0;transform:translateY(1.25rem);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .js .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
@@ -236,10 +227,10 @@ h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
 }
 
 @media (max-width:56rem){
-  .hero .wrap,.with,.path-grid,.docs,.faq-wrap,.aide-grid{grid-template-columns:1fr}
+  .hero .wrap,.word-grid,.path-grid,.docs,.faq-wrap,.aide-grid{grid-template-columns:1fr}
   .hero-photo{order:-1}
   .hero-photo img{aspect-ratio:16/10;object-position:60% 50%}
-  .with figure img,.docs figure img{aspect-ratio:16/10}
+  .word-grid img,.docs figure img{aspect-ratio:16/10}
   .path-photo{position:static}
   .path-photo img{aspect-ratio:16/10}
 }
@@ -254,12 +245,11 @@ h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
 {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://aurevafreight.com/"},{"@type":"ListItem","position":2,"name":"Espace familles","item":"https://aurevafreight.com/familles.html"}]},
 {"@type":"WebPage","@id":"https://aurevafreight.com/familles.html","name":"Rapatriement d'un proche : l'espace familles","inLanguage":"fr","isPartOf":{"@id":"https://aurevafreight.com/#org"},"audience":{"@type":"Audience","audienceType":"Familles endeuillées"}},
 {"@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Combien cela coûte-t-il, et qui paie ?","acceptedAnswer":{"@type":"Answer","text":"Le prix dépend de la destination, de la compagnie et du cercueil. Il vous est présenté sur devis par la pompe funèbre, avant tout engagement. AUREVA ne facture jamais les familles."}},
-{"@type":"Question","name":"Combien de temps faut-il ?","acceptedAnswer":{"@type":"Answer","text":"Cela dépend des papiers, de l'accord du consulat et des places à bord. Nous cherchons toujours le premier vol direct compatible avec la date d'inhumation que vous souhaitez, 7 jours sur 7, jours fériés compris."}},
-{"@type":"Question","name":"Nos rites seront-ils respectés ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Nous savons que certaines traditions demandent une inhumation rapide : nous cherchons toujours le premier vol direct possible. La toilette et les soins se font avec la pompe funèbre, selon vos souhaits. Chaque défunt est accompagné avec respect, quelle que soit sa religion."}},
-{"@type":"Question","name":"Je n'ai pas de pompe funèbre. Que faire ?","acceptedAnswer":{"@type":"Answer","text":"Écrivez-nous. En France, un rapatriement passe obligatoirement par une pompe funèbre habilitée : nous vous en proposons près de chez vous, puis nous organisons le vol avec celle que vous choisissez."}},
-{"@type":"Question","name":"Mon proche doit reposer hors d'Afrique. Est-ce possible ?","acceptedAnswer":{"@type":"Answer","text":"Oui. L'Afrique est notre cœur de métier, mais nous organisons aussi des vols vers le reste du monde, au départ de la France. Écrivez-nous : nous vous disons quel vol direct existe vers la ville d'inhumation."}},
-{"@type":"Question","name":"Saurai-je où en est le voyage ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Nous suivons le vol jusqu'à l'atterrissage et vous êtes tenus informés, avec votre pompe funèbre, à chaque étape."}}
+{"@type": "Question", "name": "Combien cela coûte-t-il, et qui paie ?", "acceptedAnswer": {"@type": "Answer", "text": "Le prix dépend de la destination, de la compagnie et du cercueil. La pompe funèbre vous le présente sur devis, avant tout engagement. AUREVA ne facture jamais les familles."}},
+{"@type": "Question", "name": "Combien de temps faut-il ?", "acceptedAnswer": {"@type": "Answer", "text": "Cela dépend des papiers, du consulat et des places à bord. Nous cherchons le premier vol direct compatible avec la date d'inhumation, 7 jours sur 7."}},
+{"@type": "Question", "name": "Nos rites seront-ils respectés ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Nous savons que certaines traditions demandent une inhumation rapide. La toilette et les soins se font selon vos souhaits, et chaque défunt est accompagné avec respect, quelle que soit sa religion."}},
+{"@type": "Question", "name": "Je n'ai pas de pompe funèbre. Que faire ?", "acceptedAnswer": {"@type": "Answer", "text": "Écrivez-nous. En France, un rapatriement passe obligatoirement par une pompe funèbre habilitée : nous vous en proposons une près de chez vous, puis nous organisons le vol avec elle."}},
+{"@type": "Question", "name": "Mon proche doit reposer hors d'Afrique. Est-ce possible ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, vers le monde entier, au départ de la France. Écrivez-nous : nous vous disons quel vol direct existe."}}
 ]}]}</script>
 </head>
 <body>
@@ -277,7 +267,6 @@ h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
     <a class="brand" href="index.html" aria-label="AUREVA Freight, accueil du site"><img src="Images/aureva-mark-160.webp" srcset="Images/aureva-mark-104.webp 104w, Images/aureva-mark-160.webp 160w" sizes="46px" alt="" width="160" height="100"><span><b>AUREVA</b><small>Espace familles</small></span></a>
     <nav class="tabs" aria-label="Rubriques de l’espace familles">
       <ul>
-        <li><a href="#accompagnement">Notre accompagnement</a></li>
         <li><a href="#etapes">Les étapes</a></li>
         <li><a href="#documents">Les documents</a></li>
         <li><a href="#questions">Vos questions</a></li>
@@ -310,30 +299,14 @@ h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
     </div>
   </section>
 
-  <section class="blk" id="accompagnement" aria-labelledby="h-acc" style="padding-top:clamp(1rem,3vw,2rem)">
-    <div class="wrap">
-      <div class="head rv">
-        <p class="label">Notre accompagnement</p>
-        <h2 id="h-acc">Vous n’êtes pas seuls dans les démarches</h2>
-        <p>En France, un rapatriement passe toujours par une pompe funèbre. Nous restons à vos côtés du premier appel jusqu’à l’arrivée de votre proche, et chacun a son rôle.</p>
-      </div>
-      <div class="with">
-        <figure class="rv"><img src="Images/photo-epaule-800.webp" srcset="Images/photo-epaule-800.webp 800w, Images/photo-epaule.webp 1600w" sizes="(max-width:56rem) 100vw, 50vw" alt="Une main posée sur l’épaule d’une personne, pour la réconforter" width="1600" height="900" loading="lazy" decoding="async"></figure>
-        <ul class="roles">
-          <li class="rv"><span class="who" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span><div><h3>Vous, la famille</h3><p>Vous nous dites où votre proche doit reposer, et vous confiez sa pièce d’identité à la pompe funèbre. C’est tout ce qu’on vous demande.</p></div></li>
-          <li class="rv" data-d="1"><span class="who" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.5 3h-5A1.5 1.5 0 0 0 8 4.5v1A1.5 1.5 0 0 0 9.5 7h5A1.5 1.5 0 0 0 16 5.5v-1A1.5 1.5 0 0 0 14.5 3Z"/><path d="M16 5h1.5A2.5 2.5 0 0 1 20 7.5v11a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 18.5v-11A2.5 2.5 0 0 1 6.5 5H8"/><path d="m9 14 2 2 4-4"/></svg></span><div><h3>La pompe funèbre</h3><p>Elle prend en charge les démarches en France et le consulat, prépare votre proche selon vos souhaits et vos rites, et l’accompagne jusqu’à l’aéroport.</p></div></li>
-          <li class="us rv" data-d="2"><span class="who" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></span><div><h3>AUREVA, pour le vol</h3><p>Nous faisons le lien avec la pompe funèbre, trouvons le premier vol direct, confions nous-mêmes votre proche à la compagnie et suivons son voyage jusqu’à l’arrivée.</p></div></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
   <section class="word" aria-label="Un mot de notre équipe">
-    <div class="wrap rv">
-      <img class="mark" src="Images/aureva-mark-104.webp" alt="" width="104" height="65" loading="lazy">
-      <p class="label">Un mot de notre équipe</p>
-      <blockquote>« Nous aussi, nous avons raccompagné un proche jusqu’à sa terre. Nous nous souvenons de l’attente, des appels restés sans réponse, des papiers qu’on ne comprend pas. Nous faisons ce métier pour qu’aucune famille ne traverse cela seule. »</blockquote>
-      <cite><b>L’équipe AUREVA</b>Sausheim, Alsace</cite>
+    <div class="wrap word-grid">
+      <figure class="rv"><img src="Images/photo-epaule-800.webp" srcset="Images/photo-epaule-800.webp 800w, Images/photo-epaule.webp 1600w" sizes="(max-width:56rem) 100vw, 45vw" alt="Une main posée sur l’épaule d’une personne, pour la réconforter" width="1600" height="900" loading="lazy" decoding="async"></figure>
+      <div class="rv" data-d="1">
+        <p class="label">Un mot de notre équipe</p>
+        <blockquote>« Nous aussi, nous avons raccompagné un proche jusqu’à sa terre. Nous faisons ce métier pour qu’aucune famille ne traverse cela seule. »</blockquote>
+        <cite><b>L’équipe AUREVA</b>Sausheim, Alsace</cite>
+      </div>
     </div>
   </section>
 
@@ -349,11 +322,11 @@ h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
           <p>Le chemin de votre proche, de la France jusqu’à son pays.</p>
         </div>
         <ol class="steps">
-          <li class="rv"><div><h3>Vous choisissez une pompe funèbre</h3><p>Vous en avez déjà une ? Nous travaillons avec elle. Sinon, nous vous en proposons près de chez vous.</p></div></li>
-          <li class="rv"><div><h3>Les papiers sont préparés</h3><p>La pompe funèbre réunit les documents en France et obtient l’accord du consulat. Vous n’avez pas à courir les administrations.</p><span class="by">Pompe funèbre</span></div></li>
-          <li class="rv"><div><h3>Votre proche est préparé pour le voyage</h3><p>Les soins et la toilette se font selon vos souhaits et les rites de votre famille, puis la mise en bière, dans un cercueil adapté à l’avion.</p><span class="by">Pompe funèbre</span></div></li>
-          <li class="us rv"><div><h3>Nous organisons le vol</h3><p>Nous cherchons le premier vol direct vers la ville où votre proche reposera, et nous le confions nous-mêmes à la compagnie.</p><span class="by">AUREVA</span></div></li>
-          <li class="rv"><div><h3>Votre proche arrive sur sa terre</h3><p>À l’atterrissage, il est accueilli par votre famille ou par la pompe funèbre du pays. Vous êtes tenus informés jusqu’au bout.</p></div></li>
+          <li class="rv"><div><h3>Vous choisissez une pompe funèbre</h3><p>Vous en avez une ? Nous travaillons avec elle. Sinon, nous vous en proposons une près de chez vous.</p></div></li>
+          <li class="rv"><div><h3>Les papiers sont préparés</h3><p>La pompe funèbre s’occupe des documents et du consulat. Vous n’avez rien à courir.</p><span class="by">Pompe funèbre</span></div></li>
+          <li class="rv"><div><h3>Votre proche est préparé</h3><p>Toilette et soins selon vos souhaits et vos rites, puis mise en bière.</p><span class="by">Pompe funèbre</span></div></li>
+          <li class="us rv"><div><h3>Nous organisons le vol</h3><p>Nous trouvons le premier vol direct et confions nous-mêmes votre proche à la compagnie.</p><span class="by">AUREVA</span></div></li>
+          <li class="rv"><div><h3>Votre proche arrive sur sa terre</h3><p>Votre famille ou la pompe funèbre du pays l’accueille à l’atterrissage. Vous êtes informés jusqu’au bout.</p></div></li>
         </ol>
       </div>
     </div>
@@ -369,7 +342,7 @@ h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
       <div class="docs">
         <figure class="rv">
           <img src="Images/photo-signature-800.webp" srcset="Images/photo-signature-800.webp 800w, Images/photo-signature.webp 1600w" sizes="(max-width:56rem) 100vw, 46vw" alt="Une main signe un document sur un bureau en bois" width="1600" height="1068" loading="lazy" decoding="async">
-          <figcaption>Chaque pays a ses exigences : le consulat confirme la liste à chaque dossier.</figcaption>
+          <figcaption>La liste exacte dépend du pays et du consulat.</figcaption>
         </figure>
         <div>
           <div class="yours rv">
@@ -383,7 +356,6 @@ h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
           </div>
           <div class="theirs rv">
             <h3>Le reste, la pompe funèbre s’en charge</h3>
-            <p>Certificats, autorisations, accord du consulat : elle s’en occupe pour vous.</p>
             <details>
               <summary>Voir la liste complète</summary>
               <ul>
@@ -427,12 +399,11 @@ h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
         <p>Si votre question n’y est pas, écrivez-nous.</p>
       </div>
       <div class="faq rv" data-d="1">
-        <details name="faq"><summary>Combien cela coûte-t-il, et qui paie ?</summary><p>Le prix dépend de la destination, de la compagnie et du cercueil. Il vous est présenté sur devis par la pompe funèbre, avant tout engagement. AUREVA ne facture jamais les familles.</p></details>
-        <details name="faq"><summary>Combien de temps faut-il ?</summary><p>Cela dépend des papiers, de l’accord du consulat et des places à bord. Nous cherchons toujours le premier vol direct compatible avec la date d’inhumation que vous souhaitez, 7 jours sur 7, jours fériés compris.</p></details>
-        <details name="faq"><summary>Nos rites seront-ils respectés ?</summary><p>Oui. Nous savons que certaines traditions demandent une inhumation rapide : nous cherchons toujours le premier vol direct possible. La toilette et les soins se font avec la pompe funèbre, selon vos souhaits. Chaque défunt est accompagné avec respect, quelle que soit sa religion.</p></details>
-        <details name="faq"><summary>Je n’ai pas de pompe funèbre. Que faire ?</summary><p>Écrivez-nous. En France, un rapatriement passe obligatoirement par une pompe funèbre habilitée : nous vous en proposons près de chez vous, puis nous organisons le vol avec celle que vous choisissez.</p></details>
-        <details name="faq"><summary>Mon proche doit reposer hors d’Afrique. Est-ce possible ?</summary><p>Oui. L’Afrique est notre cœur de métier, mais nous organisons aussi des vols vers le reste du monde, au départ de la France. Écrivez-nous : nous vous disons quel vol direct existe vers la ville d’inhumation.</p></details>
-        <details name="faq"><summary>Saurai-je où en est le voyage ?</summary><p>Oui. Nous suivons le vol jusqu’à l’atterrissage et vous êtes tenus informés, avec votre pompe funèbre, à chaque étape.</p></details>
+        <details name="faq"><summary>Combien cela coûte-t-il, et qui paie ?</summary><p>Le prix dépend de la destination, de la compagnie et du cercueil. La pompe funèbre vous le présente sur devis, avant tout engagement. AUREVA ne facture jamais les familles.</p></details>
+        <details name="faq"><summary>Combien de temps faut-il ?</summary><p>Cela dépend des papiers, du consulat et des places à bord. Nous cherchons le premier vol direct compatible avec la date d’inhumation, 7 jours sur 7.</p></details>
+        <details name="faq"><summary>Nos rites seront-ils respectés ?</summary><p>Oui. Nous savons que certaines traditions demandent une inhumation rapide. La toilette et les soins se font selon vos souhaits, et chaque défunt est accompagné avec respect, quelle que soit sa religion.</p></details>
+        <details name="faq"><summary>Je n’ai pas de pompe funèbre. Que faire ?</summary><p>Écrivez-nous. En France, un rapatriement passe obligatoirement par une pompe funèbre habilitée : nous vous en proposons une près de chez vous, puis nous organisons le vol avec elle.</p></details>
+        <details name="faq"><summary>Mon proche doit reposer hors d’Afrique. Est-ce possible ?</summary><p>Oui, vers le monde entier, au départ de la France. Écrivez-nous : nous vous disons quel vol direct existe.</p></details>
       </div>
     </div>
   </section>
@@ -442,7 +413,7 @@ h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
       <div class="head rv">
         <p class="label">Nous écrire</p>
         <h2 id="h-aide">Écrivez-nous, simplement</h2>
-        <p>Dites-nous où vous en êtes. Nous vous répondons avec attention, sans aucun engagement.</p>
+        <p>Dites-nous où vous en êtes, nous vous répondons avec attention. Sans engagement.</p>
         <p class="reach">Vous préférez un email ?<br><a href="mailto:support@aurevafreight.com">support@aurevafreight.com</a></p>
       </div>
       <div class="panel rv" data-d="1">

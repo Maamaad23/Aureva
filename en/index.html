@@ -533,8 +533,8 @@ p{text-wrap:pretty}
 .js .loaded .hero-media img{transform:none}
 
 /* ══ SECTIONS ══ */
-.sec{padding-block:var(--s-10)}
-@media (max-width:48rem){.sec{padding-block:var(--s-9)}}
+.sec{padding-block:var(--s-9)}
+@media (max-width:48rem){.sec{padding-block:var(--s-8)}}
 .sec-head{margin-bottom:var(--s-8)}
 .sec-head h2{font-size:var(--t-h2);max-width:18ch}
 .sec-head .lead{margin-top:var(--s-5)}
@@ -666,6 +666,7 @@ form{display:grid;gap:var(--s-5)}
 .form-done p{color:var(--paper-2);max-width:44ch}
 @media (max-width:62rem){
   .contact{grid-template-columns:1fr}
+  .contact-form{order:-1} /* téléphone : le formulaire d’abord, sans défiler */
   .contact-call dl{margin-top:0;padding-top:var(--s-7)}
 }
 @media (max-width:40rem){
@@ -676,8 +677,8 @@ form{display:grid;gap:var(--s-5)}
 /* ══ FOOTER ══ */
 .foot{background:var(--ink-0);padding-block:var(--s-8) var(--s-6);border-top:1px solid var(--line)}
 .foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s-7);padding-bottom:var(--s-7);border-bottom:1px solid var(--line)}
-.foot-slogan{font-family:var(--f-display);font-size:clamp(1.5rem,1.2rem + 1.2vw,2.25rem);max-width:16ch;margin-top:var(--s-5);line-height:1.2}
-.foot nav ul{display:grid;gap:var(--s-2)}
+.foot-slogan{font-family:var(--f-display);font-size:clamp(1.25rem,1.1rem + .6vw,1.6rem);max-width:20ch;margin-top:var(--s-4);line-height:1.25}
+.foot nav ul{display:flex;flex-wrap:wrap;gap:var(--s-1) var(--s-5);max-width:34rem}
 .foot nav a{color:var(--paper-2);text-decoration:none;font-size:var(--t-sm);display:inline-block;padding-block:.35rem}
 .foot nav a:hover{color:var(--gold-hi)}
 .foot-pays{padding-block:var(--s-5);border-bottom:1px solid var(--line);font-size:var(--t-sm);color:var(--paper-3);line-height:2.2}.foot-pays span{color:var(--paper-2);margin-right:.5rem}.foot-pays a{color:var(--paper-2);text-decoration:none;display:inline-block}.foot-pays a:hover{color:var(--gold-hi)}
@@ -787,7 +788,7 @@ form{display:grid;gap:var(--s-5)}
 /* ══ REFONTE 2026-10-22 : plus d'images, moins de texte ══ */
 /* 01 : trois étapes en photo */
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s-6)}
-.step-fig{position:relative;overflow:hidden;aspect-ratio:4/5;margin-bottom:var(--s-5)}
+.step-fig{position:relative;overflow:hidden;aspect-ratio:4/3;margin-bottom:var(--s-5)}
 .step-fig img{width:100%;height:100%;object-fit:cover}
 .step-n{display:block;font-size:var(--t-xs);font-weight:600;letter-spacing:.16em;color:var(--gold);margin-bottom:var(--s-2);font-variant-numeric:tabular-nums}
 .step h3{font-size:var(--t-h3);line-height:1.2}
@@ -1031,7 +1032,7 @@ form{display:grid;gap:var(--s-5)}
 @media (max-width:52rem){.about-grid{grid-template-columns:1fr}.about-head{position:static}.about-qa > div{grid-template-columns:1fr;gap:var(--s-2)}}
 
 /* Tableau des compagnies, façon panneau des départs */
-.board{margin-top:var(--s-8);padding:var(--s-6);background:var(--ink-0);border:1px solid var(--line-strong)}
+.board{margin-top:var(--s-7);padding:var(--s-6);background:var(--ink-0);border:1px solid var(--line-strong)}
 .board-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:var(--s-2) var(--s-5);padding-bottom:var(--s-4);border-bottom:1px solid var(--line-gold)}
 .board-head h3{font-size:var(--t-h3)}
 .board-head p{font-size:var(--t-sm);color:var(--paper-2)}
@@ -1060,7 +1061,6 @@ form{display:grid;gap:var(--s-5)}
   .board-rows li{gap:var(--s-2);padding:.5rem 0}
   .board .flap i{width:1.05rem;height:1.45rem;font-size:.72rem}
   .b-name{font-size:.7rem;letter-spacing:.05em;white-space:normal;line-height:1.25}
-  .foot nav ul{grid-template-columns:1fr 1fr;column-gap:var(--s-5)}
   .foot-top{gap:var(--s-5);padding-bottom:var(--s-5)}
   .sec{padding-block:var(--s-8)}
   .sec-head{margin-bottom:var(--s-6)}
@@ -1100,10 +1100,10 @@ form{display:grid;gap:var(--s-5)}
 /* ══ Plan simplifié 2026-10-23 ══ */
 .js-cine .cine{height:auto}
 .js-cine .cine-stage{position:relative;top:auto}
-.cine-stage{height:86svh;min-height:30rem}
+.cine-stage{height:62svh;min-height:26rem}
 .cine-stage::after{display:none}
 #garanties .sec-head{margin-bottom:var(--s-7)}
-#garanties .about-grid{margin-top:var(--s-8);padding-bottom:0;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-8);align-items:start}
+#garanties .about-grid{margin-top:var(--s-7);padding-bottom:0;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-8);align-items:start}
 #garanties .about-story{margin-top:0;border-left-color:var(--gold)}
 #garanties .about-qa dt{color:var(--paper)}
 .dregs-more{margin-top:var(--s-6);border-top:1px solid var(--line)}
@@ -1116,7 +1116,7 @@ form{display:grid;gap:var(--s-5)}
   .dest-grid .dm{order:-2;max-width:16rem}
   #garanties .about-grid{grid-template-columns:1fr;gap:var(--s-6);margin-top:var(--s-7)}
 }
-@media (max-width:40rem){.cine-stage{height:72svh;min-height:26rem}}
+@media (max-width:40rem){.cine-stage{height:60svh;min-height:24rem}}
 
 /* ══ Confiance interactive 2026-10-23 : réponses qui s'ouvrent, accréditations tamponnées ══ */
 .qa-js > div{position:relative;display:block;padding:0;transition:background-color .5s var(--ease-out)}
@@ -1179,6 +1179,11 @@ form{display:grid;gap:var(--s-5)}
 @media (hover:hover){.board-rows li button:hover .b-name{color:var(--gold-hi)}}
 .board-rows li button[aria-pressed="true"] .b-name{color:var(--gold-hi)}
 .board-rows li button[aria-pressed="true"]{box-shadow:inset 3px 0 0 var(--gold);padding-left:var(--s-3)}
+/* Tableau : codes compagnie en simple étiquette dorée, sans cases (2026-11-13) */
+.board .board-rows .flap{gap:0;min-width:2.1rem}
+.board .board-rows .flap i{width:auto;height:auto;background:none;box-shadow:none;border-radius:0;font-size:.78rem;letter-spacing:.1em;color:var(--gold)}
+.board .board-rows .flap i::after{display:none}
+.board .board-rows .b-name{font-size:var(--t-base);letter-spacing:0;text-transform:none}
 .board-info{margin-top:var(--s-5);font-size:var(--t-sm);line-height:1.7;color:var(--paper-2);min-height:3.4em}
 .board-info b{display:block;color:var(--paper);font-weight:600;margin-bottom:var(--s-2)}
 .board-info ul{display:grid;gap:var(--s-2)}
@@ -1438,7 +1443,6 @@ form{display:grid;gap:var(--s-5)}
       <p class="about-story rv" data-d="2">Like many African families in France, we have taken a loved one back to their homeland. We remember the waiting, and the calls that went unanswered. AUREVA was born from that memory.</p>
       <dl class="about-qa">
       <div class="rv"><dt>Who are you?</dt><dd>AUREVA Freight, an air freight forwarder for the transport of the deceased, founded in 2026. A team with a background in air freight and customs, in Sausheim, next to EuroAirport Basel-Mulhouse. SIREN 102 873 577.</dd></div>
-      <div class="rv"><dt>And the family?</dt><dd>It remains yours. We never solicit it and never bill it. Families who write to us on their own are referred to our partners.</dd></div>
       <div class="rv"><dt>Do you know the rites?</dt><dd>We know the time constraints of a Muslim burial, and we accompany every deceased person, whatever their faith.</dd></div>
       </dl>
     </div>
@@ -1515,10 +1519,6 @@ form{display:grid;gap:var(--s-5)}
       </div>
       <div class="faq-group rv" data-d="3">
         <h3 class="faq-t">Pricing, accreditation and families</h3>
-        <details name="faq" class="iata-only">
-          <summary>What does IATA accreditation change for you?<span class="pm" aria-hidden="true"></span></summary>
-          <div class="ans"><p>We book directly with the airlines, with no middleman: one contact, from quotation to landing.</p></div>
-        </details>
         <details name="faq">
           <summary>How is the price set?<span class="pm" aria-hidden="true"></span></summary>
           <div class="ans"><p>On quotation, before any commitment. It depends on the destination, the airline and the coffin, with no hidden fees.</p></div>
@@ -1542,16 +1542,13 @@ form{display:grid;gap:var(--s-5)}
       <a class="email" href="mailto:support@aurevafreight.com">support@aurevafreight.com</a>
       <dl>
         <div><dt>Office</dt><dd>20 rue du Jura, 68390 Sausheim, France</dd></div>
-        <div><dt>Airport base</dt><dd>EuroAirport Basel-Mulhouse</dd></div>
-        <div><dt>Quick-reference sheet</dt><dd><a class="li" href="../fiche-reflexe-aureva.pdf" download data-goal="Fiche">Download the PDF (1 page, in French)</a></dd></div>
         <div><dt>Brochure</dt><dd><a class="li" href="../plaquette-aureva.pdf" download>Download the PDF (2 pages, in French)</a></dd></div>
-        <div><dt>LinkedIn</dt><dd><a class="li" href="https://www.linkedin.com/company/aurevafreight/" target="_blank" rel="noopener">AUREVA Freight</a></dd></div>
       </dl>
     </div>
     <div class="contact-form">
       <div id="form-wrap">
         <h3>Request a professional quote</h3>
-        <p class="sub">For funeral homes only. Three required fields, the others help us prepare the quote. Are you a family? <a href="../familles.html">Families (in French)</a></p>
+        <p class="sub">For funeral homes only. Are you a family? <a href="../familles.html">Families (in French)</a></p>
         <form id="contact-form" action="https://formspree.io/f/mvzlovrr" method="POST" novalidate>
           <input type="hidden" name="_subject" value="Nouvelle demande (EN) · AUREVA Freight">
           <input type="hidden" name="type" value="Demande de devis professionnel">
