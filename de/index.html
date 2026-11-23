@@ -1106,6 +1106,12 @@ form{display:grid;gap:var(--s-5)}
 #garanties .about-grid{margin-top:var(--s-7);padding-bottom:0;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-8);align-items:start}
 #garanties .about-story{margin-top:0;border-left-color:var(--gold)}
 #garanties .about-qa dt{color:var(--paper)}
+#garanties .pledge{margin-top:var(--s-7);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-8);align-items:start;padding-top:var(--s-6);border-top:1px solid var(--line-strong)}
+#garanties .pledge h3{font-size:clamp(1.375rem,1.1rem + .7vw,1.75rem);line-height:1.15}
+#garanties .pledge ul{list-style:none;display:grid;gap:var(--s-3)}
+#garanties .pledge li{position:relative;padding-left:1.6rem;color:var(--paper-2)}
+#garanties .pledge li::before{content:"";position:absolute;left:0;top:.62em;width:.55rem;height:.55rem;border:1px solid var(--gold);transform:rotate(45deg)}
+@media (max-width:52rem){#garanties .pledge{grid-template-columns:1fr;gap:var(--s-4)}}
 .dregs-more{margin-top:var(--s-6);border-top:1px solid var(--line)}
 .dregs-more > summary{cursor:pointer;list-style:none;padding:var(--s-4) 0;color:var(--gold-hi);font-size:var(--t-sm);letter-spacing:.04em}
 .dregs-more > summary::-webkit-details-marker{display:none}
@@ -1439,11 +1445,21 @@ form{display:grid;gap:var(--s-5)}
       </div>
     </div>
     </div>
+    <div class="pledge rv">
+      <h3>Unser Versprechen</h3>
+      <ul>
+        <li>Ein Verstorbener, niemals Fracht: Wir übergeben ihn selbst an die Fluggesellschaft.</li>
+        <li>Der erste Direktflug, niemals ein Zwischenstopp.</li>
+        <li>Sie werden bei jedem Schritt informiert, bis zur Landung.</li>
+        <li>Ein klares Angebot vor jeder Verpflichtung, ohne versteckte Kosten.</li>
+        <li>Erreichbar an 7 Tagen pro Woche, auch an Feiertagen.</li>
+      </ul>
+    </div>
     <div class="about-grid">
       <p class="about-story rv" data-d="2">Wie viele afrikanische Familien in Frankreich haben wir einen Angehörigen in seine Heimat zurückbegleitet. Wir erinnern uns an das Warten und an die unbeantworteten Anrufe. Aus dieser Erinnerung ist AUREVA entstanden.</p>
       <dl class="about-qa">
       <div class="rv"><dt>Wer sind Sie?</dt><dd>AUREVA Freight, Luftfrachtspediteur für die Überführung Verstorbener, gegründet 2026. Ein Team aus Luftfracht und Zoll, in Sausheim, neben dem EuroAirport Basel-Mulhouse. SIREN 102 873 577.</dd></div>
-      <div class="rv"><dt>Kennen Sie die Riten?</dt><dd>Wir kennen die Fristen einer muslimischen Bestattung und begleiten jeden Verstorbenen, gleich welcher Religion.</dd></div>
+      <div class="rv"><dt>Warum der erste Direktflug?</dt><dd>Weil wir es selbst erlebt haben. Wir haben Angehörige verloren und auf einen Flug gewartet, während die Familie wartete. Riten und Formalitäten bleiben beim Bestattungsunternehmen; unsere Aufgabe als Luftfrachtspediteur ist es, beim Flug Zeit zu gewinnen: der erste Direktflug, ohne Zwischenstopp, begleitet bis zur Landung.</dd></div>
       </dl>
     </div>
     <!-- Place prévue pour une vraie photo du bureau ou de la plaque de Sausheim (jamais d'image IA) -->

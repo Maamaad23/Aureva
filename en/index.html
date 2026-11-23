@@ -1106,6 +1106,12 @@ form{display:grid;gap:var(--s-5)}
 #garanties .about-grid{margin-top:var(--s-7);padding-bottom:0;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-8);align-items:start}
 #garanties .about-story{margin-top:0;border-left-color:var(--gold)}
 #garanties .about-qa dt{color:var(--paper)}
+#garanties .pledge{margin-top:var(--s-7);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-8);align-items:start;padding-top:var(--s-6);border-top:1px solid var(--line-strong)}
+#garanties .pledge h3{font-size:clamp(1.375rem,1.1rem + .7vw,1.75rem);line-height:1.15}
+#garanties .pledge ul{list-style:none;display:grid;gap:var(--s-3)}
+#garanties .pledge li{position:relative;padding-left:1.6rem;color:var(--paper-2)}
+#garanties .pledge li::before{content:"";position:absolute;left:0;top:.62em;width:.55rem;height:.55rem;border:1px solid var(--gold);transform:rotate(45deg)}
+@media (max-width:52rem){#garanties .pledge{grid-template-columns:1fr;gap:var(--s-4)}}
 .dregs-more{margin-top:var(--s-6);border-top:1px solid var(--line)}
 .dregs-more > summary{cursor:pointer;list-style:none;padding:var(--s-4) 0;color:var(--gold-hi);font-size:var(--t-sm);letter-spacing:.04em}
 .dregs-more > summary::-webkit-details-marker{display:none}
@@ -1439,11 +1445,21 @@ form{display:grid;gap:var(--s-5)}
       </div>
     </div>
     </div>
+    <div class="pledge rv">
+      <h3>Our commitment</h3>
+      <ul>
+        <li>A deceased person, never cargo: we hand them over to the airline ourselves.</li>
+        <li>The first direct flight, never a stopover.</li>
+        <li>You are kept informed at every step, until landing.</li>
+        <li>A clear quote before any commitment, with no hidden fees.</li>
+        <li>Reachable 7 days a week, public holidays included.</li>
+      </ul>
+    </div>
     <div class="about-grid">
       <p class="about-story rv" data-d="2">Like many African families in France, we have taken a loved one back to their homeland. We remember the waiting, and the calls that went unanswered. AUREVA was born from that memory.</p>
       <dl class="about-qa">
       <div class="rv"><dt>Who are you?</dt><dd>AUREVA Freight, an air freight forwarder for the transport of the deceased, founded in 2026. A team with a background in air freight and customs, in Sausheim, next to EuroAirport Basel-Mulhouse. SIREN 102 873 577.</dd></div>
-      <div class="rv"><dt>Do you know the rites?</dt><dd>We know the time constraints of a Muslim burial, and we accompany every deceased person, whatever their faith.</dd></div>
+      <div class="rv"><dt>Why the first direct flight?</dt><dd>Because we have lived it. We have lost loved ones and waited for a flight while the family waited. Rites and formalities stay with the funeral home; our job as a freight forwarder is to save time on the flight: the first direct flight, no stopover, tracked until landing.</dd></div>
       </dl>
     </div>
     <!-- Place prévue pour une vraie photo du bureau ou de la plaque de Sausheim (jamais d'image IA) -->

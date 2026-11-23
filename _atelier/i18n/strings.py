@@ -496,3 +496,15 @@ T.update({"Les familles sans pompe funèbre vous sont orientées.": ("Families w
  "Nous vous accompagnons avec respect et bienveillance dans l'organisation du rapatriement d'un proche.": ('We support you with respect and kindness in arranging the repatriation of a loved one (page in French).', 'Wir begleiten Sie mit Respekt und Fürsorge bei der Überführung eines Angehörigen (Seite auf Französisch).'),
  'Vous êtes un particulier ?': ('Are you a private individual?', 'Sie sind Privatperson?'),
 })
+
+# Confiance : angle transitaire et vécu, charte (2026-11-23)
+T.update({
+ 'Pourquoi le premier vol direct ?': ('Why the first direct flight?', 'Warum der erste Direktflug?'),
+ "Parce que nous l'avons vécu. Nous avons perdu des proches et attendu un vol pendant que la famille attendait. Les rites et les démarches restent chez la pompe funèbre ; notre métier de transitaire, c'est de faire gagner du temps sur le vol : le premier vol direct, sans escale, suivi jusqu'à l'atterrissage.": ("Because we have lived it. We have lost loved ones and waited for a flight while the family waited. Rites and formalities stay with the funeral home; our job as a freight forwarder is to save time on the flight: the first direct flight, no stopover, tracked until landing.", "Weil wir es selbst erlebt haben. Wir haben Angehörige verloren und auf einen Flug gewartet, während die Familie wartete. Riten und Formalitäten bleiben beim Bestattungsunternehmen; unsere Aufgabe als Luftfrachtspediteur ist es, beim Flug Zeit zu gewinnen: der erste Direktflug, ohne Zwischenstopp, begleitet bis zur Landung."),
+ 'Notre engagement': ('Our commitment', 'Unser Versprechen'),
+ 'Un défunt, jamais une marchandise : nous le confions nous-mêmes à la compagnie.': ('A deceased person, never cargo: we hand them over to the airline ourselves.', 'Ein Verstorbener, niemals Fracht: Wir übergeben ihn selbst an die Fluggesellschaft.'),
+ "Le premier vol direct, jamais d'escale.": ('The first direct flight, never a stopover.', 'Der erste Direktflug, niemals ein Zwischenstopp.'),
+ "Vous êtes informés à chaque étape, jusqu'à l'atterrissage.": ('You are kept informed at every step, until landing.', 'Sie werden bei jedem Schritt informiert, bis zur Landung.'),
+ 'Un devis clair avant tout engagement, sans frais cachés.': ('A clear quote before any commitment, with no hidden fees.', 'Ein klares Angebot vor jeder Verpflichtung, ohne versteckte Kosten.'),
+ 'Joignables 7 jours sur 7, jours fériés compris.': ('Reachable 7 days a week, public holidays included.', 'Erreichbar an 7 Tagen pro Woche, auch an Feiertagen.'),
+})

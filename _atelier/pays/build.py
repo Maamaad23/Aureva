@@ -61,6 +61,16 @@ def vols(code, air, routes):
     return sorted(out, key=lambda x: list(DEPARTS).index(x[0]))
 
 
+def lieu(vers):
+    """« vers le Maroc » → « au Maroc » ; « vers la Guinée », « vers l'Algérie » → « en … »."""
+    v = vers.removeprefix("vers ")
+    if v.startswith("le "):
+        return "au " + v[3:]
+    if v.startswith("les "):
+        return "aux " + v[4:]
+    return "en " + re.sub(r"^(la |l'|l’)", "", v).replace("'", "’")
+
+
 def page(p, d, autres, air, routes, villes):
     nom, vers, sl = p["nom"], p["vers"], slug(p["nom"])
     url = f"{SITE}rapatriement-corps-{sl}.html"
@@ -123,7 +133,7 @@ def page(p, d, autres, air, routes, villes):
     out = (tpl.replace("{{TITLE}}", e(f"Rapatriement de corps {vers} · AUREVA Freight"))
               .replace("{{DESC}}", e(desc)).replace("{{URL}}", url)
               .replace("{{LD}}", json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"))
-              .replace("{{H1}}", e(f"Rapatriement de corps {vers}")).replace("{{NOM}}", e(nom)).replace("{{VERS}}", e(vers))
+              .replace("{{H1}}", e(f"Rapatriement de corps {vers}")).replace("{{LIEU}}", e(lieu(vers))).replace("{{NOM}}", e(nom)).replace("{{VERS}}", e(vers))
               .replace("{{VILLES}}", e(villes_txt)).replace("{{LIGNES}}", "".join(lignes))
               .replace("{{AUTORITE}}", e(p["autorite"])).replace("{{PIECES}}", pieces).replace("{{SOCLE}}", socle)
               .replace("{{CERCUEIL}}", e(d["socle"]["cercueil"])).replace("{{NOTE}}", e(NOTE[p["fiabilite"]].format(d=verifie)))
