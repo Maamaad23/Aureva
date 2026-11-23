@@ -22,7 +22,7 @@
 <link rel="icon" type="image/png" sizes="512x512" href="Images/icon-512.png">
 <link rel="preload" as="font" type="font/woff2" href="fonts/Marcellus-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="fonts/HankenGrotesk-latin.woff2" crossorigin>
-<link rel="preload" as="image" href="Images/photo-aile-nuages-800.webp" imagesrcset="Images/photo-aile-nuages-800.webp 800w, Images/photo-aile-nuages.webp 1600w" imagesizes="(max-width:56rem) 100vw, 46vw">
+<link rel="preload" as="image" href="Images/photo-famille-voiles-800.webp" imagesrcset="Images/photo-famille-voiles-800.webp 800w, Images/photo-famille-voiles.webp 1600w" imagesizes="(max-width:56rem) 100vw, 46vw">
 <style>
 @font-face{font-family:'Marcellus';src:url(fonts/Marcellus-latin.woff2) format('woff2');font-weight:400;font-display:swap}
 @font-face{font-family:'Hanken Grotesk';src:url(fonts/HankenGrotesk-latin.woff2) format('woff2');font-weight:100 900;font-display:swap}
@@ -97,7 +97,7 @@ h1{font-size:clamp(2.4rem,1.6rem + 3.2vw,4.25rem);line-height:1.04;letter-spacin
 .soft:hover{color:var(--amber)}
 .promise{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.6rem;list-style:none}
 .promise li{font-size:.875rem;font-weight:500;color:var(--ink-soft);background:var(--sand-2);padding:.4rem .9rem;border-radius:999px}
-.hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:68% 50%;border-radius:var(--r)}
+.hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:52% 30%;border-radius:var(--r)}
 
 /* ── Blocs ── */
 .blk{padding-block:clamp(4rem,8vw,6.5rem)}
@@ -109,16 +109,24 @@ h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
 /* Un mot de l'équipe */
 .word{background:var(--sand-2);padding-block:clamp(3.5rem,8vw,6.5rem)}
 .word-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
-.word-grid img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:62% 50%;border-radius:var(--r)}
+.word-grid img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:50% 24%;border-radius:var(--r)}
 .word blockquote{font-family:var(--f-display);font-size:clamp(1.35rem,1.1rem + 1.1vw,1.9rem);line-height:1.4;color:var(--ink);margin-top:1rem}
 .word cite{display:block;margin-top:1.6rem;font-style:normal;font-size:.9375rem;color:var(--muted)}
 .word cite b{display:block;color:var(--ink);font-weight:600}
+
+
+/* Motif géométrique (étoile à huit branches), or très léger, statique */
+.word,.aide{position:relative;isolation:isolate}
+.word::before,.aide::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.5;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72' fill='none' stroke='%23b8954a' stroke-opacity='.28' stroke-width='1'%3E%3Cpath d='M36 14l6.4 15.6L58 36l-15.6 6.4L36 58l-6.4-15.6L14 36l15.6-6.4z'/%3E%3Cpath d='M20.4 20.4h31.2v31.2H20.4z'/%3E%3Cpath d='M36 0v14M36 58v14M0 36h14M58 36h14'/%3E%3C/svg%3E") 0 0/72px 72px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 30%,#000 70%,transparent);mask-image:linear-gradient(90deg,transparent,#000 30%,#000 70%,transparent)}
+.ayah{margin-top:1rem;padding-left:1rem;border-left:2px solid var(--gold);display:grid;gap:.15rem}
+.ayah span{font-family:'Geeza Pro','Noto Naskh Arabic','Amiri','Traditional Arabic',serif;font-size:clamp(1.25rem,1.1rem + .5vw,1.55rem);line-height:1.6;color:var(--ink);text-align:right;justify-self:start}
+.ayah em{font-style:normal;font-size:.9375rem;color:var(--muted)}
 
 /* ── 2. Les étapes ── */
 .path{background:var(--sheet);border-radius:clamp(0px,2.5vw,32px);margin:clamp(3rem,6vw,5rem) clamp(0rem,2vw,1.5rem) 0}
 .path-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:start}
 .path-photo{position:sticky;top:calc(var(--head) + var(--tabs) + 2rem)}
-.path-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:88% 50%;border-radius:var(--r);filter:brightness(1.18) saturate(.92)}
+.path-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:56% 50%;border-radius:var(--r)}
 .steps{list-style:none;counter-reset:s;position:relative}
 .steps::before{content:"";position:absolute;left:1.2rem;top:1.5rem;bottom:1.5rem;width:1px;background:var(--rule-2)}
 .steps li{counter-increment:s;position:relative;display:grid;grid-template-columns:2.4rem 1fr;gap:1.25rem;padding-bottom:2rem}
@@ -229,7 +237,7 @@ h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
 @media (max-width:56rem){
   .hero .wrap,.word-grid,.path-grid,.docs,.faq-wrap,.aide-grid{grid-template-columns:1fr}
   .hero-photo{order:-1}
-  .hero-photo img{aspect-ratio:16/10;object-position:60% 50%}
+  .hero-photo img{aspect-ratio:16/10;object-position:50% 28%}
   .word-grid img,.docs figure img{aspect-ratio:16/10}
   .path-photo{position:static}
   .path-photo img{aspect-ratio:16/10}
@@ -247,7 +255,7 @@ h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
 {"@type":"FAQPage","mainEntity":[
 {"@type": "Question", "name": "Combien cela coûte-t-il, et qui paie ?", "acceptedAnswer": {"@type": "Answer", "text": "Le prix dépend de la destination, de la compagnie et du cercueil. La pompe funèbre vous le présente sur devis, avant tout engagement. AUREVA ne facture jamais les familles."}},
 {"@type": "Question", "name": "Combien de temps faut-il ?", "acceptedAnswer": {"@type": "Answer", "text": "Cela dépend des papiers, du consulat et des places à bord. Nous cherchons le premier vol direct compatible avec la date d'inhumation, 7 jours sur 7."}},
-{"@type": "Question", "name": "Nos rites seront-ils respectés ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Nous savons que certaines traditions demandent une inhumation rapide. La toilette et les soins se font selon vos souhaits, et chaque défunt est accompagné avec respect, quelle que soit sa religion."}},
+{"@type": "Question", "name": "Nos rites seront-ils respectés ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Nous savons que, pour une inhumation musulmane, chaque heure compte : nous cherchons le premier vol direct dès que les papiers sont prêts. La toilette rituelle et le linceul se font selon vos souhaits, et chaque défunt est accompagné avec respect, quelle que soit sa religion."}},
 {"@type": "Question", "name": "Je n'ai pas de pompe funèbre. Que faire ?", "acceptedAnswer": {"@type": "Answer", "text": "Écrivez-nous. En France, un rapatriement passe obligatoirement par une pompe funèbre habilitée : nous vous en proposons une près de chez vous, puis nous organisons le vol avec elle."}},
 {"@type": "Question", "name": "Mon proche doit reposer hors d'Afrique. Est-ce possible ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, vers le monde entier, au départ de la France. Écrivez-nous : nous vous disons quel vol direct existe."}}
 ]}]}</script>
@@ -283,6 +291,7 @@ h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
         <p class="label in-load">Espace familles</p>
         <h1 id="h1" class="in-load d1">Vous venez de perdre un être cher ?</h1>
         <p class="condo in-load d2">Nous vous présentons nos sincères condoléances.</p>
+        <p class="ayah in-load d2"><span lang="ar" dir="rtl">إِنَّا لِلَّٰهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ</span><em>Nous sommes à Dieu, et c’est vers Lui que nous retournons.</em></p>
         <p class="lead in-load d3">À vos côtés dans cette épreuve, nous faisons le lien avec les pompes funèbres qui prennent en charge les opérations funéraires nécessaires en France, et nous organisons le rapatriement, pour vous accompagner à chaque étape avec respect, humanité et bienveillance.</p>
         <div class="cta in-load d4">
           <a class="btn btn-main" href="#aide">Être accompagné <span aria-hidden="true">→</span></a>
@@ -294,14 +303,14 @@ h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
         </ul>
       </div>
       <figure class="hero-photo in-load d2">
-        <img src="Images/photo-aile-nuages-800.webp" srcset="Images/photo-aile-nuages-800.webp 800w, Images/photo-aile-nuages.webp 1600w" sizes="(max-width:56rem) 100vw, 46vw" alt="L’aile d’un avion au-dessus d’une mer de nuages, dans la lumière douce du matin" width="1600" height="1066" fetchpriority="high">
+        <img src="Images/photo-famille-voiles-800.webp" srcset="Images/photo-famille-voiles-800.webp 800w, Images/photo-famille-voiles.webp 1600w" sizes="(max-width:56rem) 100vw, 46vw" alt="Deux mères voilées et leurs enfants, côte à côte, le regard digne" width="1600" height="1067" fetchpriority="high">
       </figure>
     </div>
   </section>
 
   <section class="word" aria-label="Un mot de notre équipe">
     <div class="wrap word-grid">
-      <figure class="rv"><img src="Images/photo-epaule-800.webp" srcset="Images/photo-epaule-800.webp 800w, Images/photo-epaule.webp 1600w" sizes="(max-width:56rem) 100vw, 45vw" alt="Une main posée sur l’épaule d’une personne, pour la réconforter" width="1600" height="900" loading="lazy" decoding="async"></figure>
+      <figure class="rv"><img src="Images/photo-doua-800.webp" srcset="Images/photo-doua-800.webp 800w, Images/photo-doua.webp 1600w" sizes="(max-width:56rem) 100vw, 45vw" alt="Une femme voilée, les mains levées, en prière pour un proche" width="1600" height="2400" loading="lazy" decoding="async"></figure>
       <div class="rv" data-d="1">
         <p class="label">Un mot de notre équipe</p>
         <blockquote>« Nous aussi, nous avons raccompagné un proche jusqu’à sa terre. Nous faisons ce métier pour qu’aucune famille ne traverse cela seule. »</blockquote>
@@ -313,7 +322,7 @@ h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
   <section class="blk path" id="etapes" aria-labelledby="h-etapes">
     <div class="wrap path-grid">
       <figure class="path-photo rv">
-        <img src="Images/photo-salle-embarquement-800.webp" srcset="Images/photo-salle-embarquement-800.webp 800w, Images/photo-salle-embarquement.webp 1600w" sizes="(max-width:56rem) 100vw, 40vw" alt="Une salle d’embarquement au coucher du soleil, un avion derrière la vitre" width="1600" height="1200" loading="lazy" decoding="async">
+        <img src="Images/photo-minaret-couchant-800.webp" srcset="Images/photo-minaret-couchant-800.webp 800w, Images/photo-minaret-couchant.webp 1600w" sizes="(max-width:56rem) 100vw, 40vw" alt="Un minaret au coucher du soleil, la foule rassemblée à ses pieds" width="1600" height="1200" loading="lazy" decoding="async">
       </figure>
       <div>
         <div class="head rv">
@@ -401,7 +410,7 @@ h2{font-size:clamp(1.9rem,1.4rem + 1.8vw,3rem)}
       <div class="faq rv" data-d="1">
         <details name="faq"><summary>Combien cela coûte-t-il, et qui paie ?</summary><p>Le prix dépend de la destination, de la compagnie et du cercueil. La pompe funèbre vous le présente sur devis, avant tout engagement. AUREVA ne facture jamais les familles.</p></details>
         <details name="faq"><summary>Combien de temps faut-il ?</summary><p>Cela dépend des papiers, du consulat et des places à bord. Nous cherchons le premier vol direct compatible avec la date d’inhumation, 7 jours sur 7.</p></details>
-        <details name="faq"><summary>Nos rites seront-ils respectés ?</summary><p>Oui. Nous savons que certaines traditions demandent une inhumation rapide. La toilette et les soins se font selon vos souhaits, et chaque défunt est accompagné avec respect, quelle que soit sa religion.</p></details>
+        <details name="faq"><summary>Nos rites seront-ils respectés ?</summary><p>Oui. Nous savons que, pour une inhumation musulmane, chaque heure compte : nous cherchons le premier vol direct dès que les papiers sont prêts. La toilette rituelle et le linceul se font selon vos souhaits, et chaque défunt est accompagné avec respect, quelle que soit sa religion.</p></details>
         <details name="faq"><summary>Je n’ai pas de pompe funèbre. Que faire ?</summary><p>Écrivez-nous. En France, un rapatriement passe obligatoirement par une pompe funèbre habilitée : nous vous en proposons une près de chez vous, puis nous organisons le vol avec elle.</p></details>
         <details name="faq"><summary>Mon proche doit reposer hors d’Afrique. Est-ce possible ?</summary><p>Oui, vers le monde entier, au départ de la France. Écrivez-nous : nous vous disons quel vol direct existe.</p></details>
       </div>
